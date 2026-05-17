@@ -1,14 +1,19 @@
 {
   "items": [
-    { "name": "Grilled Gilt-head Bream / Koc zgare", "price": 850, "description": "" },
-    { "name": "Grilled Sea Bass / Levrek zgare", "price": 850, "description": "" },
-    { "name": "Fried Hake / Merluc fritur", "price": 850, "description": "" },
-    { "name": "Fried Red Mullet / Barbun fritur", "price": 850, "description": "" },
-    { "name": "Squid (Grilled/Fried) / Kallamar zgare / friture", "price": 950, "description": "" },
-    { "name": "Cuttlefish (Grilled/Fried) / Sepje zgare / friture", "price": 950, "description": "" },
-    { "name": "Shrimp (Grilled/Fried) / Karkalec zgare / fritur", "price": 950, "description": "" },
-    { "name": "Fried Mix / Mix friure", "price": 1000, "description": "" },
-    { "name": "Grilled Octopus / Oktapod zgare", "price": 1150, "description": "" },
-    { "name": "Mixed Plate / Pjate Mixe", "price": 850, "description": "" }
+    { "name": "Monkfish Oven/Grilled / Peshkatrice Furre/Zgare", "price": 1600, "description": "" },
+    { "name": "Baked Salmon / Salmon Furre", "price": 1250, "description": "" },
+    { "name": "Grilled Gilt-head Bream / Koc Zgare", "price": 1100, "description": "" },
+    { "name": "Wild Sea Bass in Pan KG / Levrek i Eger ne Tave KG", "price": 5500, "description": "" },
+    { "name": "Grilled Sea Bass / Levrek Zgare", "price": 1100, "description": "" },
+    { "name": "Fried Hake / Merluc Friture", "price": 1200, "description": "" },
+    { "name": "Squid Grilled/Fried / Kallamar Zgare/Friture", "price": 1100, "description": "" },
+    { "name": "Cuttlefish Grilled/Fried / Sepje Zgare/Friture", "price": 1100, "description": "" },
+    { "name": "Shrimp Grilled/Fried / Karkalec Zgare/Fritur", "price": 1200, "description": "" },
+    { "name": "Fish Fillet with Oven Fries / Fileto Peshku me Patate Furre", "price": 1500, "description": "" },
+    { "name": "Grilled Octopus / Oktapod Zgare", "price": 1350, "description": "" },
+    { "name": "Mussels / Midhje", "price": 800, "description": "" },
+    { "name": "Crudo per 3 Persona", "price": 2800, "description": "" },
+    { "name": "Mixed Crudo Plate 2 Persons / Pjate Mixe Crudo 2 Persona", "price": 1600, "description": "" },
+    { "name": "Fried Mix / Mix Friture", "price": 1250, "description": "" }
   ]
 }

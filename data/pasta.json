@@ -1,14 +1,16 @@
 {
   "items": [
-    { "name": "Linguini fruta deti", "price": 650, "description": "Sepje, kallamar, karkalec, midhje, pomodorini, majdanoz" },
-    { "name": "Linguini me karkalec e kungull", "price": 750, "description": "Karkalec, kungull, pomodorini, majdanoz" },
-    { "name": "Pasta bolonjeze", "price": 450, "description": "" },
-    { "name": "Pasta me gjalp", "price": 350, "description": "" },
-    { "name": "Ravioli krem tartufi", "price": 850, "description": "Pana, tartuf" },
-    { "name": "Ravioli tartuf karkalec", "price": 900, "description": "Karkalec, pana, tartuf" },
-    { "name": "Rizoto fruta deti", "price": 750, "description": "Sepje, kallamar, karkalec, midhje, pomodorini, majdanoz" },
-    { "name": "Rizoto me karkalec e kungull", "price": 750, "description": "Karkalec, kungull, pomodorini, majdanoz" },
-    { "name": "Rizoto karkalec e zaferano", "price": 700, "description": "Karkalec, pomodorini, zaferano, majdanoz" },
-    { "name": "Rizoto e thjesht", "price": 300, "description": "oriz rizo, pomodorini, zaferano, majdanoz" }
+    { "name": "Linguini Fruta Deti", "price": 900, "description": "Sepje, kallamar, karkalec, midhje, pomodorini, majdanoz" },
+    { "name": "Linguini me Karkalec e Kungull", "price": 850, "description": "Karkalec, kungull, pomodorini, majdanoz" },
+    { "name": "Pasta Bolonjeze", "price": 650, "description": "Mish i grire, pomodorini, majdanoz" },
+    { "name": "Pasta me Gjalp", "price": 550, "description": "Gjalp i fresket, majdanoz" },
+    { "name": "Ravioli Krem Tartufi", "price": 950, "description": "Pana, tartuf" },
+    { "name": "Ravioli Tartuf Karkalec", "price": 1000, "description": "Karkalec, pana, tartuf" },
+    { "name": "Makarona Fileto Pule Pana Kerpudhe", "price": 850, "description": "" },
+    { "name": "Rizoto Fruta Deti", "price": 900, "description": "Sepje, kallamar, karkalec, midhje, pomodorini, majdanoz" },
+    { "name": "Rizoto me Karkalec e Kungull", "price": 900, "description": "Karkalec, kungull, pomodorini, majdanoz" },
+    { "name": "Rizoto me Salmon", "price": 900, "description": "Salmon, pomodorini, majdanoz" },
+    { "name": "Rizoto Karkalec", "price": 850, "description": "Karkalec, pomodorini, majdanoz" },
+    { "name": "Rizoto me Perime", "price": 600, "description": "Oriz rizo, pomodorini, zaferano, majdanoz" }
   ]
 }

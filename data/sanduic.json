@@ -1,18 +1,16 @@
 {
   "items": [
-    { "name": "Proshute Vici", "price": 250, "description": "mozzarela, proshute, domate, kastravec, majonez" },
-    { "name": "Sallam", "price": 220, "description": "mozzarela, sallam, domate, kastravec, majonez" },
-    { "name": "Pikant", "price": 250, "description": "mozzarela, sallam pikant, speca, domate, kastravec, majonez" },
-    { "name": "Ton", "price": 300, "description": "mozzarela, ton, ullinj, domate, kastravec, majonez" },
+    { "name": "Proshute Vici", "price": 300, "description": "mozzarela, proshute, domate, kastravec, majonez" },
+    { "name": "Sallam", "price": 250, "description": "mozzarela, sallam, domate, kastravec, majonez" },
+    { "name": "Pikant", "price": 300, "description": "mozzarela, sallam pikant, speca, domate, majonez" },
+    { "name": "Ton", "price": 350, "description": "mozzarela, ton, ullinj, domate, majonez" },
     { "name": "Mix", "price": 350, "description": "mozzarela, sallam pikant, proshute, sallam, ullinj, domate, kastravec, majonez, ton, kerpudhe, speca" },
-    { "name": "Vegjetarian", "price": 250, "description": "mozzarela, speca, ullinj, domate, kastravec, majonez, kerpudhe, kungull" },
-    { "name": "Sanduic Patate", "price": 300, "description": "mozzarela, proshute, patate, ullinj, domate, kastravec, majonez" },
-    { "name": "Fshati", "price": 250, "description": "salce kosi, speca, ullinj, domate, kastravec, djath i bardhe" },
-    { "name": "Wudy", "price": 300, "description": "mozzarela, kremvice, ullinj, domate, kastravec, majonez" },
-    { "name": "4 Djathrat", "price": 250, "description": "mozzarela, domate, kastraveca, speca, pana, grana, gorgonzola" },
-    { "name": "Proshut Pule", "price": 300, "description": "mozzarela, proshute pule, domate, kastravec, majonez" },
-    { "name": "Sanduic Ova", "price": 450, "description": "salc kosi, salat jeshile, domate, kastravec, mish, patate" },
-    { "name": "Kotoleta Pule", "price": 550, "description": "" },
-    { "name": "Shishqebap", "price": 500, "description": "" }
+    { "name": "Vegjetarian", "price": 300, "description": "mozzarela, speca, ullinj, domate, kastravec, majonez, kerpudhe" },
+    { "name": "Sanduic Patate", "price": 350, "description": "mozzarela, proshute, patate, domate, kastravec, majonez" },
+    { "name": "Fshati", "price": 300, "description": "salce kosi, speca, ullinj, domate, kastravec, djath i bardhe" },
+    { "name": "Wudy", "price": 350, "description": "mozzarela, kremvice, domate, kastravec, majonez" },
+    { "name": "4 Djathrat", "price": 300, "description": "mozarela, djath i bardhe, grana, gorgonzola, majonez" },
+    { "name": "Proshut Pule", "price": 300, "description": "mozzarella, proshute pule, domate, kastravec, majonez" },
+    { "name": "Sanduic Ova", "price": 450, "description": "salc kosi, salat jeshile, domate, kastravec, pikant, patate" }
   ]
 }

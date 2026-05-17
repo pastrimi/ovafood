@@ -1,16 +1,16 @@
 {
   "items": [
-    { "name": "Daily Juice", "price": 250, "description": "Orange, apple, banana" },
-    { "name": "Pick Me Up", "price": 300, "description": "Raspberry, banana" },
-    { "name": "Stress Down", "price": 300, "description": "Apple, strawberry, banana, mint" },
-    { "name": "Recovery Juice", "price": 250, "description": "Apple, cucumber, lemon" },
-    { "name": "Green Life", "price": 250, "description": "Apple, pineapple, spinach" },
-    { "name": "Ginger Shot", "price": 200, "description": "Apple, ginger" },
-    { "name": "Ginger Sensation", "price": 250, "description": "Apple, ginger, mint" },
-    { "name": "Lengu i Jetes", "price": 300, "description": "Apple, orange, carrot, beetroot" },
-    { "name": "Energy", "price": 250, "description": "Orange, lime, citron" },
-    { "name": "On Your Mark", "price": 350, "description": "Apple, avocado, lime, yoghurt, honey" },
-    { "name": "Raspberry Glow", "price": 350, "description": "Apple, yoghurt, raspberry, honey, vanilla" },
-    { "name": "Tropikal", "price": 350, "description": "Banane, mango, ananas, leng portokalli, mjalte" }
+    { "name": "Daily Juice", "price": 400, "description": "Orange, apple, banana" },
+    { "name": "Pick Me Up", "price": 450, "description": "Raspberry, banana" },
+    { "name": "Stress Down", "price": 450, "description": "Apple, strawberry, banana, mint" },
+    { "name": "Recovery Juice", "price": 400, "description": "Apple, cucumber, lemon" },
+    { "name": "Green Life", "price": 400, "description": "Apple, pineapple, spinach" },
+    { "name": "Ginger Shot", "price": 400, "description": "Apple, ginger" },
+    { "name": "Ginger Sensation", "price": 450, "description": "Apple, ginger, mint" },
+    { "name": "Lengu i Jetes", "price": 500, "description": "Apple, orange, carrot, beetroot" },
+    { "name": "Energy", "price": 450, "description": "Orange, lime, citron" },
+    { "name": "On Your Mark", "price": 500, "description": "Apple, avocado, lime, yoghurt, honey" },
+    { "name": "Raspberry Glow", "price": 550, "description": "Apple, yoghurt, raspberry, honey, vanilla" },
+    { "name": "Tropical", "price": 550, "description": "Banana, mango, ananas, leng portokalli, mjalte" }
   ]
 }

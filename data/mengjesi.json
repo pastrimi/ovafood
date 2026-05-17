@@ -1,12 +1,14 @@
 {
   "items": [
-    { "name": "Mengjesi Ova", "price": 790, "description": "Proshut pule, proshut vici, recel luleshtrydhe, recel fiku, recel kumbulle, recel qershie, mjalt, cokokrem, djath kackavall, djath i bardh, fruta, domate, kastravec, salc kosi, omlet / veze" },
-    { "name": "Omlet me proshut", "price": 290, "description": "Vez, domate, kastravec, salc kosi, proshut pule" },
-    { "name": "Omlet me perime", "price": 280, "description": "Vez, domate, kastravec, salc kosi, perime" },
-    { "name": "Omlet me djath", "price": 280, "description": "Vez, domate, kastravec, salc kosi, djath i bardh" },
-    { "name": "Omlet mix", "price": 370, "description": "Vez, domate, kastravec, salc kosi, proshut pule, djath i bardh, perime" },
-    { "name": "Vez e skuqur", "price": 250, "description": "Vez, domate, kastravec, salc kosi" },
-    { "name": "Vez sy", "price": 270, "description": "Vez, domate, kastravec, salc kosi" },
-    { "name": "Scrambled egg / Veze e prishur", "price": 290, "description": "Vez, domate, kastravec, salc kosi" }
+    { "name": "Mengjes OVA", "price": 790, "description": "Proshut pule dhe vici, recel luleshtrydhe, recel fiku, recel qershie, veze, mjalt, nutella, djath kackavall, djath i bardh, domate, kastravec, salc kosi, veze, fruta" },
+    { "name": "Omlet me Proshut", "price": 350, "description": "Vez, domate, kastravec, salc kosi, proshut pule" },
+    { "name": "Omlet me Perime", "price": 350, "description": "Vez, domate, kastravec, salc kosi, perime" },
+    { "name": "Omlet me Djath", "price": 350, "description": "Vez, domate, kastravec, salc kosi, djath i bardh" },
+    { "name": "Omlet Mix", "price": 370, "description": "Vez, domate, kastravec, salc kosi, proshut pule, djath i bardh, perime" },
+    { "name": "Veze e Skuqur", "price": 300, "description": "Vez, domate, kastravec, salc kosi" },
+    { "name": "Veze Sy", "price": 300, "description": "Vez, domate, kastravec, salc kosi" },
+    { "name": "Scrambled Egg / Veze e Prishur", "price": 300, "description": "Vez, domate, kastravec, salc kosi" },
+    { "name": "Tost", "price": 150, "description": "majonez, domate, dopio proshute, ketchup" },
+    { "name": "Petulla me Mjalt dhe Djath", "price": 300, "description": "" }
   ]
 }

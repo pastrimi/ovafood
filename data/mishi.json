@@ -1,10 +1,13 @@
 {
   "items": [
-    { "name": "Fileto pule me patate", "price": 650, "description": "" },
-    { "name": "Biftek vici me patate", "price": 750, "description": "" },
-    { "name": "Berxoll vici me patate", "price": 750, "description": "" },
-    { "name": "Tave balte", "price": 550, "description": "" },
-    { "name": "Kotoleta Pule", "price": 550, "description": "" },
-    { "name": "Shishqebap", "price": 500, "description": "" }
+    { "name": "Fileto Pule me Patate", "price": 950, "description": "" },
+    { "name": "Biftek Vici me Patate Furre", "price": 1200, "description": "" },
+    { "name": "Berxoll Vici me Patate Furre", "price": 1200, "description": "" },
+    { "name": "Brinje Qingji Zgare me Patate Furre", "price": 1300, "description": "" },
+    { "name": "Zgare Mixe Normale", "price": 2500, "description": "" },
+    { "name": "Zgare Mixe Familjare", "price": 4500, "description": "" },
+    { "name": "Shishqebap", "price": 850, "description": "" },
+    { "name": "Kotoleta Pule", "price": 850, "description": "" },
+    { "name": "Krah Pule te Marinuar", "price": 650, "description": "" }
   ]
 }
