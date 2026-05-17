@@ -1,0 +1,14 @@
+{
+  "items": [
+    { "name": "Linguini fruta deti", "price": 650, "description": "Sepje, kallamar, karkalec, midhje, pomodorini, majdanoz" },
+    { "name": "Linguini me karkalec e kungull", "price": 750, "description": "Karkalec, kungull, pomodorini, majdanoz" },
+    { "name": "Pasta bolonjeze", "price": 450, "description": "" },
+    { "name": "Pasta me gjalp", "price": 350, "description": "" },
+    { "name": "Ravioli krem tartufi", "price": 850, "description": "Pana, tartuf" },
+    { "name": "Ravioli tartuf karkalec", "price": 900, "description": "Karkalec, pana, tartuf" },
+    { "name": "Rizoto fruta deti", "price": 750, "description": "Sepje, kallamar, karkalec, midhje, pomodorini, majdanoz" },
+    { "name": "Rizoto me karkalec e kungull", "price": 750, "description": "Karkalec, kungull, pomodorini, majdanoz" },
+    { "name": "Rizoto karkalec e zaferano", "price": 700, "description": "Karkalec, pomodorini, zaferano, majdanoz" },
+    { "name": "Rizoto e thjesht", "price": 300, "description": "oriz rizo, pomodorini, zaferano, majdanoz" }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "items": [
+    { "name": "Grilled Gilt-head Bream / Koc zgare", "price": 850, "description": "" },
+    { "name": "Grilled Sea Bass / Levrek zgare", "price": 850, "description": "" },
+    { "name": "Fried Hake / Merluc fritur", "price": 850, "description": "" },
+    { "name": "Fried Red Mullet / Barbun fritur", "price": 850, "description": "" },
+    { "name": "Squid (Grilled/Fried) / Kallamar zgare / friture", "price": 950, "description": "" },
+    { "name": "Cuttlefish (Grilled/Fried) / Sepje zgare / friture", "price": 950, "description": "" },
+    { "name": "Shrimp (Grilled/Fried) / Karkalec zgare / fritur", "price": 950, "description": "" },
+    { "name": "Fried Mix / Mix friure", "price": 1000, "description": "" },
+    { "name": "Grilled Octopus / Oktapod zgare", "price": 1150, "description": "" },
+    { "name": "Mixed Plate / Pjate Mixe", "price": 850, "description": "" }
+  ]
+}

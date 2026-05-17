@@ -1,0 +1,16 @@
+{
+  "items": [
+    { "name": "Nutella", "price": 300, "description": "" },
+    { "name": "Nutella Biskote / Cookie", "price": 350, "description": "" },
+    { "name": "Nutella Banane / Banana", "price": 350, "description": "" },
+    { "name": "Lidia", "price": 400, "description": "nutella, banane, biskote / Nutella, banana, cookie" },
+    { "name": "Kivi / Kiwi", "price": 400, "description": "Nutella, kivi, biskote / Nutella, kiwi, cookie" },
+    { "name": "Bounty", "price": 350, "description": "Cokollate e bardhe, Arre kokosi / white chocolate, coconut" },
+    { "name": "Cherry", "price": 350, "description": "Recel qershie / cherry jam" },
+    { "name": "Rafaelo", "price": 400, "description": "Cokollate e bardhe, Arre kokosi, lajthi / white chocolate, coconut, nuts" },
+    { "name": "Oreo", "price": 400, "description": "Nutella, Oreo, banana" },
+    { "name": "Dubai", "price": 600, "description": "Nutella, pistachio, kadaif, shurup pistachio" },
+    { "name": "Fshati / Village (e kripur)", "price": 400, "description": "Krem djathi, proshute pule, mocarela, ullinj, speca, domate / cream cheese, chicken ham, mozzarella, olives, peppers, tomatoes" },
+    { "name": "Cezar / Caesar (e kripur)", "price": 450, "description": "Krem djathi, proshute pule, mocarela, salce cezar, sallate / cream cheese, chicken ham, mozzarella, Caesar sauce, salad" }
+  ]
+}

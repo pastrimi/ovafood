@@ -1,0 +1,21 @@
+{
+  "items": [
+    { "name": "Koc zgare", "price": 850, "description": "" },
+    { "name": "Levrek zgare", "price": 850, "description": "" },
+    { "name": "Merluc fritur", "price": 850, "description": "" },
+    { "name": "Barbun fritur", "price": 850, "description": "" },
+    { "name": "Kallamar zgare / friture", "price": 950, "description": "" },
+    { "name": "Sepje zgare / friture", "price": 950, "description": "" },
+    { "name": "Karkalec zgare / fritur", "price": 950, "description": "" },
+    { "name": "Mix friure", "price": 1000, "description": "" },
+    { "name": "Oktapod zgare", "price": 1150, "description": "" },
+    { "name": "Pjate Mixe", "price": 850, "description": "" },
+    { "name": "Patate te skuqura", "price": 250, "description": "" },
+    { "name": "Qofte gafore", "price": 450, "description": "" },
+    { "name": "Djath kackavall zgare", "price": 350, "description": "" },
+    { "name": "Djath i bardh", "price": 200, "description": "" },
+    { "name": "Salc kosi", "price": 250, "description": "" },
+    { "name": "Xaxiq", "price": 250, "description": "" },
+    { "name": "Ullinj", "price": 100, "description": "" }
+  ]
+}

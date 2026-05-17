@@ -1,0 +1,26 @@
+{
+  "items": [
+    { "name": "Ova Breakfast / Mengjesi Ova", "price": 700, "description": "Proshut pule, proshut vici, recel luleshtrydhe, recel fiku, recel kumbulle, djath kackavall, djath i bardhe" },
+    { "name": "Ham Omelette / Omlet me proshut", "price": 250, "description": "Vez, domate, kastravec, salc kosi, proshut pule" },
+    { "name": "Vegetable Omelette / Omlet me perime", "price": 250, "description": "Vez, domate, kastravec, salc kosi, perime" },
+    { "name": "Cheese Omelette / Omlet me djath", "price": 250, "description": "Vez, domate, kastravec, salc kosi, djath i bardhe" },
+    { "name": "Mix Omelette / Omlet mix", "price": 280, "description": "Vez, domate, kastravec, salc kosi, proshut pule, djath i bardhe, perime" },
+    { "name": "Fried Egg / Vez e skuqur", "price": 200, "description": "Vez, domate, kastravec, salc kosi" },
+    { "name": "Sunny Side Up Egg / Vez sy", "price": 200, "description": "Vez, domate, kastravec, salc kosi" },
+    { "name": "Scrambled Egg / Veze e rrahur", "price": 200, "description": "Vez, domate, kastravec, salc kosi" },
+    { "name": "Green Salad / Sallat Jeshile", "price": 400, "description": "domate, qep, kastravec, djath i bardhe, spec, ullinj, rigon" },
+    { "name": "Greek Salad / Sallat Greke", "price": 450, "description": "sallat jeshile, limon, ullinj, qep" },
+    { "name": "Mix Salad / Sallat Mix", "price": 450, "description": "sallat jeshile, ullinj, qep, domate, kastravec, limon, spec" },
+    { "name": "Village Salad / Sallat Fshati", "price": 400, "description": "sallat jeshile, domate, kastravec, djath te bardhe" },
+    { "name": "Arugula Salad / Sallate Rukola", "price": 450, "description": "pomodorini, rucola, grana" },
+    { "name": "Caesar Salad / Sallate Cezar", "price": 550, "description": "sallate jeshile, buke e thekur, fileto pule, miser, grana" },
+    { "name": "Fish Soup / Supe peshku", "price": 300, "description": "" },
+    { "name": "Chicken Soup / Supe pule", "price": 250, "description": "" },
+    { "name": "Vegetable Soup / Supe perime", "price": 200, "description": "" },
+    { "name": "French Fries / Patate te skuqura", "price": 250, "description": "" },
+    { "name": "Qofte gafore", "price": 450, "description": "" },
+    { "name": "Djath kackavall zgare", "price": 350, "description": "" },
+    { "name": "Djath i bardh", "price": 200, "description": "" },
+    { "name": "Salc kosi", "price": 250, "description": "" }
+  ]
+}

@@ -1,0 +1,118 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: assets
+public_folder: /assets
+
+collections:
+  - name: menu
+    label: Menu
+    files:
+
+      - name: starters
+        label: "Starters / Antipasta"
+        file: data/starters.json
+        fields:
+          - label: Items
+            name: items
+            widget: list
+            summary: "{{fields.name}} — {{fields.price}} L"
+            fields:
+              - { label: "Name (English / Albanian)", name: name, widget: string }
+              - { label: "Price (L)", name: price, widget: number, value_type: int }
+              - { label: "Description", name: description, widget: text, required: false, default: "" }
+
+      - name: pizza
+        label: Pizza
+        file: data/pizza.json
+        fields:
+          - label: Items
+            name: items
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Name (English / Albanian)", name: name, widget: string }
+              - { label: "Has Small & Large sizes?", name: has_sizes, widget: boolean, default: true }
+              - { label: "Price (L) — only if NO sizes", name: price, widget: number, value_type: int, required: false }
+              - { label: "Small Pizza Price (L)", name: small_price, widget: number, value_type: int, required: false }
+              - { label: "Large Pizza Price (L)", name: large_price, widget: number, value_type: int, required: false }
+              - { label: "Description", name: description, widget: text, required: false, default: "" }
+
+      - name: pasta
+        label: Pasta
+        file: data/pasta.json
+        fields:
+          - label: Items
+            name: items
+            widget: list
+            summary: "{{fields.name}} — {{fields.price}} L"
+            fields:
+              - { label: "Name (English / Albanian)", name: name, widget: string }
+              - { label: "Price (L)", name: price, widget: number, value_type: int }
+              - { label: "Description", name: description, widget: text, required: false, default: "" }
+
+      - name: burgers
+        label: Burgers
+        file: data/burgers.json
+        fields:
+          - label: Items
+            name: items
+            widget: list
+            summary: "{{fields.name}} — {{fields.price}} L"
+            fields:
+              - { label: "Name", name: name, widget: string }
+              - { label: "Price (L)", name: price, widget: number, value_type: int }
+              - { label: "Description", name: description, widget: text, required: false, default: "" }
+
+      - name: meat
+        label: "Meat / Mishi"
+        file: data/meat.json
+        fields:
+          - label: Items
+            name: items
+            widget: list
+            summary: "{{fields.name}} — {{fields.price}} L"
+            fields:
+              - { label: "Name (English / Albanian)", name: name, widget: string }
+              - { label: "Price (L)", name: price, widget: number, value_type: int }
+              - { label: "Description", name: description, widget: text, required: false, default: "" }
+
+      - name: fish
+        label: "Fish / Peshku"
+        file: data/fish.json
+        fields:
+          - label: Items
+            name: items
+            widget: list
+            summary: "{{fields.name}} — {{fields.price}} L"
+            fields:
+              - { label: "Name (English / Albanian)", name: name, widget: string }
+              - { label: "Price (L)", name: price, widget: number, value_type: int }
+              - { label: "Description", name: description, widget: text, required: false, default: "" }
+
+      - name: dessert
+        label: "Desserts / Ëmbëlsirë"
+        file: data/dessert.json
+        fields:
+          - label: Items
+            name: items
+            widget: list
+            summary: "{{fields.name}} — {{fields.price}} L"
+            fields:
+              - { label: "Name (English / Albanian)", name: name, widget: string }
+              - { label: "Price (L)", name: price, widget: number, value_type: int }
+              - { label: "Description", name: description, widget: text, required: false, default: "" }
+
+      - name: drinks
+        label: "Drinks / Pije"
+        file: data/drinks.json
+        fields:
+          - label: Items
+            name: items
+            widget: list
+            summary: "{{fields.name}} — {{fields.price}} L"
+            fields:
+              - { label: "Name (English / Albanian)", name: name, widget: string }
+              - { label: "Price (L)", name: price, widget: number, value_type: int }
+              - { label: "Description", name: description, widget: text, required: false, default: "" }

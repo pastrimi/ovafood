@@ -1,0 +1,10 @@
+{
+  "items": [
+    { "name": "Fileto pule me patate", "price": 650, "description": "" },
+    { "name": "Biftek vici me patate", "price": 750, "description": "" },
+    { "name": "Berxoll vici me patate", "price": 750, "description": "" },
+    { "name": "Tave balte", "price": 550, "description": "" },
+    { "name": "Kotoleta Pule", "price": 550, "description": "" },
+    { "name": "Shishqebap", "price": 500, "description": "" }
+  ]
+}

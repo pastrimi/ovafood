@@ -1,0 +1,14 @@
+{
+  "items": [
+    { "name": "Nutella", "price": 220, "description": "" },
+    { "name": "Nutella Cookie / Nutella Biskote", "price": 270, "description": "" },
+    { "name": "Nutella Banana / Nutella Banane", "price": 280, "description": "" },
+    { "name": "Lidia", "price": 300, "description": "Nutella, banane, biskote / Nutella, banana, cookie" },
+    { "name": "Kivi / Kiwi", "price": 300, "description": "Nutella, kivi, biskote / Nutella, kiwi, cookie" },
+    { "name": "Bounty", "price": 300, "description": "Cokollate e bardhe, Arre kokosi / white chocolate, coconut" },
+    { "name": "Cherry", "price": 250, "description": "Recel qershie / cherry jam" },
+    { "name": "Rafaelo", "price": 300, "description": "Cokollate e bardhe, Arre kokosi, lajthi / white chocolate, coconut, nuts" },
+    { "name": "Oreo", "price": 300, "description": "Nutella, Oreo, banana" },
+    { "name": "Dubai", "price": 400, "description": "Nutella, pistachio, kadaif, shurup pistachio" }
+  ]
+}

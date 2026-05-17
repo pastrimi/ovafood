@@ -1,0 +1,27 @@
+{
+  "items": [
+    { "name": "B52", "price": 200, "description": "Energy Drink" },
+    { "name": "Golden Eagle", "price": 170, "description": "Energy Drink" },
+    { "name": "Red Bull", "price": 250, "description": "Energy Drink" },
+    { "name": "Red Bull Summer", "price": 300, "description": "Energy Drink" },
+    { "name": "Red Bull Bottle", "price": 400, "description": "Energy Drink (Shishe)" },
+    { "name": "Lemon Soda", "price": 180, "description": "" },
+    { "name": "Orange Soda", "price": 180, "description": "" },
+    { "name": "Schwepps Tonic", "price": 180, "description": "" },
+    { "name": "Schwepps Lemon", "price": 180, "description": "" },
+    { "name": "Coca Cola Can / Kanaçe", "price": 200, "description": "" },
+    { "name": "Coca Cola Bottle / Shishe", "price": 200, "description": "" },
+    { "name": "Fanta Orange Can / Kanaçe", "price": 200, "description": "" },
+    { "name": "Fanta Orange Bottle / Shishe", "price": 200, "description": "" },
+    { "name": "Exotic Fanta", "price": 200, "description": "" },
+    { "name": "Bravo Can / Kanaçe", "price": 180, "description": "" },
+    { "name": "Rose Lemonade", "price": 400, "description": "" },
+    { "name": "Cold Tea / Caj i ftohte", "price": 180, "description": "" },
+    { "name": "Pepsi", "price": 180, "description": "" },
+    { "name": "Sprite", "price": 180, "description": "" },
+    { "name": "Water / Uje", "price": 90, "description": "" },
+    { "name": "Vitamin Water", "price": 180, "description": "" },
+    { "name": "Heiniken", "price": 300, "description": "Alcohol Free / Pa Alkool" },
+    { "name": "Bavaria", "price": 250, "description": "Alcohol Free / Pa Alkool" }
+  ]
+}

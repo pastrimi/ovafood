@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OVA Restaurant — QR Code Generator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #1A1A1A;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .card {
+            background: #262626;
+            border-radius: 24px;
+            padding: 40px 36px;
+            width: 100%;
+            max-width: 480px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 6px;
+        }
+
+        .logo span { color: #BA5218; }
+
+        .subtitle {
+            color: #A0A0A0;
+            font-size: 0.9rem;
+            margin-bottom: 32px;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            font-size: 0.85rem;
+            color: #A0A0A0;
+            margin-bottom: 8px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        input {
+            width: 100%;
+            background: #1A1A1A;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 14px 16px;
+            color: #fff;
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        input:focus { border-color: #BA5218; }
+        input::placeholder { color: #555; }
+
+        button {
+            width: 100%;
+            background: #BA5218;
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            padding: 14px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        button:hover { opacity: 0.9; }
+        button:active { opacity: 0.8; }
+
+        #qr-area {
+            display: none;
+            margin-top: 32px;
+        }
+
+        #qr-area.visible { display: block; }
+
+        .divider {
+            border: none;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            margin-bottom: 28px;
+        }
+
+        #qr-box {
+            background: #fff;
+            border-radius: 16px;
+            padding: 20px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        #qr-box canvas, #qr-box img {
+            display: block;
+        }
+
+        .qr-label {
+            font-size: 0.8rem;
+            color: #A0A0A0;
+            margin-bottom: 16px;
+        }
+
+        .btn-download {
+            background: rgba(186,82,24,0.15);
+            border: 1px solid #BA5218;
+            color: #BA5218;
+        }
+
+        .btn-download:hover { background: rgba(186,82,24,0.25); opacity: 1; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="logo">OVA <span>RESTAURANT</span></div>
+        <p class="subtitle">QR Code Generator</p>
+
+        <label for="url-input">Paste your Netlify URL</label>
+        <input
+            type="url"
+            id="url-input"
+            placeholder="https://ovafood.netlify.app"
+        />
+        <button onclick="generate()">Generate QR Code</button>
+
+        <div id="qr-area">
+            <hr class="divider" style="margin-top:28px;">
+            <p class="qr-label">Scan to open the menu</p>
+            <div id="qr-box">
+                <div id="qrcode"></div>
+            </div>
+            <button class="btn-download" onclick="downloadQR()">Download QR Code (PNG)</button>
+        </div>
+    </div>
+
+    <script>
+        let qrInstance = null;
+
+        function generate() {
+            const url = document.getElementById('url-input').value.trim();
+            if (!url) { alert('Please enter a URL first.'); return; }
+
+            const container = document.getElementById('qrcode');
+            container.innerHTML = '';
+            qrInstance = null;
+
+            qrInstance = new QRCode(container, {
+                text: url,
+                width: 240,
+                height: 240,
+                colorDark: '#1A1A1A',
+                colorLight: '#ffffff',
+                correctLevel: QRCode.CorrectLevel.H
+            });
+
+            document.getElementById('qr-area').classList.add('visible');
+        }
+
+        function downloadQR() {
+            const canvas = document.querySelector('#qrcode canvas');
+            if (!canvas) { alert('Generate a QR code first.'); return; }
+
+            // Add white padding + OVA FOOD label
+            const pad = 24;
+            const labelH = 36;
+            const out = document.createElement('canvas');
+            out.width  = canvas.width  + pad * 2;
+            out.height = canvas.height + pad * 2 + labelH;
+            const ctx = out.getContext('2d');
+
+            ctx.fillStyle = '#ffffff';
+            ctx.fillRect(0, 0, out.width, out.height);
+            ctx.drawImage(canvas, pad, pad);
+
+            ctx.fillStyle = '#1A1A1A';
+            ctx.font = 'bold 14px Segoe UI, sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('OVA RESTAURANT — Scan to view menu', out.width / 2, canvas.height + pad + 22);
+
+            const link = document.createElement('a');
+            link.download = 'ovafood-qr.png';
+            link.href = out.toDataURL('image/png');
+            link.click();
+        }
+
+        document.getElementById('url-input').addEventListener('keydown', e => {
+            if (e.key === 'Enter') generate();
+        });
+    </script>
+</body>
+</html>

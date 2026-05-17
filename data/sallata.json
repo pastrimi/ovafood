@@ -1,0 +1,13 @@
+{
+  "items": [
+    { "name": "Sallat Jeshile", "price": 400, "description": "sallat jeshile, limon, ullinj, qep" },
+    { "name": "Sallat Greke", "price": 450, "description": "domate, qep, kastraveca, djath i bardhe, spec, ullinj, rigon" },
+    { "name": "Sallat Mix", "price": 450, "description": "sallat jeshile, ullinje, qep, domate, kastraveca, limon, spec" },
+    { "name": "Sallat Fshati", "price": 400, "description": "sallat jeshile, domate, kastraveca, djath te bardhe" },
+    { "name": "Sallate Rukola", "price": 450, "description": "pomodorini, rucola, grana" },
+    { "name": "Sallate Cezar", "price": 550, "description": "sallate jeshile, buke e thekur, fileto pule, miser, grana" },
+    { "name": "Supe peshku", "price": 300, "description": "" },
+    { "name": "Supe pule", "price": 250, "description": "" },
+    { "name": "Supe perime", "price": 200, "description": "" }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "items": [
+    { "name": "The Chockoloco", "price": 450, "description": "Nutella, arra, shurup cokollate, shllak" },
+    { "name": "Tutti Frutti", "price": 600, "description": "Nutella, luleshtrydhe, banana, kivi, arra, shurup cokollate, shllak" },
+    { "name": "Krem Biskote", "price": 550, "description": "Krem biskotash, recel qershie, arra, shurup cokollate" },
+    { "name": "Tropical", "price": 450, "description": "Arre kokosi, ananas, shurup tropikali, shllak" },
+    { "name": "Ying Yang", "price": 550, "description": "Shurup cokollate, luleshtrydhe, arra, shllak, akullore" },
+    { "name": "Simple Fruits", "price": 650, "description": "Luleshtrydhe, banana, shllak, bajame, arra, shurup cokollate" },
+    { "name": "Costa Rica", "price": 450, "description": "Banana, shllak, arra, shurup cokollate" },
+    { "name": "House Special", "price": 650, "description": "Nutella, luleshtrydhe, banana, shllak, akullore" },
+    { "name": "Apple", "price": 450, "description": "Molle, arra, shllak, shurup cokollate, krem pasticerie" },
+    { "name": "Bumble Bee", "price": 500, "description": "Mjalte, arra, akullore" },
+    { "name": "Waffle Madness", "price": 600, "description": "Cokollate e bardhe, luleshtrydhe, arra" },
+    { "name": "Cheesecake", "price": 600, "description": "Filadelfia, biskote, recel qershie, akullore" },
+    { "name": "Waffle Dubai", "price": 600, "description": "Nutella, kadaif, pistachio, krem pistachio" },
+    { "name": "Akullore", "price": 100, "description": "" },
+    { "name": "Mix Frutash", "price": 300, "description": "" }
+  ]
+}

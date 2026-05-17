@@ -1,0 +1,18 @@
+{
+  "items": [
+    { "name": "Hamburger", "price": 300, "description": "majonez, xaxiq, qofte, sallate jeshile, domate, kastravec, ketchup, mustard" },
+    { "name": "Sanchesse Burger", "price": 450, "description": "salce kosi, double qofte vici, kastravec, domate, majonez ketchup, djath, sallat jeshile, patate" },
+    { "name": "Barbeque Burger", "price": 550, "description": "qofte vici double, majonez, djath i bardhe, domate, patate, salce bbq" },
+    { "name": "Big Best Burger", "price": 600, "description": "salce kosi, dopio qofte, domate, kastraveca turshi, djath i bardhe, patate" },
+    { "name": "Ova Burger", "price": 850, "description": "sos, sallate jeshile, dopio qofte, miser, kastravec turshi, djath i bardhe, djath cedar, patate" },
+    { "name": "Sufllaqe", "price": 300, "description": "xaxiq, domate, kastravec, sallate jeshile, mish, patate, ketchup, majonez, mustard" },
+    { "name": "Sufllaqe e Hapur", "price": 550, "description": "xaxiq, majonez, sallate jeshile, qepe, kastraveca, domate, mish, patate, ketchup" },
+    { "name": "Tost", "price": 150, "description": "majonez, domate, dopio proshute, ketchup" },
+    { "name": "Hot Dog", "price": 300, "description": "xaxiq, majonez, kremvice, sallat jeshile, domate, kastravec, qep, patate, ketchup, mustard" },
+    { "name": "Doner", "price": 250, "description": "majonez, xaxiq, sallat jeshile, domate, kastravec, qep, mish, patate, ketchup, mustard" },
+    { "name": "Sanduic Club", "price": 450, "description": "3 buke tosti, xaxiq, majonez, djath guda, proshute, sallate jeshile, domate" },
+    { "name": "Shawarma (Kebap)", "price": 450, "description": "sallate jeshile, kastraveca, domate, patate, mish pule, salce kosi, majonez, ketchup" },
+    { "name": "Pite", "price": 50, "description": "" },
+    { "name": "Panine", "price": 50, "description": "" }
+  ]
+}

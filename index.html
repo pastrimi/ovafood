@@ -1,0 +1,3953 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>OVA Restaurant | Premium Dining</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <style>
+        :root {
+            --color-primary: #BA5218;
+            /* Burnt Orange */
+            --color-bg: #1A1A1A;
+            --color-card-bg: #262626;
+            --color-text: #FFFFFF;
+            --color-text-muted: #A0A0A0;
+            --shadow-soft: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+            --radius-card: 16px;
+            --font-main: 'Outfit', sans-serif;
+            --header-height: 80px;
+            --nav-height: 60px;
+            --safe-area-top: env(safe-area-inset-top, 0px);
+            --safe-area-bottom: env(safe-area-inset-bottom, 20px);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+            /* Hide Scrollbars Globally for App Feel */
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        *::-webkit-scrollbar {
+            display: none;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            overflow-x: hidden;
+            min-height: 100vh;
+            /* Prevent rubber-banding on iOS */
+            overscroll-behavior-y: none;
+            width: 100%;
+            max-width: 100vw;
+        }
+
+        /* --- Dynamic Background Architecture --- */
+        .background-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .bg-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 0.8s ease-in-out;
+        }
+
+        /* Default state is visible initially */
+        .bg-layer.active {
+            opacity: 0.4;
+            /* Low contrast for readability */
+        }
+
+        /* Overlay to ensure text readability */
+        .bg-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(26, 26, 26, 0.9), rgba(26, 26, 26, 0.7));
+            z-index: 0;
+        }
+
+        /* --- Header --- */
+        header {
+            height: calc(var(--header-height) + var(--safe-area-top));
+            padding-top: var(--safe-area-top);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-left: 16px;
+            padding-right: 16px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            color: var(--color-text);
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .logo span {
+            color: var(--color-primary);
+        }
+
+        /* --- Sticky Navigation --- */
+        .sticky-nav-container {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(26, 26, 26, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 8px 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .sticky-nav {
+            display: flex;
+            overflow-x: auto;
+            gap: 8px;
+            padding: 0 16px;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .nav-item {
+            flex: 0 0 auto;
+            padding: 12px 16px;
+            /* Larger touch target for mobile */
+            border-radius: 24px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--color-text-muted);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+            white-space: nowrap;
+            min-height: 44px;
+            /* iOS recommended touch target */
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-item.active {
+            background-color: rgba(186, 82, 24, 0.15);
+            color: var(--color-primary);
+            border-color: var(--color-primary);
+            box-shadow: 0 0 15px rgba(186, 82, 24, 0.2);
+        }
+
+        /* --- Menu Content --- */
+        main {
+            padding: 16px;
+            padding-bottom: calc(100px + var(--safe-area-bottom));
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        section {
+            margin-bottom: 40px;
+            scroll-margin-top: calc(var(--nav-height) + 40px);
+        }
+
+        .section-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--color-primary);
+            padding-left: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            line-height: 1.4;
+        }
+
+        /* --- App-Like Cards --- */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            width: 100%;
+        }
+
+        .menu-card {
+            background-color: var(--color-card-bg);
+            border-radius: var(--radius-card);
+            padding: 16px;
+            box-shadow: var(--shadow-soft);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+
+            /* Animation Initial State */
+            opacity: 0;
+            transform: translateY(20px);
+
+            /* Hardware acceleration */
+            will-change: transform, opacity;
+        }
+
+        .menu-card.visible {
+            animation: fadeInUp 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .menu-card:active {
+            transform: scale(0.98);
+            border-color: rgba(186, 82, 24, 0.5);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .item-name {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--color-text);
+            line-height: 1.4;
+            flex: 1;
+            min-width: 0;
+            word-wrap: break-word;
+        }
+
+        .item-price {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .item-desc {
+            font-size: 0.85rem;
+            color: var(--color-text-muted);
+            line-height: 1.5;
+            margin-bottom: 12px;
+            word-wrap: break-word;
+        }
+
+        .add-btn {
+            align-self: flex-end;
+            background: rgba(255, 255, 255, 0.08);
+            color: var(--color-text);
+            border: none;
+            padding: 12px 20px;
+            /* Larger touch target */
+            border-radius: 12px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            -webkit-tap-highlight-color: rgba(186, 82, 24, 0.2);
+            min-height: 44px;
+            /* iOS recommended touch target */
+            width: 100%;
+        }
+
+        .add-btn:active {
+            background: var(--color-primary);
+            transform: scale(0.98);
+        }
+
+        .section-header-image {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: var(--radius-card);
+            margin-bottom: 16px;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            /* Fade in animation */
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Cart Styles */
+        .cart-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, rgba(186, 82, 24, 0.95), rgba(140, 62, 18, 0.95));
+            backdrop-filter: blur(10px);
+            padding: 12px 16px;
+            display: none;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 999;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            animation: slideUp 0.3s ease-out;
+            padding-bottom: calc(12px + env(safe-area-inset-bottom));
+            gap: 12px;
+        }
+
+        .cart-bar.visible {
+            display: flex;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(100%);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        .cart-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            flex: 1;
+            min-width: 0;
+        }
+
+        .cart-count {
+            font-size: 1rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .cart-total {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .view-order-btn {
+            background: white;
+            color: var(--color-primary);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            min-height: 44px;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .view-order-btn:active {
+            transform: scale(0.95);
+        }
+
+        /* Cart Modal */
+        .cart-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            display: none;
+            align-items: flex-end;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        .cart-modal.visible {
+            display: flex;
+        }
+
+        .cart-content {
+            background: var(--color-bg);
+            width: 100%;
+            max-height: 90vh;
+            border-radius: 24px 24px 0 0;
+            padding: 20px 16px;
+            padding-bottom: calc(20px + env(safe-area-inset-bottom));
+            overflow-y: auto;
+            animation: slideUpModal 0.3s ease-out;
+        }
+
+        @keyframes slideUpModal {
+            from {
+                transform: translateY(100%);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        .cart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .cart-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--color-text);
+        }
+
+        .close-cart-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: var(--color-text);
+            font-size: 1.5rem;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            flex-shrink: 0;
+        }
+
+        .close-cart-btn:active {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(0.9);
+        }
+
+        .cart-items {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .cart-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .cart-item-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .cart-item-name {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--color-text);
+            margin-bottom: 4px;
+            word-wrap: break-word;
+        }
+
+        .cart-item-price {
+            font-size: 0.85rem;
+            color: var(--color-primary);
+        }
+
+        .cart-item-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-shrink: 0;
+        }
+
+        .qty-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: var(--color-text);
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            flex-shrink: 0;
+        }
+
+        .qty-btn:active {
+            background: var(--color-primary);
+            transform: scale(0.9);
+        }
+
+        .qty-display {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--color-text);
+            min-width: 28px;
+            text-align: center;
+        }
+
+        .cart-summary {
+            background: rgba(186, 82, 24, 0.1);
+            border: 1px solid rgba(186, 82, 24, 0.3);
+            border-radius: 16px;
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+
+        .cart-summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        .cart-summary-row:last-child {
+            margin-bottom: 0;
+            padding-top: 10px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--color-primary);
+        }
+
+        .cart-message {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 14px;
+            text-align: center;
+            line-height: 1.6;
+            color: var(--color-text-muted);
+            font-size: 0.85rem;
+        }
+
+        .cart-message strong {
+            color: var(--color-text);
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+
+        .place-order-btn {
+            width: 100%;
+            background: var(--color-primary);
+            color: #fff;
+            border: none;
+            border-radius: 14px;
+            padding: 16px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 14px;
+            transition: all 0.2s;
+            letter-spacing: 0.3px;
+        }
+
+        .place-order-btn:active {
+            transform: scale(0.97);
+            opacity: 0.9;
+        }
+
+        /* Waiter Modal */
+        .waiter-modal {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: 2000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .waiter-modal.visible {
+            display: flex;
+        }
+
+        .waiter-modal-content {
+            background: var(--color-card-bg);
+            border-radius: 24px;
+            padding: 36px 28px;
+            text-align: center;
+            max-width: 360px;
+            width: 100%;
+            animation: scaleIn 0.3s ease-out;
+        }
+
+        .waiter-icon {
+            font-size: 3.5rem;
+            margin-bottom: 16px;
+        }
+
+        .waiter-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--color-text);
+            margin-bottom: 14px;
+        }
+
+        .waiter-message {
+            font-size: 0.95rem;
+            color: var(--color-text-muted);
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .waiter-message-al {
+            font-size: 0.85rem;
+            color: var(--color-text-muted);
+            opacity: 0.7;
+            line-height: 1.5;
+            margin-bottom: 24px;
+            font-style: italic;
+        }
+
+        .waiter-close-btn {
+            background: var(--color-primary);
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            padding: 14px 40px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .waiter-close-btn:active {
+            transform: scale(0.95);
+        }
+
+        .empty-cart {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--color-text-muted);
+        }
+
+        .empty-cart-icon {
+            font-size: 3rem;
+            margin-bottom: 12px;
+            opacity: 0.3;
+        }
+
+        /* Size Selection Modal */
+        .size-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.92);
+            z-index: 1001;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s ease-out;
+            padding: 20px;
+        }
+
+        .size-modal.visible {
+            display: flex;
+        }
+
+        .size-modal-content {
+            background: var(--color-bg);
+            width: 100%;
+            max-width: 500px;
+            border-radius: 24px;
+            padding: 24px;
+            animation: scaleIn 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .size-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .size-modal-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--color-text);
+        }
+
+        .close-size-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: var(--color-text);
+            font-size: 1.5rem;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            flex-shrink: 0;
+        }
+
+        .close-size-btn:active {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(0.9);
+        }
+
+        .size-modal-subtitle {
+            color: var(--color-text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .size-options {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .size-option {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .size-option:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--color-primary);
+            transform: translateY(-2px);
+        }
+
+        .size-option:active {
+            transform: scale(0.98);
+        }
+
+        .size-option-large {
+            border-color: rgba(186, 82, 24, 0.3);
+            background: rgba(186, 82, 24, 0.08);
+        }
+
+        .size-option-large:hover {
+            border-color: var(--color-primary);
+            background: rgba(186, 82, 24, 0.15);
+        }
+
+        .size-badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: linear-gradient(135deg, var(--color-primary), #d4621f);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 2px 8px rgba(186, 82, 24, 0.4);
+        }
+
+        .size-icon {
+            font-size: 2.5rem;
+            flex-shrink: 0;
+        }
+
+        .size-info {
+            flex: 1;
+            text-align: left;
+        }
+
+        .size-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--color-text);
+            margin-bottom: 2px;
+        }
+
+        .size-name-albanian {
+            font-size: 0.85rem;
+            color: var(--color-text-muted);
+            margin-bottom: 8px;
+        }
+
+        .size-price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--color-primary);
+        }
+
+        .size-savings {
+            font-size: 0.85rem;
+            color: #4CAF50;
+            font-weight: 600;
+            margin-top: 6px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .size-savings::before {
+            content: "💰";
+            font-size: 1rem;
+        }
+
+        /* Responsive adjustments for size modal */
+        @media (max-width: 480px) {
+            .size-modal-content {
+                padding: 20px;
+            }
+
+            .size-modal-title {
+                font-size: 1.2rem;
+            }
+
+            .size-option {
+                padding: 16px;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .size-info {
+                text-align: center;
+            }
+
+            .size-icon {
+                font-size: 2rem;
+            }
+
+            .size-badge {
+                top: 8px;
+                right: 8px;
+                font-size: 0.7rem;
+                padding: 3px 10px;
+            }
+        }
+
+        /* --- Category Hero Section --- */
+        .category-hero {
+            padding: 20px 20px 40px;
+            text-align: center;
+            margin-top: 80px;
+            /* Space for header */
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #fff, #ccc);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subtitle {
+            color: var(--color-text-muted);
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 16px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-card {
+            position: relative;
+            height: 180px;
+            border-radius: 20px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-decoration: none;
+            display: block;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            border-color: var(--color-primary);
+            box-shadow: 0 10px 30px rgba(186, 82, 24, 0.2);
+        }
+
+        .cat-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.5s ease;
+        }
+
+        .category-card:hover .cat-bg {
+            transform: scale(1.1);
+        }
+
+        .cat-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.2));
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .cat-icon {
+            font-size: 2rem;
+            margin-bottom: 8px;
+            transform: translateY(0);
+            transition: transform 0.3s ease;
+        }
+
+        .category-card:hover .cat-icon {
+            transform: translateY(-5px);
+        }
+
+        .cat-name {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        /* --- Review Footer --- */
+
+        /* ===== RESPONSIVE BREAKPOINTS ===== */
+
+
+        /* Small phones (up to 360px) */
+        @media (max-width: 360px) {
+            .logo {
+                font-size: 1.3rem;
+                letter-spacing: 1px;
+            }
+
+            .nav-item {
+                font-size: 0.8rem;
+                padding: 10px 14px;
+            }
+
+            .section-title {
+                font-size: 1.1rem;
+            }
+
+            .item-name {
+                font-size: 0.95rem;
+            }
+
+            .item-price {
+                font-size: 0.95rem;
+            }
+
+            .add-btn {
+                font-size: 0.85rem;
+                padding: 10px 16px;
+            }
+        }
+
+        /* Tablets and small laptops (768px and up) */
+        @media (min-width: 768px) {
+            header {
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+
+            .logo {
+                font-size: 2rem;
+                letter-spacing: 2px;
+            }
+
+            .sticky-nav {
+                padding: 0 24px;
+                gap: 12px;
+            }
+
+            .nav-item {
+                font-size: 0.95rem;
+                padding: 12px 20px;
+            }
+
+            main {
+                padding: 24px;
+                padding-bottom: calc(100px + var(--safe-area-bottom));
+            }
+
+            section {
+                margin-bottom: 60px;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+                margin-bottom: 28px;
+            }
+
+            .menu-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .menu-card {
+                padding: 20px;
+            }
+
+            .item-name {
+                font-size: 1.1rem;
+            }
+
+            .item-price {
+                font-size: 1.1rem;
+            }
+
+            .item-desc {
+                font-size: 0.95rem;
+            }
+
+            .add-btn {
+                width: auto;
+                min-width: 140px;
+            }
+
+            .section-header-image {
+                height: 200px;
+            }
+
+            .cart-bar {
+                padding: 16px 24px;
+                padding-bottom: calc(16px + env(safe-area-inset-bottom));
+            }
+
+            .cart-count {
+                font-size: 1.1rem;
+            }
+
+            .cart-total {
+                font-size: 0.95rem;
+            }
+
+            .view-order-btn {
+                padding: 12px 28px;
+                font-size: 1rem;
+            }
+
+            .cart-content {
+                max-height: 85vh;
+                padding: 28px;
+                padding-bottom: calc(28px + env(safe-area-inset-bottom));
+            }
+
+            .cart-title {
+                font-size: 1.6rem;
+            }
+
+            .cart-item {
+                padding: 16px;
+                flex-wrap: nowrap;
+            }
+
+            .cart-item-name {
+                font-size: 1rem;
+            }
+
+            .cart-item-price {
+                font-size: 0.9rem;
+            }
+
+            .cart-summary {
+                padding: 20px;
+            }
+
+            .cart-message {
+                font-size: 0.95rem;
+                padding: 16px;
+            }
+        }
+
+        /* Large tablets and laptops (1024px and up) */
+        @media (min-width: 1024px) {
+            main {
+                max-width: 1400px;
+                margin: 0 auto;
+                padding: 32px;
+                padding-bottom: calc(100px + var(--safe-area-bottom));
+            }
+
+            .menu-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 24px;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .menu-card:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 12px 40px -10px rgba(0, 0, 0, 0.6);
+            }
+
+            .add-btn:hover {
+                background: rgba(255, 255, 255, 0.12);
+            }
+
+            .nav-item:hover {
+                background-color: rgba(186, 82, 24, 0.1);
+                border-color: rgba(186, 82, 24, 0.3);
+            }
+
+            .cart-content {
+                max-width: 600px;
+                margin: 0 auto;
+                border-radius: 24px;
+            }
+
+            .cart-modal {
+                align-items: center;
+            }
+        }
+
+        /* Extra large screens (1440px and up) */
+        @media (min-width: 1440px) {
+            main {
+                max-width: 1600px;
+            }
+
+            .menu-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        /* Landscape orientation on mobile */
+        @media (max-height: 600px) and (orientation: landscape) {
+            header {
+                height: 60px;
+            }
+
+            .logo {
+                font-size: 1.3rem;
+            }
+
+            .sticky-nav-container {
+                padding: 6px 0;
+            }
+
+            .nav-item {
+                padding: 8px 14px;
+                font-size: 0.85rem;
+            }
+
+            .cart-content {
+                max-height: 95vh;
+            }
+        }
+
+        /* --- Review System Styles (Google-Style) --- */
+        .review-btn {
+            position: fixed;
+            top: calc(var(--header-height) + var(--safe-area-top) + 16px);
+            right: 16px;
+            background: linear-gradient(135deg, var(--color-primary), #d4621f);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 24px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            cursor: pointer;
+            z-index: 99;
+            box-shadow: 0 4px 20px rgba(186, 82, 24, 0.4);
+            transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            min-height: 44px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .review-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(186, 82, 24, 0.5);
+        }
+
+        .review-btn:active {
+            transform: scale(0.95);
+        }
+
+        .review-btn-icon {
+            font-size: 1.2rem;
+        }
+
+        /* Review Modal */
+        .review-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: 1002;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s ease-out;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .review-modal.visible {
+            display: flex;
+        }
+
+        .review-modal-content {
+            background: #2a2a2a;
+            width: 100%;
+            max-width: 600px;
+            max-height: 90vh;
+            border-radius: 16px;
+            padding: 0;
+            animation: scaleIn 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .review-modal-header {
+            padding: 24px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .review-header-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .review-business-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--color-text);
+        }
+
+        .review-subtitle {
+            font-size: 0.85rem;
+            color: var(--color-text-muted);
+            margin-top: 2px;
+        }
+
+        .close-review-btn {
+            background: transparent;
+            border: none;
+            color: var(--color-text-muted);
+            font-size: 1.8rem;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            flex-shrink: 0;
+        }
+
+        .close-review-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--color-text);
+        }
+
+        .close-review-btn:active {
+            transform: scale(0.9);
+        }
+
+        /* Review Form Body */
+        .review-form-body {
+            padding: 24px;
+            overflow-y: auto;
+            flex: 1;
+        }
+
+        /* Rating Categories */
+        .rating-category {
+            margin-bottom: 24px;
+        }
+
+        .rating-category-label {
+            font-size: 0.95rem;
+            color: var(--color-text);
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .star-rating {
+            display: flex;
+            gap: 8px;
+        }
+
+        .star {
+            font-size: 2rem;
+            cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+            color: rgba(255, 255, 255, 0.2);
+            filter: grayscale(100%);
+        }
+
+        .star:hover,
+        .star.active {
+            color: #FFD700;
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
+
+        .star:active {
+            transform: scale(0.95);
+        }
+
+        /* Review Text Area */
+        .review-text-section {
+            margin-bottom: 24px;
+        }
+
+        .review-textarea {
+            width: 100%;
+            min-height: 120px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 14px;
+            color: var(--color-text);
+            font-family: var(--font-main);
+            font-size: 0.95rem;
+            resize: vertical;
+            transition: all 0.2s;
+        }
+
+        .review-textarea:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .review-textarea::placeholder {
+            color: var(--color-text-muted);
+        }
+
+        /* Review Footer */
+        .review-modal-footer {
+            padding: 20px 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            gap: 12px;
+            justify-content: flex-end;
+        }
+
+        .cancel-btn,
+        .post-btn {
+            padding: 12px 28px;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+            min-height: 44px;
+        }
+
+        .cancel-btn {
+            background: transparent;
+            color: var(--color-text-muted);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .cancel-btn:hover {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--color-text);
+        }
+
+        .post-btn {
+            background: linear-gradient(135deg, var(--color-primary), #d4621f);
+            color: white;
+            box-shadow: 0 4px 12px rgba(186, 82, 24, 0.3);
+        }
+
+        .post-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .post-btn:not(:disabled):hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(186, 82, 24, 0.4);
+        }
+
+        .post-btn:not(:disabled):active {
+            transform: scale(0.98);
+        }
+
+        /* Thank You Screen */
+        .thank-you-screen {
+            display: none;
+            text-align: center;
+            padding: 60px 24px;
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        .thank-you-screen.visible {
+            display: block;
+        }
+
+        .thank-you-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            animation: scaleIn 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .thank-you-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--color-text);
+            margin-bottom: 12px;
+        }
+
+        .thank-you-message {
+            color: var(--color-text-muted);
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        .close-thank-you-btn {
+            background: linear-gradient(135deg, var(--color-primary), #d4621f);
+            color: white;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            min-height: 48px;
+        }
+
+        .close-thank-you-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(186, 82, 24, 0.4);
+        }
+
+        .close-thank-you-btn:active {
+            transform: scale(0.98);
+        }
+
+        /* Selection Chips (Google Style) */
+        .review-question-section {
+            margin-bottom: 24px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .review-question-title {
+            font-size: 0.95rem;
+            color: var(--color-text);
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .chips-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .chip-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--color-text);
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: var(--font-main);
+        }
+
+        .chip-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .chip-btn.selected {
+            background: rgba(138, 180, 248, 0.2);
+            /* Google blue tint */
+            border-color: #8ab4f8;
+            color: #8ab4f8;
+        }
+
+        /* Photo Upload Section */
+        .photo-upload-container {
+            margin-top: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .photo-buttons-row {
+            display: flex;
+            gap: 10px;
+        }
+
+        .add-photo-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: var(--color-text);
+            padding: 10px 16px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: var(--font-main);
+            flex: 1;
+        }
+
+        .add-photo-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        .photo-preview-area {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 4px;
+        }
+
+        .photo-preview-item {
+            width: 70px;
+            height: 70px;
+            border-radius: 8px;
+            object-fit: cover;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Highlighted Post Button */
+        .post-btn {
+            background: #1a73e8;
+            /* Google Blue */
+            color: white;
+            box-shadow: 0 4px 12px rgba(26, 115, 232, 0.4);
+            border: none;
+            font-weight: 600;
+            padding: 10px 24px;
+            border-radius: 24px;
+            transition: all 0.2s;
+        }
+
+        .post-btn:not(:disabled) {
+            animation: pulse-blue 2s infinite;
+        }
+
+        .post-btn:not(:disabled):hover {
+            background: #1557b0;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(26, 115, 232, 0.5);
+        }
+
+        @keyframes pulse-blue {
+            0% {
+                box-shadow: 0 0 0 0 rgba(26, 115, 232, 0.4);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(26, 115, 232, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(26, 115, 232, 0);
+            }
+        }
+
+        /* Responsive adjustments for review modal */
+        @media (max-width: 480px) {
+            .review-btn {
+                padding: 10px 16px;
+                font-size: 0.75rem;
+            }
+
+            .review-modal-content {
+                max-height: 95vh;
+            }
+
+            .review-business-name {
+                font-size: 1.1rem;
+            }
+
+            .star {
+                font-size: 1.8rem;
+            }
+
+            .review-form-body {
+                padding: 20px;
+            }
+
+            .review-modal-footer {
+                flex-direction: column;
+            }
+
+            .cancel-btn,
+            .post-btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Dynamic Backgrounds -->
+    <div class="background-container">
+        <div class="bg-overlay"></div>
+        <div class="bg-layer active" id="bg-dessert" style="background-image: url('assets/bg_dessert.png');"></div>
+        <div class="bg-layer" id="bg-fish" style="background-image: url('assets/bg_fish.png');"></div>
+        <div class="bg-layer" id="bg-fresh" style="background-image: url('assets/fresh.png');"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <!-- USER_CONTENT: Logo and Title Area -->
+        <div class="logo">OVA <span>RESTAURANT</span></div>
+    </header>
+
+    <!-- Category Hero Section -->
+    <section class="category-hero">
+        <h1 class="hero-title">Welcome to Ova Restaurant</h1>
+        <p class="hero-subtitle">Discover our delicious menu categories</p>
+
+        <div class="category-grid">
+            <a href="#starters" class="category-card">
+                <div class="cat-bg" style="background-image: url('assets/cat_starters.png');"></div>
+                <div class="cat-overlay">
+                    <div class="cat-icon">🥗</div>
+                    <div class="cat-name">Starters</div>
+                </div>
+            </a>
+
+            <a href="#pizza" class="category-card">
+                <div class="cat-bg" style="background-image: url('assets/cat_pizza.png');"></div>
+                <div class="cat-overlay">
+                    <div class="cat-icon">🍕</div>
+                    <div class="cat-name">Pizza</div>
+                </div>
+            </a>
+
+            <a href="#pasta" class="category-card">
+                <div class="cat-bg" style="background-image: url('assets/cat_pasta.png');"></div>
+                <div class="cat-overlay">
+                    <div class="cat-icon">🍝</div>
+                    <div class="cat-name">Pasta</div>
+                </div>
+            </a>
+
+            <a href="#meat" class="category-card">
+                <div class="cat-bg" style="background-image: url('assets/cat_meat.png');"></div>
+                <div class="cat-overlay">
+                    <div class="cat-icon">🥩</div>
+                    <div class="cat-name">Meat</div>
+                </div>
+            </a>
+
+            <a href="#burgers" class="category-card">
+                <div class="cat-bg" style="background-image: url('assets/cat_burgers.png');"></div>
+                <div class="cat-overlay">
+                    <div class="cat-icon">🍔</div>
+                    <div class="cat-name">Burgers</div>
+                </div>
+            </a>
+
+            <a href="#fish" class="category-card">
+                <div class="cat-bg" style="background-image: url('assets/cat_fish.png');"></div>
+                <div class="cat-overlay">
+                    <div class="cat-icon">🐟</div>
+                    <div class="cat-name">Fish</div>
+                </div>
+            </a>
+
+            <a href="#dessert" class="category-card">
+                <div class="cat-bg" style="background-image: url('assets/cat_dessert.png');"></div>
+                <div class="cat-overlay">
+                    <div class="cat-icon">🍰</div>
+                    <div class="cat-name">Desserts</div>
+                </div>
+            </a>
+
+            <a href="#drinks" class="category-card">
+                <div class="cat-bg" style="background-image: url('assets/cat_drinks.png');"></div>
+                <div class="cat-overlay">
+                    <div class="cat-icon">🍹</div>
+                    <div class="cat-name">Drinks</div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Sticky Navigation -->
+    <div class="sticky-nav-container">
+        <nav class="sticky-nav">
+            <a href="#starters" class="nav-item active" data-target="bg-dessert">Starters / Antipasta</a>
+            <a href="#pizza" class="nav-item" data-target="bg-dessert">Pizza</a>
+            <a href="#pasta" class="nav-item" data-target="bg-dessert">Pasta</a>
+            <a href="#meat" class="nav-item" data-target="bg-fish">Meat / Mishi</a>
+            <a href="#burgers" class="nav-item" data-target="bg-fish">Burgers</a>
+            <a href="#fish" class="nav-item" data-target="bg-fish">Fish / Peshku</a>
+            <a href="#dessert" class="nav-item" data-target="bg-fresh">Desserts / Ëmbëlsirë</a>
+            <a href="#drinks" class="nav-item" data-target="bg-fresh">Drinks / Pije</a>
+        </nav>
+    </div>
+
+    <!-- Menu Content -->
+    <main>
+
+        <!-- Starters Section -->
+        <section id="starters" data-bg="bg-dessert">
+            <h2 class="section-title">Starters / Antipasta</h2>
+            <div class="menu-grid">
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Ova Breakfast / Mengjesi Ova</h3>
+                        <span class="item-price">700 L</span>
+                    </div>
+                    <p class="item-desc">Proshut pule, proshut vici, recel luleshtrydhe, recel fiku, recel kumbulle,
+                        djath kackavall, djath i bardhe</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Ham Omelette / Omlet me proshut</h3>
+                        <span class="item-price">250 L</span>
+                    </div>
+                    <p class="item-desc">Vez, domate, kastravec, salc kosi, proshut pule</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Vegetable Omelette / Omlet me perime</h3>
+                        <span class="item-price">250 L</span>
+                    </div>
+                    <p class="item-desc">Vez, domate, kastravec, salc kosi, perime</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Cheese Omelette / Omlet me djath</h3>
+                        <span class="item-price">250 L</span>
+                    </div>
+                    <p class="item-desc">Vez, domate, kastravec, salc kosi, djath i bardhe</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Mix Omelette / Omlet mix</h3>
+                        <span class="item-price">280 L</span>
+                    </div>
+                    <p class="item-desc">Vez, domate, kastravec, salc kosi, proshut pule, djath i bardhe, perime</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Fried Egg / Vez e skuqur</h3>
+                        <span class="item-price">200 L</span>
+                    </div>
+                    <p class="item-desc">Vez, domate, kastravec, salc kosi</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Sunny Side Up Egg / Vez sy</h3>
+                        <span class="item-price">200 L</span>
+                    </div>
+                    <p class="item-desc">Vez, domate, kastravec, salc kosi</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Scrambled Egg / Veze e rrahur</h3>
+                        <span class="item-price">200 L</span>
+                    </div>
+                    <p class="item-desc">Vez, domate, kastravec, salc kosi</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Green Salad / Sallat Jeshile</h3>
+                        <span class="item-price">400 L</span>
+                    </div>
+                    <p class="item-desc">(domate, qep, kastravec, djath i bardhe, spec, ullinj, rigon)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Greek Salad / Sallat Greke</h3>
+                        <span class="item-price">450 L</span>
+                    </div>
+                    <p class="item-desc">(sallat jeshile, limon, ullinj, qep)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Mix Salad / Sallat Mix</h3>
+                        <span class="item-price">450 L</span>
+                    </div>
+                    <p class="item-desc">(sallat jeshile, ullinj, qep, domate, kastravec, limon, spec)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Village Salad / Sallat Fshati</h3>
+                        <span class="item-price">400 L</span>
+                    </div>
+                    <p class="item-desc">(sallat jeshile, domate, kastravec, djath te bardhe)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Arugula Salad / Sallate Rukola</h3>
+                        <span class="item-price">450 L</span>
+                    </div>
+                    <p class="item-desc">(pomodorini, rucola, grana)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Caesar Salad / Sallate Cezar</h3>
+                        <span class="item-price">550 L</span>
+                    </div>
+                    <p class="item-desc">(sallate jeshile, buke e thekur, fileto pule, miser, grana)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Fish Soup / Supe peshku</h3>
+                        <span class="item-price">300 L</span>
+                    </div>
+
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Chicken Soup / Supe pule</h3>
+                        <span class="item-price">250 L</span>
+                    </div>
+
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Vegetable Soup / Supe perime</h3>
+                        <span class="item-price">200 L</span>
+                    </div>
+
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">French Fries / Patate te skuqura</h3>
+                        <span class="item-price">250 L</span>
+                    </div>
+
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Qofte gafore</h3>
+                        <span class="item-price">450 L</span>
+                    </div>
+
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Djath kackavall zgare</h3>
+                        <span class="item-price">350 L</span>
+                    </div>
+
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Djath i bardh</h3>
+                        <span class="item-price">200 L</span>
+                    </div>
+
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Salc kosi</h3>
+                        <span class="item-price">250 L</span>
+                    </div>
+
+                    <button class="add-btn">Add to Order</button>
+                </article>
+            </div>
+        </section>
+
+        <!-- Pizza Section -->
+        <section id="pizza" data-bg="bg-dessert">
+            <h2 class="section-title">Pizza</h2>
+            <div class="menu-grid">
+
+                <article class="menu-card" data-has-sizes="true" data-small-price="400" data-large-price="700">
+                    <div class="card-header">
+                        <h3 class="item-name">Margherita</h3>
+                        <span class="item-price">400 L</span>
+                    </div>
+                    <p class="item-desc">(mozzarela, salce domatesh)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card" data-has-sizes="true" data-small-price="450" data-large-price="850">
+                    <div class="card-header">
+                        <h3 class="item-name">Ham / Proshute</h3>
+                        <span class="item-price">450 L</span>
+                    </div>
+                    <p class="item-desc">(mozzarela, salce domatesh, proshute)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card" data-has-sizes="true" data-small-price="450" data-large-price="800">
+                    <div class="card-header">
+                        <h3 class="item-name">Salami / Sallam</h3>
+                        <span class="item-price">450 L</span>
+                    </div>
+                    <p class="item-desc">(mozzarela, salce domatesh, sallam)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card" data-has-sizes="true" data-small-price="550" data-large-price="950">
+                    <div class="card-header">
+                        <h3 class="item-name">Ham & Salami / Proshute Sallam</h3>
+                        <span class="item-price">550 L</span>
+                    </div>
+                    <p class="item-desc">(mozzarela, salcedomatesh, proshute, sallam)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card" data-has-sizes="true" data-small-price="500" data-large-price="900">
+                    <div class="card-header">
+                        <h3 class="item-name">Spicy / Pikante</h3>
+                        <span class="item-price">500 L</span>
+                    </div>
+                    <p class="item-desc">(mozzarela, salce domatesh, sallam pikant, speca)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card" data-has-sizes="true" data-small-price="550" data-large-price="1000">
+                    <div class="card-header">
+                        <h3 class="item-name">Spicy Mushroom / Pikante Kerpudhe</h3>
+                        <span class="item-price">550 L</span>
+                    </div>
+                    <p class="item-desc">(mozzarela, salce domatesh, sallam pikant, kerpudhe e fresket)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card" data-has-sizes="true" data-small-price="550" data-large-price="950">
+                    <div class="card-header">
+                        <h3 class="item-name">Wudy Sausage / Wudy</h3>
+                        <span class="item-price">550 L</span>
+                    </div>
+                    <p class="item-desc">(mozzarela, salce domatesh, KREMVICE)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card" data-has-sizes="true" data-small-price="600" data-large-price="1000">
+                    <div class="card-header">
+                        <h3 class="item-name">Wudy & Fries / Wudy Patate</h3>
+                        <span class="item-price">600 L</span>
+                    </div>
+                    <p class="item-desc">(mozzarela, salc domatesh, kremvice, patate)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card" data-has-sizes="true" data-small-price="550" data-large-price="950">
+                    <div class="card-header">
+                        <h3 class="item-name">4 Cheeses / 4 Djathrat</h3>
+                        <span class="item-price">550 L</span>
+                    </div>
+                    <p class="item-desc">(mozzarela, salce domatesh, pana, grana, gorgonzola)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card" data-has-sizes="true" data-small-price="600" data-large-price="1000">
+                    <div class="card-header">
+                        <h3 class="item-name">Tuna / Ton</h3>
+                        <span class="item-price">600 L</span>
+                    </div>
+                    <p class="item-desc">(mozzarela, salce domatesh, ton, ullinj)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card" data-has-sizes="true" data-small-price="450" data-large-price="850">
+                    <div class="card-header">
+                        <h3 class="item-name">Mushroom / Kerpudhe</h3>
+                        <span class="item-price">450 L</span>
+                    </div>
+                    <p class="item-desc">(mozzarela, salce domatesh, kerpudhe e fresket)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card" data-has-sizes="true" data-small-price="600" data-large-price="1050">
+                    <div class="card-header">
+                        <h3 class="item-name">Tuna & Mushroom / Ton Kerpudhe</h3>
+                        <span class="item-price">600 L</span>
+                    </div>
+                    <p class="item-desc">(salce, mozzarella, ton, kerpudhe)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card" data-has-sizes="true" data-small-price="600" data-large-price="1100">
+                    <div class="card-header">
+                        <h3 class="item-name">4 Seasons / 4 Stinet</h3>
+                        <span class="item-price">600 L</span>
+                    </div>
+                    <p class="item-desc">(mozzarela, salce domatesh, proshute, speca, pikant, ullinje, ton, kerpudha)
+                    </p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card" data-has-sizes="true" data-small-price="600" data-large-price="1100">
+                    <div class="card-header">
+                        <h3 class="item-name">Capricciosa / Kapricoze</h3>
+                        <span class="item-price">600 L</span>
+                    </div>
+                    <p class="item-desc">(mozzarela, salce domatesh, kungull, ullinj, speca, kerpudha)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card" data-has-sizes="true" data-small-price="500" data-large-price="950">
+                    <div class="card-header">
+                        <h3 class="item-name">Vegetarian / Vegjetariane</h3>
+                        <span class="item-price">500 L</span>
+                    </div>
+                    <p class="item-desc">(mozzarela, salce domatesh, kungull, ullinj, speca, kerpudha)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card" data-has-sizes="true" data-small-price="750" data-large-price="1150">
+                    <div class="card-header">
+                        <h3 class="item-name">Seafood / Fruta Deti</h3>
+                        <span class="item-price">750 L</span>
+                    </div>
+                    <p class="item-desc">(mozzarela, salce domatesh, fruta deti)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card" data-has-sizes="true" data-small-price="650" data-large-price="1100">
+                    <div class="card-header">
+                        <h3 class="item-name">Sujuk & 4 Cheeses / Suxhuk 4 Djathrat</h3>
+                        <span class="item-price">650 L</span>
+                    </div>
+                    <p class="item-desc">(mozzarela, suxhuk pikant, djath i bardhe, gorgonzola, guda)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card" data-has-sizes="true" data-small-price="550" data-large-price="950">
+                    <div class="card-header">
+                        <h3 class="item-name">Carbonara / Karrbunara</h3>
+                        <span class="item-price">550 L</span>
+                    </div>
+                    <p class="item-desc">(mozzarela, proshute, pana, veze)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card" data-has-sizes="true" data-small-price="650" data-large-price="1150">
+                    <div class="card-header">
+                        <h3 class="item-name">Mix Pizza / Mix</h3>
+                        <span class="item-price">650 L</span>
+                    </div>
+                    <p class="item-desc">(salce, mozzarella, mishpule, patate)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card" data-has-sizes="true" data-small-price="650" data-large-price="1150">
+                    <div class="card-header">
+                        <h3 class="item-name">Ova Pizza</h3>
+                        <span class="item-price">650 L</span>
+                    </div>
+                    <p class="item-desc">(salce, mozzarella, suxhuk, pana, rucola, pomodorini)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card" data-has-sizes="true" data-small-price="650" data-large-price="1100">
+                    <div class="card-header">
+                        <h3 class="item-name">American Pizza / Pizza Amerikane</h3>
+                        <span class="item-price">650 L</span>
+                    </div>
+                    <p class="item-desc">(salce, mozarela, wudy, patate)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Focaccia / Fogace</h3>
+                        <span class="item-price">250 L</span>
+                    </div>
+                    <p class="item-desc">(domate, djath)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Focaccia Bruschetta / Brusket Fogace</h3>
+                        <span class="item-price">450 L</span>
+                    </div>
+
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card" data-has-sizes="true" data-small-price="600" data-large-price="1000">
+                    <div class="card-header">
+                        <h3 class="item-name">Pizza La Crema</h3>
+                        <span class="item-price">600 L</span>
+                    </div>
+
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Proshute</h3>
+                        <span class="item-price">350 L</span>
+                    </div>
+                    <p class="item-desc">(mozzarela, salce, proshute)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Proshute Kerpudhe</h3>
+                        <span class="item-price">400 L</span>
+                    </div>
+                    <p class="item-desc">(mozzarela, salce, proshute, kerpudhe)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Wudy</h3>
+                        <span class="item-price">350 L</span>
+                    </div>
+                    <p class="item-desc">(mozzarela, salce, sallam)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Pikante</h3>
+                        <span class="item-price">350 L</span>
+                    </div>
+                    <p class="item-desc">(mozzarela, salce, sallam pikant)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Mix Sallami</h3>
+                        <span class="item-price">450 L</span>
+                    </div>
+                    <p class="item-desc">(mozzarela, salce, sallam)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Ton</h3>
+                        <span class="item-price">400 L</span>
+                    </div>
+                    <p class="item-desc">(mozzarela, salce, ton)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Fruta Deti</h3>
+                        <span class="item-price">550 L</span>
+                    </div>
+                    <p class="item-desc">(mozzarela, salce, fruta deti)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+            </div>
+        </section>
+
+        <!-- Pasta Section -->
+        <section id="pasta" data-bg="bg-dessert">
+            <h2 class="section-title">Pasta</h2>
+            <div class="menu-grid">
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Seafood Linguine / Linguini fruta deti</h3>
+                        <span class="item-price">650 L</span>
+                    </div>
+                    <p class="item-desc">Sepje, kallamar, karkalec, midhje, pomodorini, majdanoz</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Shrimp & Zucchini Linguine / Linguini me karkalec e kungull</h3>
+                        <span class="item-price">750 L</span>
+                    </div>
+                    <p class="item-desc">Karkalec, kungull, pomodorini, majdanoz</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Pasta Bolognese / Pasta bolonjeze</h3>
+                        <span class="item-price">450 L</span>
+                    </div>
+
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Butter Pasta / Pasta me gjalp</h3>
+                        <span class="item-price">350 L</span>
+                    </div>
+
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Truffle Cream Ravioli / Ravioli krem tartufi</h3>
+                        <span class="item-price">850 L</span>
+                    </div>
+                    <p class="item-desc">Pana, tartuf</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Truffle & Shrimp Ravioli / Ravioli tartuf karkalec</h3>
+                        <span class="item-price">900 L</span>
+                    </div>
+                    <p class="item-desc">Karkalec, pana, tartuf</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Seafood Risotto / Rizoto fruta deti</h3>
+                        <span class="item-price">750 L</span>
+                    </div>
+                    <p class="item-desc">Sepje, kallamar, karkalec, midhje, pomodorini, majdanoz</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Shrimp & Zucchini Risotto / Rizoto me karkalec e kungull</h3>
+                        <span class="item-price">750 L</span>
+                    </div>
+                    <p class="item-desc">Karkalec, kungull, pomodorini, majdanoz</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Shrimp & Saffron Risotto / Rizoto karkalec e zaferano</h3>
+                        <span class="item-price">700 L</span>
+                    </div>
+                    <p class="item-desc">Karkalec, pomodorini, zaferano, majdanoz</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Simple Risotto / Rizoto e thjesht</h3>
+                        <span class="item-price">300 L</span>
+                    </div>
+                    <p class="item-desc">(oriz rizo pomodorini, zaferano, majdanoz)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+            </div>
+        </section>
+
+        <!-- Meat Section -->
+        <section id="meat" data-bg="bg-fish">
+            <h2 class="section-title">Meat / Mishi</h2>
+            <div class="menu-grid">
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Chicken Fillet with Fries / Fileto pule me patate</h3>
+                        <span class="item-price">650 L</span>
+                    </div>
+
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Beef Steak with Fries / Biftek vici me patate</h3>
+                        <span class="item-price">750 L</span>
+                    </div>
+
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Beef Chop with Fries / Berxoll vici me patate</h3>
+                        <span class="item-price">750 L</span>
+                    </div>
+
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Clay Pot Casserole / Tave balte</h3>
+                        <span class="item-price">550 L</span>
+                    </div>
+
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Chicken Cutlet / Kotoleta Pule</h3>
+                        <span class="item-price">550 L</span>
+                    </div>
+
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Shish Kebab / Shishqebap</h3>
+                        <span class="item-price">500 L</span>
+                    </div>
+
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Hamburger</h3>
+                        <span class="item-price">300 L</span>
+                    </div>
+                    <p class="item-desc">(majonez, xaxiq, qofte, sallate jeshile, domate, kastravec, ketchup, majonez,
+                        mustard)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Sanchesse Burger</h3>
+                        <span class="item-price">450 L</span>
+                    </div>
+                    <p class="item-desc">(salce kosi, double qofte vici, kastravec, domate, majonez ketchup, djath,
+                        sallat jeshile, patate)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Barbeque Burger</h3>
+                        <span class="item-price">550 L</span>
+                    </div>
+                    <p class="item-desc">(qofte vici double, majonez, djath i bardhe, domate, patate, salce bbq)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Big Best Burger</h3>
+                        <span class="item-price">600 L</span>
+                    </div>
+                    <p class="item-desc">(salce kosi, dopio qofte, domate, kastravec turshi, djath i bardhe, patate)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Ova Burger</h3>
+                        <span class="item-price">850 L</span>
+                    </div>
+                    <p class="item-desc">(sos, sallate jeshile, dopio qofte, miser, kastravec turshi, djath i bardhe,
+                        djath cedar, patate)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Souvlaki / Sufllaqe</h3>
+                        <span class="item-price">300 L</span>
+                    </div>
+                    <p class="item-desc">(xaxiq, domate, kastravec, sallate jeshile, mish, patate, kechup, majonez,
+                        mustard)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Open Souvlaki / Sufllaqe e Hapur</h3>
+                        <span class="item-price">550 L</span>
+                    </div>
+                    <p class="item-desc">(xaxiq, majonez, sallate jeshile, qepe, kastravec, domate, mish, patate,
+                        ketchup)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Toast / Tost</h3>
+                        <span class="item-price">150 L</span>
+                    </div>
+                    <p class="item-desc">(majonez, domate, dopio proshute, ketchup)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Hot Dog</h3>
+                        <span class="item-price">300 L</span>
+                    </div>
+                    <p class="item-desc">(xaxiq, majonez, kremvice, sallat jeshile, domate, kastravec, qep patate,
+                        ketchup, mustard)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Doner</h3>
+                        <span class="item-price">250 L</span>
+                    </div>
+                    <p class="item-desc">(majonez, xaxiq, sallat jeshile, domate, kastravec, qep, mish, patate)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Club Sandwich / Sanduic Club</h3>
+                        <span class="item-price">450 L</span>
+                    </div>
+                    <p class="item-desc">(3 buke tosti, xaxiq, majonez, djath guda, proshute, sallate jeshile, domate)
+                    </p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Shawarma (Kebap)</h3>
+                        <span class="item-price">450 L</span>
+                    </div>
+                    <p class="item-desc">(sallate jeshile, kastravec, domate, patate, mish pule, salce kosi, majonez,
+                        kecup)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Pita / Pite</h3>
+                        <span class="item-price">50 L</span>
+                    </div>
+
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Panini / Panine</h3>
+                        <span class="item-price">50 L</span>
+                    </div>
+
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Beef Ham / Proshute Vici</h3>
+                        <span class="item-price">250 L</span>
+                    </div>
+                    <p class="item-desc">(mozzarela, proshute, domate, kastravec, majonez)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Salami / Sallam</h3>
+                        <span class="item-price">250 L</span>
+                    </div>
+                    <p class="item-desc">(mozzarela, sallam, domate, kastravec, majonez)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Spicy / Pikant</h3>
+                        <span class="item-price">250 L</span>
+                    </div>
+                    <p class="item-desc">(mozzarela, sallam pikant, speca, domate katsravec majonez)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Tuna / Ton</h3>
+                        <span class="item-price">250 L</span>
+                    </div>
+                    <p class="item-desc">(mozzarela, ton, ullinj, domate, kastravec, majonez)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Mix</h3>
+                        <span class="item-price">300 L</span>
+                    </div>
+                    <p class="item-desc">(mozzarela, sallam pikant, proshute, sallam, ullinj, domate kastravec majonez
+                        ton, kerpudhe, speca)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Vegetarian / Vegjetarian</h3>
+                        <span class="item-price">250 L</span>
+                    </div>
+                    <p class="item-desc">(mozzarela, speca, ullinj, domate, kastravec, majonez, kerpudhe, kungull)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Potato Sandwich / Sanduic Patate</h3>
+                        <span class="item-price">300 L</span>
+                    </div>
+                    <p class="item-desc">(mozzarela, proshute, patate, ullinj, domate, kastravec, majonez)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Village / Fshati</h3>
+                        <span class="item-price">200 L</span>
+                    </div>
+                    <p class="item-desc">(salce kosi, speca , ullinj, domate, kastravec, djath i bardhe)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Wudy</h3>
+                        <span class="item-price">250 L</span>
+                    </div>
+                    <p class="item-desc">(mozzarela, kremvice, ullinj, domate, kastravec, majonez)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">4 Cheeses / 4 Djathrat</h3>
+                        <span class="item-price">250 L</span>
+                    </div>
+                    <p class="item-desc">(mozzarela, domate, kastravec, speca, pana, grana, gorgonzola)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Chicken Ham / Proshut Pule</h3>
+                        <span class="item-price">250 L</span>
+                    </div>
+                    <p class="item-desc">(mozzarela, proshute pule, domate, kastravec, majonez)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Ova Sandwich / Sanduic Ova</h3>
+                        <span class="item-price">350 L</span>
+                    </div>
+                    <p class="item-desc">(salc kosi, salat jeshile, domate, kastravec, mish, patate )</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Spicy 4 Cheeses / 4 Djathrat Pikant</h3>
+                        <span class="item-price">280 L</span>
+                    </div>
+
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Wudy 4 Cheeses / 4 Djathrat Wudy</h3>
+                        <span class="item-price">280 L</span>
+                    </div>
+
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Chicken Cutlet / Kotoleta Pule</h3>
+                        <span class="item-price">350 L</span>
+                    </div>
+
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Shishqebap</h3>
+                        <span class="item-price">500 L</span>
+                    </div>
+
+                    <button class="add-btn">Add to Order</button>
+                </article>
+            </div>
+        </section>
+
+        <!-- Burgers Section -->
+        <section id="burgers" data-bg="bg-fish">
+            <h2 class="section-title">Burgers</h2>
+            <div class="menu-grid">
+            </div>
+        </section>
+
+        <!-- Fish Section -->
+        <section id="fish" data-bg="bg-fish">
+            <h2 class="section-title">Fish / Peshku</h2>
+            <div class="menu-grid">
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Grilled Gilt-head Bream / Koc zgare</h3>
+                        <span class="item-price">850 L</span>
+                    </div>
+
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Grilled Sea Bass / Levrek zgare</h3>
+                        <span class="item-price">850 L</span>
+                    </div>
+
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Fried Hake / Merluc fritur</h3>
+                        <span class="item-price">850 L</span>
+                    </div>
+
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Fried Red Mullet / Barbun fritur</h3>
+                        <span class="item-price">850 L</span>
+                    </div>
+
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Squid (Grilled/Fried) / Kallamar zgare / friture</h3>
+                        <span class="item-price">950 L</span>
+                    </div>
+
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Cuttlefish (Grilled/Fried) / Sepje zgare / friture</h3>
+                        <span class="item-price">950 L</span>
+                    </div>
+
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Shrimp (Grilled/Fried) / Karkalec zgare / fritur</h3>
+                        <span class="item-price">950 L</span>
+                    </div>
+
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Fried Mix / Mix friure</h3>
+                        <span class="item-price">1000 L</span>
+                    </div>
+
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Grilled Octopus / Oktapod zgare</h3>
+                        <span class="item-price">1150 L</span>
+                    </div>
+
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Mixed Plate / Pjate Mixe</h3>
+                        <span class="item-price">850 L</span>
+                    </div>
+
+                    <button class="add-btn">Add to Order</button>
+                </article>
+            </div>
+        </section>
+
+        <!-- Dessert Section -->
+        <section id="dessert" data-bg="bg-fresh">
+            <h2 class="section-title">Desserts / Ëmbëlsirë</h2>
+            <div class="menu-grid">
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Nutella</h3>
+                        <span class="item-price">220 L</span>
+                    </div>
+
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Nutella Cookie / Nutella Biskote</h3>
+                        <span class="item-price">270 L</span>
+                    </div>
+
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Nutella Banana / Nutella Banane</h3>
+                        <span class="item-price">280 L</span>
+                    </div>
+
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Lidia</h3>
+                        <span class="item-price">300 L</span>
+                    </div>
+                    <p class="item-desc">Nutella, banane, biskote / Nutella, banana, cookie</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Kivi / Kiwi</h3>
+                        <span class="item-price">300 L</span>
+                    </div>
+                    <p class="item-desc">Nutella, kivi, biskote / Nutella, kiwi, cookie</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Bounty</h3>
+                        <span class="item-price">300 L</span>
+                    </div>
+                    <p class="item-desc">Cokollate e bardhe, Arre kokosi / white cocolate, coconut</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Cherry</h3>
+                        <span class="item-price">250 L</span>
+                    </div>
+                    <p class="item-desc">Recel qershie / cherry jam</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Rafaelo</h3>
+                        <span class="item-price">300 L</span>
+                    </div>
+                    <p class="item-desc">Cokollate e bardhe, Arre kokosi, lajthi / white cocolate, coconut, nuts</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Oreo</h3>
+                        <span class="item-price">300 L</span>
+                    </div>
+                    <p class="item-desc">Nutella, Oreo, banana / Nutella, Oreo, banana</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Dubai</h3>
+                        <span class="item-price">400 L</span>
+                    </div>
+                    <p class="item-desc">Nutella, pistachio, kadaif, shurup pstachio</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+            </div>
+        </section>
+
+        <!-- Drinks Section -->
+        <section id="drinks" data-bg="bg-fresh">
+            <h2 class="section-title">Drinks / Pije</h2>
+            <div class="menu-grid">
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">B52</h3>
+                        <span class="item-price">200 L</span>
+                    </div>
+                    <p class="item-desc">Energy Drink</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Golden Eagle</h3>
+                        <span class="item-price">170 L</span>
+                    </div>
+                    <p class="item-desc">Energy Drink</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Red Bull</h3>
+                        <span class="item-price">250 L</span>
+                    </div>
+                    <p class="item-desc">Energy Drink</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Red Bull Summer</h3>
+                        <span class="item-price">300 L</span>
+                    </div>
+                    <p class="item-desc">Energy Drink</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Red Bull Bottle</h3>
+                        <span class="item-price">400 L</span>
+                    </div>
+                    <p class="item-desc">Energy Drink (Shishe)</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Lemon Soda</h3>
+                        <span class="item-price">180 L</span>
+                    </div>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Orange Soda</h3>
+                        <span class="item-price">180 L</span>
+                    </div>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Schwepps Tonic</h3>
+                        <span class="item-price">180 L</span>
+                    </div>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Schwepps Lemon</h3>
+                        <span class="item-price">180 L</span>
+                    </div>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Coca Cola Can / Kanaçe</h3>
+                        <span class="item-price">200 L</span>
+                    </div>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Coca Cola Bottle / Shishe</h3>
+                        <span class="item-price">200 L</span>
+                    </div>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Fanta Orange Can / Kanaçe</h3>
+                        <span class="item-price">200 L</span>
+                    </div>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Fanta Orange Bottle / Shishe</h3>
+                        <span class="item-price">200 L</span>
+                    </div>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Exotic Fanta</h3>
+                        <span class="item-price">200 L</span>
+                    </div>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Bravo Can / Kanaçe</h3>
+                        <span class="item-price">180 L</span>
+                    </div>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Rose Lemonade</h3>
+                        <span class="item-price">400 L</span>
+                    </div>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Cold Tea / Caj i ftohte</h3>
+                        <span class="item-price">180 L</span>
+                    </div>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Pepsi</h3>
+                        <span class="item-price">180 L</span>
+                    </div>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Sprite</h3>
+                        <span class="item-price">180 L</span>
+                    </div>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Water / Uje</h3>
+                        <span class="item-price">90 L</span>
+                    </div>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Vitamin Water</h3>
+                        <span class="item-price">180 L</span>
+                    </div>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Heiniken</h3>
+                        <span class="item-price">300 L</span>
+                    </div>
+                    <p class="item-desc">Alcohol Free / Pa Alkool</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">Bavaria</h3>
+                        <span class="item-price">250 L</span>
+                    </div>
+                    <p class="item-desc">Alcohol Free / Pa Alkool</p>
+                    <button class="add-btn">Add to Order</button>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // --- 1. Intersection Observer for Scroll Animations (Fade In) ---
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const cardObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // Only animate once
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.menu-card').forEach(card => {
+                cardObserver.observe(card);
+            });
+
+
+            // --- 2. Active Navigation & Background Switching ---
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-item');
+            const bgLayers = document.querySelectorAll('.bg-layer');
+
+            const sectionObserverOptions = {
+                root: null,
+                rootMargin: '-40% 0px -60% 0px', // Trigger when section is in the middle
+                threshold: 0
+            };
+
+            const sectionObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute('id');
+                        const bgId = entry.target.getAttribute('data-bg');
+
+                        // Update Nav
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === `#${id}`) {
+                                link.classList.add('active');
+
+                                // Scroll nav item into view if needed (horizontal scroll)
+                                link.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                            }
+                        });
+
+                        // Update Background
+                        bgLayers.forEach(layer => {
+                            layer.classList.remove('active');
+                            if (layer.id === bgId) {
+                                layer.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }, sectionObserverOptions);
+
+            sections.forEach(section => {
+                sectionObserver.observe(section);
+            });
+
+            // --- 3. Smooth Scroll for Nav Links & Category Cards ---
+            function smoothScrollToSection(targetId) {
+                const targetSection = document.querySelector(targetId);
+                if (!targetSection) return;
+                const headerOffset = 140;
+                const offsetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+                window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+            }
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    smoothScrollToSection(link.getAttribute('href'));
+                });
+            });
+
+            document.querySelectorAll('.category-card').forEach(card => {
+                card.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    smoothScrollToSection(card.getAttribute('href'));
+                });
+            });
+
+        });
+    </script>
+
+    <!-- Size Selection Modal -->
+    <div class="size-modal" id="sizeModal">
+        <div class="size-modal-content">
+            <div class="size-modal-header">
+                <h2 class="size-modal-title" id="sizeModalTitle">Choose Your Size</h2>
+                <button class="close-size-btn" id="closeSizeBtn">×</button>
+            </div>
+            <p class="size-modal-subtitle">Select the perfect size for your pizza</p>
+            <div class="size-options">
+                <button class="size-option" id="smallSizeBtn">
+                    <div class="size-icon">🍕</div>
+                    <div class="size-info">
+                        <div class="size-name">Small Pizza</div>
+                        <div class="size-name-albanian">Pizza e Vogël</div>
+                        <div class="size-price" id="smallPrice">400 L</div>
+                    </div>
+                </button>
+                <button class="size-option size-option-large" id="largeSizeBtn">
+                    <div class="size-badge">Best Value!</div>
+                    <div class="size-icon">🍕🍕</div>
+                    <div class="size-info">
+                        <div class="size-name">Large Pizza (Family)</div>
+                        <div class="size-name-albanian">Pizza e Madhe (Familjare)</div>
+                        <div class="size-price" id="largePrice">700 L</div>
+                        <div class="size-savings" id="sizeSavings">Get Large for only 300 L more!</div>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Bar (Sticky Bottom) -->
+    <div class="cart-bar" id="cartBar">
+        <div class="cart-info">
+            <div class="cart-count" id="cartCount">0 items</div>
+            <div class="cart-total" id="cartTotal">Total: 0 L</div>
+        </div>
+        <button class="view-order-btn" id="viewOrderBtn">View Order</button>
+    </div>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2 class="cart-title">Your Order</h2>
+                <button class="close-cart-btn" id="closeCartBtn">×</button>
+            </div>
+            <div id="cartItemsContainer"></div>
+        </div>
+    </div>
+
+    <!-- Cart JavaScript -->
+    <script>
+        // Cart Management
+        const cart = [];
+        const cartBar = document.getElementById('cartBar');
+        const cartModal = document.getElementById('cartModal');
+        const cartCount = document.getElementById('cartCount');
+        const cartTotal = document.getElementById('cartTotal');
+        const viewOrderBtn = document.getElementById('viewOrderBtn');
+        const closeCartBtn = document.getElementById('closeCartBtn');
+        const cartItemsContainer = document.getElementById('cartItemsContainer');
+
+        // Size selection modal elements
+        const sizeModal = document.getElementById('sizeModal');
+        const closeSizeBtn = document.getElementById('closeSizeBtn');
+        const smallSizeBtn = document.getElementById('smallSizeBtn');
+        const largeSizeBtn = document.getElementById('largeSizeBtn');
+        const smallPrice = document.getElementById('smallPrice');
+        const largePrice = document.getElementById('largePrice');
+        const sizeSavings = document.getElementById('sizeSavings');
+        const sizeModalTitle = document.getElementById('sizeModalTitle');
+
+        // Current item being sized
+        let currentSizingItem = null;
+
+        // Add to cart — event delegation so dynamically loaded cards work too
+        document.addEventListener('click', (e) => {
+            const btn = e.target.closest('.add-btn');
+            if (!btn) return;
+            const card = btn.closest('.menu-card');
+            if (!card) return;
+            const hasSizes = card.getAttribute('data-has-sizes') === 'true';
+
+            if (hasSizes) {
+                const name = card.querySelector('.item-name').textContent;
+                const smallPriceValue = parseInt(card.getAttribute('data-small-price'));
+                const largePriceValue = parseInt(card.getAttribute('data-large-price'));
+                const difference = largePriceValue - smallPriceValue;
+
+                currentSizingItem = {
+                    name: name,
+                    smallPrice: smallPriceValue,
+                    largePrice: largePriceValue,
+                    button: btn
+                };
+
+                sizeModalTitle.textContent = name;
+                smallPrice.textContent = `${smallPriceValue} L`;
+                largePrice.textContent = `${largePriceValue} L`;
+                sizeSavings.textContent = `Get Large for only ${difference} L more!`;
+                sizeModal.classList.add('visible');
+            } else {
+                const name = card.querySelector('.item-name').textContent;
+                const priceText = card.querySelector('.item-price').textContent;
+                const price = parseInt(priceText.replace(/[^0-9]/g, ''));
+                addToCart(name, price, btn);
+            }
+        });
+
+        // Size selection handlers
+        smallSizeBtn.addEventListener('click', () => {
+            if (currentSizingItem) {
+                const itemName = `${currentSizingItem.name} (Small)`;
+                addToCart(itemName, currentSizingItem.smallPrice, currentSizingItem.button);
+                sizeModal.classList.remove('visible');
+                currentSizingItem = null;
+            }
+        });
+
+        largeSizeBtn.addEventListener('click', () => {
+            if (currentSizingItem) {
+                const itemName = `${currentSizingItem.name} (Large)`;
+                addToCart(itemName, currentSizingItem.largePrice, currentSizingItem.button);
+                sizeModal.classList.remove('visible');
+                currentSizingItem = null;
+            }
+        });
+
+        // Close size modal
+        closeSizeBtn.addEventListener('click', () => {
+            sizeModal.classList.remove('visible');
+            currentSizingItem = null;
+        });
+
+        // Close modal when clicking outside
+        sizeModal.addEventListener('click', (e) => {
+            if (e.target === sizeModal) {
+                sizeModal.classList.remove('visible');
+                currentSizingItem = null;
+            }
+        });
+
+        // Add to cart helper function
+        function addToCart(name, price, button) {
+            const existingItem = cart.find(item => item.name === name);
+            if (existingItem) {
+                existingItem.quantity++;
+            } else {
+                cart.push({ name, price, quantity: 1 });
+            }
+
+            updateCart();
+
+            // Visual feedback on button
+            button.textContent = 'Added!';
+            setTimeout(() => {
+                button.textContent = 'Add to Order';
+            }, 800);
+        }
+
+        function updateCart() {
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+
+            // Update cart bar
+            cartCount.textContent = `${totalItems} ${totalItems === 1 ? 'item' : 'items'}`;
+            cartTotal.textContent = '';
+
+            // Show/hide cart bar
+            if (totalItems > 0) {
+                cartBar.classList.add('visible');
+            } else {
+                cartBar.classList.remove('visible');
+            }
+
+            renderCartItems();
+        }
+
+        function renderCartItems() {
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = `
+                    <div class="empty-cart">
+                        <div class="empty-cart-icon">🍽️</div>
+                        <p>Your order is empty</p>
+                    </div>
+                `;
+                return;
+            }
+
+            const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+
+            cartItemsContainer.innerHTML = `
+                <div class="cart-items">
+                    ${cart.map((item, index) => `
+                        <div class="cart-item">
+                            <div class="cart-item-info">
+                                <div class="cart-item-name">${item.name}</div>
+                                <div class="cart-item-price">${item.price} L each</div>
+                            </div>
+                            <div class="cart-item-controls">
+                                <button class="qty-btn" onclick="decreaseQuantity(${index})">−</button>
+                                <span class="qty-display">${item.quantity}</span>
+                                <button class="qty-btn" onclick="increaseQuantity(${index})">+</button>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+                <div class="cart-summary">
+                    <div class="cart-summary-row">
+                        <span>Subtotal:</span>
+                        <span>${totalPrice} L</span>
+                    </div>
+                    <div class="cart-summary-row">
+                        <span>Total:</span>
+                        <span>${totalPrice} L</span>
+                    </div>
+                </div>
+                <button class="place-order-btn" onclick="document.getElementById('waiterModal').classList.add('visible')">
+                    Place Order
+                </button>
+            `;
+        }
+
+        function increaseQuantity(index) {
+            cart[index].quantity++;
+            updateCart();
+        }
+
+        function decreaseQuantity(index) {
+            if (cart[index].quantity > 1) {
+                cart[index].quantity--;
+            } else {
+                cart.splice(index, 1);
+            }
+            updateCart();
+        }
+
+        // View order button
+        viewOrderBtn.addEventListener('click', () => {
+            cartModal.classList.add('visible');
+            renderCartItems();
+        });
+
+        // Close cart modal
+        closeCartBtn.addEventListener('click', () => {
+            cartModal.classList.remove('visible');
+        });
+
+        // Close modal when clicking outside
+        cartModal.addEventListener('click', (e) => {
+            if (e.target === cartModal) {
+                cartModal.classList.remove('visible');
+            }
+        });
+    </script>
+
+    <script>
+        // ============================================
+        // WAITER ORDER SYSTEM
+        // ============================================
+        document.addEventListener('DOMContentLoaded', () => {
+            const waiterModal = document.getElementById('waiterModal');
+            const closeWaiterBtn = document.getElementById('closeWaiterBtn');
+            if (closeWaiterBtn) {
+                closeWaiterBtn.addEventListener('click', () => {
+                    waiterModal.classList.remove('visible');
+                });
+            }
+            if (waiterModal) {
+                waiterModal.addEventListener('click', (e) => {
+                    if (e.target === waiterModal) waiterModal.classList.remove('visible');
+                });
+            }
+        });
+        // ============================================
+        // REVIEW SYSTEM (ISOLATED SCRIPT) — DISABLED
+        // ============================================
+        document.addEventListener('DOMContentLoaded', () => {
+            const reviewModal = document.getElementById('reviewModal');
+            const openReviewBtn = document.getElementById('openReviewBtn');
+            const closeReviewBtn = document.getElementById('closeReviewBtn');
+            const cancelBtn = document.getElementById('cancelBtn');
+            const postBtn = document.getElementById('postBtn');
+            const reviewForm = document.getElementById('reviewForm');
+            const thankYouScreen = document.getElementById('thankYouScreen');
+            const closeThankYouBtn = document.getElementById('closeThankYouBtn');
+            const reviewTextarea = document.getElementById('reviewTextarea');
+
+            // Photo elements
+            const btnTakePhoto = document.getElementById('btnTakePhoto');
+            const btnUploadPhoto = document.getElementById('btnUploadPhoto');
+            const cameraInput = document.getElementById('cameraInput');
+            const uploadInput = document.getElementById('uploadInput');
+            const photoPreviewArea = document.getElementById('photoPreviewArea');
+
+            let ratings = {
+                overall: 0,
+                food: 0,
+                service: 0,
+                atmosphere: 0
+            };
+
+            // Open review modal
+            if (openReviewBtn) {
+                openReviewBtn.addEventListener('click', (e) => {
+                    e.preventDefault(); // Prevent any default behavior
+                    reviewModal.classList.add('visible');
+                    resetReviewForm();
+                });
+            } else {
+                console.error('Review button not found!');
+            }
+
+            // Close review modal
+            if (closeReviewBtn) {
+                closeReviewBtn.addEventListener('click', () => {
+                    reviewModal.classList.remove('visible');
+                });
+            }
+
+            if (cancelBtn) {
+                cancelBtn.addEventListener('click', () => {
+                    reviewModal.classList.remove('visible');
+                });
+            }
+
+            // Close modal when clicking outside
+            if (reviewModal) {
+                reviewModal.addEventListener('click', (e) => {
+                    if (e.target === reviewModal) {
+                        reviewModal.classList.remove('visible');
+                    }
+                });
+            }
+
+            // Photo Upload Logic
+            function handleFileSelect(e) {
+                if (e.target.files && e.target.files.length > 0) {
+                    Array.from(e.target.files).forEach(file => {
+                        if (file.type.startsWith('image/')) {
+                            const reader = new FileReader();
+                            reader.onload = (e) => {
+                                const img = document.createElement('img');
+                                img.src = e.target.result;
+                                img.classList.add('photo-preview-item');
+                                photoPreviewArea.appendChild(img);
+                            };
+                            reader.readAsDataURL(file);
+                        }
+                    });
+                }
+            }
+
+            if (btnTakePhoto && cameraInput) {
+                btnTakePhoto.addEventListener('click', () => {
+                    cameraInput.click();
+                });
+                cameraInput.addEventListener('change', handleFileSelect);
+            }
+
+            if (btnUploadPhoto && uploadInput) {
+                btnUploadPhoto.addEventListener('click', () => {
+                    uploadInput.click();
+                });
+                uploadInput.addEventListener('change', handleFileSelect);
+            }
+
+            // Chip selection logic
+            document.querySelectorAll('.chips-container').forEach(container => {
+                container.addEventListener('click', (e) => {
+                    if (e.target.classList.contains('chip-btn')) {
+                        // Deselect other chips in the same container
+                        container.querySelectorAll('.chip-btn').forEach(btn => btn.classList.remove('selected'));
+                        // Select clicked chip
+                        e.target.classList.add('selected');
+                    }
+                });
+            });
+
+            // Star rating interaction for all categories
+            function setupStarRating(category) {
+                const stars = document.querySelectorAll(`.star-rating[data-category="${category}"] .star`);
+
+                stars.forEach((star, index) => {
+                    star.addEventListener('click', () => {
+                        ratings[category] = index + 1;
+                        updateStars(category);
+                        checkFormValidity();
+                    });
+
+                    star.addEventListener('mouseenter', () => {
+                        highlightStars(category, index + 1);
+                    });
+                });
+
+                // Reset stars on mouse leave
+                const ratingContainer = document.querySelector(`.star-rating[data-category="${category}"]`);
+                if (ratingContainer) {
+                    ratingContainer.addEventListener('mouseleave', () => {
+                        updateStars(category);
+                    });
+                }
+            }
+
+            function highlightStars(category, rating) {
+                const stars = document.querySelectorAll(`.star-rating[data-category="${category}"] .star`);
+                stars.forEach((star, index) => {
+                    if (index < rating) {
+                        star.classList.add('active');
+                    } else {
+                        star.classList.remove('active');
+                    }
+                });
+            }
+
+            function updateStars(category) {
+                highlightStars(category, ratings[category]);
+            }
+
+            function checkFormValidity() {
+                // Enable post button if overall rating is selected
+                if (postBtn) {
+                    postBtn.disabled = ratings.overall === 0;
+                }
+            }
+
+            // Setup all rating categories
+            setupStarRating('overall');
+            setupStarRating('food');
+            setupStarRating('service');
+            setupStarRating('atmosphere');
+
+            // Submit review
+            if (postBtn) {
+                postBtn.addEventListener('click', () => {
+                    if (ratings.overall === 0) return;
+
+                    const reviewText = reviewTextarea ? reviewTextarea.value.trim() : '';
+
+                    // Show thank you screen (NO REDIRECT TO GOOGLE)
+                    showThankYouScreen(ratings.overall >= 4);
+
+                    // Log the review
+                    console.log('Review submitted:', {
+                        ratings: ratings,
+                        reviewText: reviewText,
+                        photos: (cameraInput?.files.length || 0) + (uploadInput?.files.length || 0),
+                        timestamp: new Date().toISOString()
+                    });
+                });
+            }
+
+            function showThankYouScreen(isHighRating) {
+                if (reviewForm) reviewForm.style.display = 'none';
+                if (thankYouScreen) thankYouScreen.classList.add('visible');
+
+                const thankYouIcon = document.getElementById('thankYouIcon');
+                const thankYouTitle = document.getElementById('thankYouTitle');
+                const thankYouMessage = document.getElementById('thankYouMessage');
+
+                if (thankYouIcon) thankYouIcon.textContent = '🙏';
+                if (thankYouTitle) thankYouTitle.textContent = 'Thank You!';
+
+                if (thankYouMessage) {
+                    if (isHighRating) {
+                        thankYouMessage.innerHTML = 'We appreciate your positive feedback!';
+                    } else {
+                        thankYouMessage.innerHTML = 'We appreciate your feedback!<br>Your input helps us improve our service.';
+                    }
+                }
+            }
+
+            function resetReviewForm() {
+                ratings = {
+                    overall: 0,
+                    food: 0,
+                    service: 0,
+                    atmosphere: 0
+                };
+
+                updateStars('overall');
+                updateStars('food');
+                updateStars('service');
+                updateStars('atmosphere');
+
+                // Reset chips
+                document.querySelectorAll('.chip-btn').forEach(btn => btn.classList.remove('selected'));
+
+                if (reviewTextarea) reviewTextarea.value = '';
+                if (cameraInput) cameraInput.value = '';
+                if (uploadInput) uploadInput.value = '';
+                if (photoPreviewArea) photoPreviewArea.innerHTML = ''; // Clear previews
+
+                if (postBtn) postBtn.disabled = true;
+                if (reviewForm) reviewForm.style.display = 'block';
+                if (thankYouScreen) thankYouScreen.classList.remove('visible');
+            }
+
+            // Close thank you screen
+            if (closeThankYouBtn) {
+                closeThankYouBtn.addEventListener('click', () => {
+                    reviewModal.classList.remove('visible');
+                    setTimeout(resetReviewForm, 300);
+                });
+            }
+        });
+    </script>
+
+    <!-- Waiter Notification Modal -->
+    <div class="waiter-modal" id="waiterModal">
+        <div class="waiter-modal-content">
+            <div class="waiter-icon">🛎️</div>
+            <h2 class="waiter-title">Call Your Waiter</h2>
+            <p class="waiter-message">Please show your order to the waiter — they will take care of everything for you!</p>
+            <p class="waiter-message-al">Ju lutem tregojani porosinë kamarierit — ai do të kujdeset për gjithçka!</p>
+            <button class="waiter-close-btn" id="closeWaiterBtn">Got it!</button>
+        </div>
+    </div>
+
+    <!-- Review Modal (Google-Style) — HIDDEN -->
+    <div class="review-modal" id="reviewModal" style="display:none!important">
+        <div class="review-modal-content">
+            <!-- Header -->
+            <div class="review-modal-header">
+                <div class="review-header-left">
+                    <div>
+                        <div class="review-business-name">Ova Restaurant</div>
+                    </div>
+                </div>
+                <button class="close-review-btn" id="closeReviewBtn">×</button>
+            </div>
+
+            <!-- Review Form -->
+            <div id="reviewForm">
+                <div class="review-form-body">
+                    <!-- Overall Rating -->
+                    <div class="rating-category">
+                        <div class="rating-category-label">Overall Rating</div>
+                        <div class="star-rating" data-category="overall">
+                            <span class="star" data-rating="1">⭐</span>
+                            <span class="star" data-rating="2">⭐</span>
+                            <span class="star" data-rating="3">⭐</span>
+                            <span class="star" data-rating="4">⭐</span>
+                            <span class="star" data-rating="5">⭐</span>
+                        </div>
+                    </div>
+
+                    <!-- Food Rating -->
+                    <div class="rating-category">
+                        <div class="rating-category-label">Food</div>
+                        <div class="star-rating" data-category="food">
+                            <span class="star" data-rating="1">⭐</span>
+                            <span class="star" data-rating="2">⭐</span>
+                            <span class="star" data-rating="3">⭐</span>
+                            <span class="star" data-rating="4">⭐</span>
+                            <span class="star" data-rating="5">⭐</span>
+                        </div>
+                    </div>
+
+                    <!-- Service Rating -->
+                    <div class="rating-category">
+                        <div class="rating-category-label">Service</div>
+                        <div class="star-rating" data-category="service">
+                            <span class="star" data-rating="1">⭐</span>
+                            <span class="star" data-rating="2">⭐</span>
+                            <span class="star" data-rating="3">⭐</span>
+                            <span class="star" data-rating="4">⭐</span>
+                            <span class="star" data-rating="5">⭐</span>
+                        </div>
+                    </div>
+
+                    <!-- Atmosphere Rating -->
+                    <div class="rating-category">
+                        <div class="rating-category-label">Atmosphere</div>
+                        <div class="star-rating" data-category="atmosphere">
+                            <span class="star" data-rating="1">⭐</span>
+                            <span class="star" data-rating="2">⭐</span>
+                            <span class="star" data-rating="3">⭐</span>
+                            <span class="star" data-rating="4">⭐</span>
+                            <span class="star" data-rating="5">⭐</span>
+                        </div>
+                    </div>
+
+                    <!-- What did you get? -->
+                    <div class="review-question-section">
+                        <div class="review-question-title">What did you get?</div>
+                        <div class="chips-container">
+                            <button class="chip-btn">Breakfast</button>
+                            <button class="chip-btn">Brunch</button>
+                            <button class="chip-btn">Lunch</button>
+                            <button class="chip-btn">Dinner</button>
+                            <button class="chip-btn">Other</button>
+                        </div>
+                    </div>
+
+                    <!-- How much did you spend? -->
+                    <div class="review-question-section">
+                        <div class="review-question-title">How much did you spend per person?</div>
+                        <div class="chips-container">
+                            <button class="chip-btn">ALL 1–500</button>
+                            <button class="chip-btn">ALL 500–1,000</button>
+                            <button class="chip-btn">ALL 1,000–1,500</button>
+                            <button class="chip-btn">ALL 1,500+</button>
+                        </div>
+                    </div>
+
+                    <!-- Review Text -->
+                    <div class="review-text-section">
+                        <div class="rating-category-label">Share details of your own experience at this place</div>
+                        <textarea id="reviewTextarea" class="review-textarea"
+                            placeholder="Tell us about your experience..."></textarea>
+
+                        <!-- Photo Upload -->
+                        <div class="photo-upload-container">
+                            <input type="file" id="reviewPhotoInput" accept="image/*" capture="environment" multiple
+                                style="display: none;">
+                            <button class="add-photo-btn" id="addPhotoBtn">
+                                <span>📷</span> Add photos
+                            </button>
+                            <div class="photo-preview-area" id="photoPreviewArea"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <div class="review-modal-footer">
+                    <button class="cancel-btn" id="cancelBtn">Cancel</button>
+                    <button class="post-btn" id="postBtn" disabled>Post</button>
+                </div>
+            </div>
+
+            <!-- Thank You Screen -->
+            <div class="thank-you-screen" id="thankYouScreen">
+                <div class="thank-you-icon" id="thankYouIcon">🙏</div>
+                <h2 class="thank-you-title" id="thankYouTitle">Thank You!</h2>
+                <p class="thank-you-message" id="thankYouMessage">We appreciate your feedback!</p>
+                <button class="close-thank-you-btn" id="closeThankYouBtn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dynamic menu loader — reads from /data/*.json (managed via Decap CMS) -->
+    <script>
+        const SECTIONS = [
+            { id: 'starters', file: 'starters' },
+            { id: 'pizza',    file: 'pizza'    },
+            { id: 'pasta',    file: 'pasta'    },
+            { id: 'meat',     file: 'meat'     },
+            { id: 'burgers',  file: 'burgers'  },
+            { id: 'fish',     file: 'fish'     },
+            { id: 'dessert',  file: 'dessert'  },
+            { id: 'drinks',   file: 'drinks'   }
+        ];
+
+        function buildCard(item) {
+            const desc = item.description
+                ? `<p class="item-desc">${item.description}</p>`
+                : '';
+            if (item.has_sizes) {
+                return `
+                    <article class="menu-card" data-has-sizes="true"
+                        data-small-price="${item.small_price}"
+                        data-large-price="${item.large_price}">
+                        <div class="card-header">
+                            <h3 class="item-name">${item.name}</h3>
+                            <span class="item-price">${item.small_price} L</span>
+                        </div>
+                        ${desc}
+                        <button class="add-btn">Add to Order</button>
+                    </article>`;
+            }
+            return `
+                <article class="menu-card">
+                    <div class="card-header">
+                        <h3 class="item-name">${item.name}</h3>
+                        <span class="item-price">${item.price} L</span>
+                    </div>
+                    ${desc}
+                    <button class="add-btn">Add to Order</button>
+                </article>`;
+        }
+
+        async function loadMenus() {
+            const observer = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            await Promise.all(SECTIONS.map(async ({ id, file }) => {
+                try {
+                    const res = await fetch(`/data/${file}.json`);
+                    if (!res.ok) return;
+                    const data = await res.json();
+                    const grid = document.querySelector(`#${id} .menu-grid`);
+                    if (!grid) return;
+                    grid.innerHTML = data.items.map(buildCard).join('');
+                    grid.querySelectorAll('.menu-card').forEach(c => observer.observe(c));
+                } catch (e) {
+                    // keep hardcoded fallback on error
+                }
+            }));
+        }
+
+        loadMenus();
+
+        // Netlify Identity redirect helper
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on('init', user => {
+                if (!user) {
+                    window.netlifyIdentity.on('login', () => {
+                        document.location.href = '/admin/';
+                    });
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>

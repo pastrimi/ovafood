@@ -1,0 +1,10 @@
+{
+  "items": [
+    { "name": "Chicken Fillet with Fries / Fileto pule me patate", "price": 650, "description": "" },
+    { "name": "Beef Steak with Fries / Biftek vici me patate", "price": 750, "description": "" },
+    { "name": "Beef Chop with Fries / Berxoll vici me patate", "price": 750, "description": "" },
+    { "name": "Clay Pot Casserole / Tave balte", "price": 550, "description": "" },
+    { "name": "Chicken Cutlet / Kotoleta Pule", "price": 550, "description": "" },
+    { "name": "Shish Kebab / Shishqebap", "price": 500, "description": "" }
+  ]
+}
