@@ -229,6 +229,11 @@
       "name": "Mix Frutash",
       "price": 300,
       "description": ""
+    },
+    {
+      "description": "Nutella,banane,oreo,akullore",
+      "name": "Waffle oreo",
+      "price": 650
     }
   ]
 }
