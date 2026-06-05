@@ -7,7 +7,7 @@
     },
     {
       "name": "Makiato",
-      "price": 90,
+      "price": 100,
       "description": ""
     },
     {
@@ -42,17 +42,17 @@
     },
     {
       "name": "Caj i Nxehte",
-      "price": 80,
+      "price": 90,
       "description": ""
     },
     {
       "name": "Kafe e Ftohte",
-      "price": 200,
+      "price": 250,
       "description": ""
     },
     {
       "name": "Kafe Late me Qumesht",
-      "price": 250,
+      "price": 300,
       "description": ""
     },
     {
@@ -87,12 +87,12 @@
     },
     {
       "name": "Lemon Soda",
-      "price": 180,
+      "price": 200,
       "description": ""
     },
     {
       "name": "Orange Soda",
-      "price": 180,
+      "price": 200,
       "description": ""
     },
     {
@@ -102,16 +102,11 @@
     },
     {
       "name": "Schwepps Lemon",
-      "price": 180,
-      "description": ""
-    },
-    {
-      "name": "Cola Kanace",
       "price": 200,
       "description": ""
     },
     {
-      "name": "Cola Shishe",
+      "name": "Cola Kanace",
       "price": 200,
       "description": ""
     },
@@ -121,17 +116,7 @@
       "description": ""
     },
     {
-      "name": "Fanta Orange Shishe",
-      "price": 200,
-      "description": ""
-    },
-    {
       "name": "Fanta Exotik",
-      "price": 200,
-      "description": ""
-    },
-    {
-      "name": "Fanta Exotik Shishe",
       "price": 200,
       "description": ""
     },
@@ -172,22 +157,22 @@
     },
     {
       "name": "Pepsi",
-      "price": 180,
+      "price": 200,
       "description": ""
     },
     {
       "name": "Sprite",
-      "price": 180,
+      "price": 200,
       "description": ""
     },
     {
       "name": "Water / Uje",
-      "price": 90,
+      "price": 100,
       "description": ""
     },
     {
       "name": "Uje Vitamine",
-      "price": 180,
+      "price": 200,
       "description": ""
     },
     {
@@ -197,47 +182,47 @@
     },
     {
       "name": "Frape",
-      "price": 200,
+      "price": 250,
       "description": ""
     },
     {
       "name": "Milkshake",
-      "price": 300,
+      "price": 350,
       "description": ""
     },
     {
       "name": "Kafe Late me Akull te Madhe",
-      "price": 250,
+      "price": 300,
       "description": ""
     },
     {
       "name": "Kapucino e Ftohte",
-      "price": 250,
+      "price": 300,
       "description": ""
     },
     {
       "name": "Cokollate e Ftohte",
-      "price": 250,
+      "price": 300,
       "description": ""
     },
     {
       "name": "Neskafe e Ftohte",
-      "price": 200,
+      "price": 250,
       "description": ""
     },
     {
       "name": "Leng Portokalli",
-      "price": 300,
+      "price": 400,
       "description": ""
     },
     {
       "name": "Leng Molle",
-      "price": 300,
+      "price": 400,
       "description": ""
     },
     {
-      "name": "Leng Frutash",
-      "price": 350,
+      "name": "Leng Frutash mix",
+      "price": 450,
       "description": ""
     },
     {
