@@ -1,334 +1,70 @@
 {
   "items": [
-    {
-      "name": "Kafe",
-      "price": 80,
-      "description": ""
-    },
-    {
-      "name": "Makiato",
-      "price": 100,
-      "description": ""
-    },
-    {
-      "name": "Big Makiato",
-      "price": 200,
-      "description": ""
-    },
-    {
-      "name": "Kapucino e Madhe",
-      "price": 200,
-      "description": ""
-    },
-    {
-      "name": "Kapucino me Shllak dhe Kanelle",
-      "price": 250,
-      "description": ""
-    },
-    {
-      "name": "Kakao e Madhe",
-      "price": 200,
-      "description": ""
-    },
-    {
-      "name": "Cokollate e Shkrire",
-      "price": 200,
-      "description": ""
-    },
-    {
-      "name": "Salep",
-      "price": 180,
-      "description": ""
-    },
-    {
-      "name": "Caj i Nxehte",
-      "price": 90,
-      "description": ""
-    },
-    {
-      "name": "Kafe e Ftohte",
-      "price": 250,
-      "description": ""
-    },
-    {
-      "name": "Kafe Late me Qumesht",
-      "price": 300,
-      "description": ""
-    },
-    {
-      "name": "Qumesht",
-      "price": 100,
-      "description": ""
-    },
-    {
-      "name": "B52",
-      "price": 200,
-      "description": "Energy Drink"
-    },
-    {
-      "name": "Golden Eagle",
-      "price": 170,
-      "description": "Energy Drink"
-    },
-    {
-      "name": "Red Bull",
-      "price": 300,
-      "description": "Energy Drink"
-    },
-    {
-      "name": "Red Bull Summer",
-      "price": 350,
-      "description": "Energy Drink"
-    },
-    {
-      "name": "Red Bull Shishe",
-      "price": 400,
-      "description": "Energy Drink"
-    },
-    {
-      "name": "Lemon Soda",
-      "price": 200,
-      "description": ""
-    },
-    {
-      "name": "Orange Soda",
-      "price": 200,
-      "description": ""
-    },
-    {
-      "name": "Schwepps Tonik",
-      "price": 180,
-      "description": ""
-    },
-    {
-      "name": "Schwepps Lemon",
-      "price": 200,
-      "description": ""
-    },
-    {
-      "name": "Cola Kanace",
-      "price": 200,
-      "description": ""
-    },
-    {
-      "name": "Fanta Orange Kanace",
-      "price": 200,
-      "description": ""
-    },
-    {
-      "name": "Fanta Exotik",
-      "price": 200,
-      "description": ""
-    },
-    {
-      "name": "Bravo Kanace",
-      "price": 180,
-      "description": ""
-    },
-    {
-      "name": "Rose Lemonade",
-      "price": 400,
-      "description": ""
-    },
-    {
-      "name": "Caj i Ftohte",
-      "price": 180,
-      "description": ""
-    },
-    {
-      "name": "Lengje Natyral",
-      "price": 170,
-      "description": ""
-    },
-    {
-      "name": "Leng Pjepri",
-      "price": 200,
-      "description": ""
-    },
-    {
-      "name": "Koktel Margarita",
-      "price": 450,
-      "description": ""
-    },
-    {
-      "name": "Koktel Mojito",
-      "price": 450,
-      "description": ""
-    },
-    {
-      "name": "Pepsi",
-      "price": 200,
-      "description": ""
-    },
-    {
-      "name": "Sprite",
-      "price": 200,
-      "description": ""
-    },
-    {
-      "name": "Water / Uje",
-      "price": 100,
-      "description": ""
-    },
-    {
-      "name": "Uje Vitamine",
-      "price": 200,
-      "description": ""
-    },
-    {
-      "name": "Fredo Kafe",
-      "price": 300,
-      "description": ""
-    },
-    {
-      "name": "Frape",
-      "price": 250,
-      "description": ""
-    },
-    {
-      "name": "Milkshake",
-      "price": 350,
-      "description": ""
-    },
-    {
-      "name": "Kafe Late me Akull te Madhe",
-      "price": 300,
-      "description": ""
-    },
-    {
-      "name": "Kapucino e Ftohte",
-      "price": 300,
-      "description": ""
-    },
-    {
-      "name": "Cokollate e Ftohte",
-      "price": 300,
-      "description": ""
-    },
-    {
-      "name": "Neskafe e Ftohte",
-      "price": 250,
-      "description": ""
-    },
-    {
-      "name": "Leng Portokalli",
-      "price": 400,
-      "description": ""
-    },
-    {
-      "name": "Leng Molle",
-      "price": 400,
-      "description": ""
-    },
-    {
-      "name": "Leng Frutash mix",
-      "price": 450,
-      "description": ""
-    },
-    {
-      "name": "Smooth",
-      "price": 500,
-      "description": ""
-    },
-    {
-      "name": "Heiniken",
-      "price": 300,
-      "description": "Beer Alcohol Free"
-    },
-    {
-      "name": "Bavaria",
-      "price": 250,
-      "description": "Beer Alcohol Free"
-    },
-    {
-      "name": "Kaiser",
-      "price": 350,
-      "description": "Beer Alcohol Free"
-    },
-    {
-      "name": "Lussory",
-      "price": 1800,
-      "description": "Wine Alcohol Free"
-    },
-    {
-      "name": "Schloss Somerau",
-      "price": 1500,
-      "description": "Wine Alcohol Free"
-    },
-    {
-      "name": "Shampanje",
-      "price": 2000,
-      "description": "Alcohol Free"
-    },
-    {
-      "name": "Coctails Alcohol Free",
-      "price": 550,
-      "description": ""
-    },
-    {
-      "name": "Gote vere",
-      "price": 450,
-      "description": ""
-    },
-    {
-      "name": "Daily Juice",
-      "price": 400,
-      "description": "Orange, apple, banana"
-    },
-    {
-      "name": "Pick Me Up",
-      "price": 450,
-      "description": "Raspberry, banana"
-    },
-    {
-      "name": "Stress Down",
-      "price": 450,
-      "description": "Apple, strawberry, banana, mint"
-    },
-    {
-      "name": "Recovery Juice",
-      "price": 400,
-      "description": "Apple, cucumber, lemon"
-    },
-    {
-      "name": "Green Life",
-      "price": 400,
-      "description": "Apple, pineapple, spinach"
-    },
-    {
-      "name": "Ginger Shot",
-      "price": 400,
-      "description": "Apple, ginger"
-    },
-    {
-      "name": "Ginger Sensation",
-      "price": 450,
-      "description": "Apple, ginger, mint"
-    },
-    {
-      "name": "Lengu i Jetes",
-      "price": 500,
-      "description": "Apple, orange, carrot, beetroot"
-    },
-    {
-      "name": "Energy",
-      "price": 450,
-      "description": "Orange, lime, citron"
-    },
-    {
-      "name": "On Your Mark",
-      "price": 500,
-      "description": "Apple, avocado, lime, yoghurt, honey"
-    },
-    {
-      "name": "Raspberry Glow",
-      "price": 550,
-      "description": "Apple, yoghurt, raspberry, honey, vanilla"
-    },
-    {
-      "name": "Tropical",
-      "price": 550,
-      "description": "Banana, mango, ananas, leng portokalli, mjalte"
-    }
+    { "name": "Espresso", "price": 80, "description": "" },
+    { "name": "Macchiato", "price": 100, "description": "" },
+    { "name": "Big Macchiato", "price": 200, "description": "" },
+    { "name": "Large Cappuccino", "price": 200, "description": "" },
+    { "name": "Cappuccino with Cream & Cinnamon", "price": 250, "description": "" },
+    { "name": "Large Hot Chocolate", "price": 200, "description": "" },
+    { "name": "Melted Chocolate", "price": 200, "description": "" },
+    { "name": "Salep", "price": 180, "description": "" },
+    { "name": "Hot Tea", "price": 90, "description": "" },
+    { "name": "Iced Coffee", "price": 250, "description": "" },
+    { "name": "Cafe Latte", "price": 300, "description": "" },
+    { "name": "Milk", "price": 100, "description": "" },
+    { "name": "B52", "price": 200, "description": "Energy Drink" },
+    { "name": "Golden Eagle", "price": 170, "description": "Energy Drink" },
+    { "name": "Red Bull", "price": 300, "description": "Energy Drink" },
+    { "name": "Red Bull Summer", "price": 350, "description": "Energy Drink" },
+    { "name": "Red Bull Bottle", "price": 400, "description": "Energy Drink" },
+    { "name": "Lemon Soda", "price": 200, "description": "" },
+    { "name": "Orange Soda", "price": 200, "description": "" },
+    { "name": "Schwepps Tonic", "price": 180, "description": "" },
+    { "name": "Schwepps Lemon", "price": 200, "description": "" },
+    { "name": "Coca Cola Can", "price": 200, "description": "" },
+    { "name": "Fanta Orange Can", "price": 200, "description": "" },
+    { "name": "Fanta Exotic", "price": 200, "description": "" },
+    { "name": "Bravo Can", "price": 180, "description": "" },
+    { "name": "Rose Lemonade", "price": 400, "description": "" },
+    { "name": "Iced Tea", "price": 180, "description": "" },
+    { "name": "Natural Juice", "price": 170, "description": "" },
+    { "name": "Melon Juice", "price": 200, "description": "" },
+    { "name": "Cocktail Margarita", "price": 450, "description": "" },
+    { "name": "Cocktail Mojito", "price": 450, "description": "" },
+    { "name": "Pepsi", "price": 200, "description": "" },
+    { "name": "Sprite", "price": 200, "description": "" },
+    { "name": "Water", "price": 100, "description": "" },
+    { "name": "Vitamin Water", "price": 200, "description": "" },
+    { "name": "Freddo Coffee", "price": 300, "description": "" },
+    { "name": "Frappe", "price": 250, "description": "" },
+    { "name": "Milkshake", "price": 350, "description": "" },
+    { "name": "Large Iced Latte", "price": 300, "description": "" },
+    { "name": "Iced Cappuccino", "price": 300, "description": "" },
+    { "name": "Iced Chocolate", "price": 300, "description": "" },
+    { "name": "Iced Nescafe", "price": 250, "description": "" },
+    { "name": "Orange Juice", "price": 400, "description": "" },
+    { "name": "Apple Juice", "price": 400, "description": "" },
+    { "name": "Fruit Juice Mix", "price": 450, "description": "" },
+    { "name": "Smoothie", "price": 500, "description": "" },
+    { "name": "Heineken", "price": 300, "description": "Beer — Alcohol Free" },
+    { "name": "Bavaria", "price": 250, "description": "Beer — Alcohol Free" },
+    { "name": "Kaiser", "price": 350, "description": "Beer — Alcohol Free" },
+    { "name": "Lussory", "price": 1800, "description": "Wine — Alcohol Free" },
+    { "name": "Schloss Somerau", "price": 1500, "description": "Wine — Alcohol Free" },
+    { "name": "Champagne", "price": 2000, "description": "Alcohol Free" },
+    { "name": "Cocktails Alcohol Free", "price": 550, "description": "" },
+    { "name": "Glass of Wine", "price": 450, "description": "" },
+    { "name": "Daily Juice", "price": 400, "description": "Orange, apple, banana" },
+    { "name": "Pick Me Up", "price": 450, "description": "Raspberry, banana" },
+    { "name": "Stress Down", "price": 450, "description": "Apple, strawberry, banana, mint" },
+    { "name": "Recovery Juice", "price": 400, "description": "Apple, cucumber, lemon" },
+    { "name": "Green Life", "price": 400, "description": "Apple, pineapple, spinach" },
+    { "name": "Ginger Shot", "price": 400, "description": "Apple, ginger" },
+    { "name": "Ginger Sensation", "price": 450, "description": "Apple, ginger, mint" },
+    { "name": "Juice of Life", "price": 500, "description": "Apple, orange, carrot, beetroot" },
+    { "name": "Energy", "price": 450, "description": "Orange, lime, citron" },
+    { "name": "On Your Mark", "price": 500, "description": "Apple, avocado, lime, yoghurt, honey" },
+    { "name": "Raspberry Glow", "price": 550, "description": "Apple, yoghurt, raspberry, honey, vanilla" },
+    { "name": "Tropical", "price": 550, "description": "Banana, mango, pineapple, orange juice, honey" }
   ]
 }

@@ -1,11 +1,11 @@
 {
   "items": [
-    { "name": "Chesse Burger", "price": 550, "description": "sos, double qofte vici, kastravec, domate, djath cedar, sallat jeshile, patate" },
-    { "name": "Barbeque Burger", "price": 600, "description": "qofte vici double, majonez, djath i bardhe, domate, patate, sallate jeshile, salce bbq" },
-    { "name": "Chiken Burger", "price": 650, "description": "sos, fileto pule, cedar, domate kastravec turshi, sallate jeshile, patate" },
-    { "name": "Big Best Burger", "price": 650, "description": "sos, dopio qofte, domate, kastraveca turshi, djath i bardhe, patate" },
-    { "name": "Ova Burger", "price": 850, "description": "sos, sallate jeshile, dopio qofte, proshute, miser, kastravec turshi, djath i bardhe, djath cedar, patate" },
-    { "name": "Smash Burger", "price": 650, "description": "sos, dopje qofte mishi, cedar i shkrire, qep e karamelizuar, patate" },
-    { "name": "UFO Burger", "price": 650, "description": "sos, dopje qofte, cedar i shkrire, qep, patate" }
+    { "name": "Cheese Burger", "price": 550, "description": "Sauce, double beef patty, cucumber, tomato, cheddar, lettuce, fries" },
+    { "name": "Barbeque Burger", "price": 600, "description": "Double beef patty, mayonnaise, white cheese, tomato, fries, lettuce, BBQ sauce" },
+    { "name": "Chicken Burger", "price": 650, "description": "Sauce, chicken fillet, cheddar, tomato, pickled cucumber, lettuce, fries" },
+    { "name": "Big Best Burger", "price": 650, "description": "Sauce, double patty, tomato, pickled cucumber, white cheese, fries" },
+    { "name": "Ova Burger", "price": 850, "description": "Sauce, lettuce, double patty, ham, corn, pickled cucumber, white cheese, cheddar, fries" },
+    { "name": "Smash Burger", "price": 650, "description": "Sauce, double smashed patty, melted cheddar, caramelized onion, fries" },
+    { "name": "UFO Burger", "price": 650, "description": "Sauce, double patty, melted cheddar, onion, fries" }
   ]
 }

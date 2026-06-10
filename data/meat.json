@@ -1,13 +1,13 @@
 {
   "items": [
-    { "name": "Chicken Fillet with Fries / Fileto Pule me Patate", "price": 950, "description": "" },
-    { "name": "Beef Steak with Oven Fries / Biftek Vici me Patate Furre", "price": 1200, "description": "" },
-    { "name": "Beef Chop with Oven Fries / Berxoll Vici me Patate Furre", "price": 1200, "description": "" },
-    { "name": "Lamb Ribs Grilled with Oven Fries / Brinje Qingji Zgare me Patate Furre", "price": 1300, "description": "" },
-    { "name": "Mixed Grill Normal / Zgare Mixe Normale", "price": 2500, "description": "" },
-    { "name": "Mixed Grill Family / Zgare Mixe Familjare", "price": 4500, "description": "" },
-    { "name": "Shish Kebab / Shishqebap", "price": 850, "description": "" },
-    { "name": "Chicken Cutlet / Kotoleta Pule", "price": 850, "description": "" },
-    { "name": "Marinated Chicken Wings / Krah Pule te Marinuar", "price": 650, "description": "" }
+    { "name": "Chicken Fillet with Fries", "price": 950, "description": "" },
+    { "name": "Beef Steak with Oven Fries", "price": 1200, "description": "" },
+    { "name": "Beef Chop with Oven Fries", "price": 1200, "description": "" },
+    { "name": "Grilled Lamb Ribs with Oven Fries", "price": 1300, "description": "" },
+    { "name": "Mixed Grill Normal", "price": 2500, "description": "" },
+    { "name": "Mixed Grill Family", "price": 4500, "description": "" },
+    { "name": "Shish Kebab", "price": 850, "description": "" },
+    { "name": "Chicken Cutlet", "price": 850, "description": "" },
+    { "name": "Marinated Chicken Wings", "price": 650, "description": "" }
   ]
 }

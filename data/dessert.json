@@ -1,239 +1,51 @@
 {
   "items": [
-    {
-      "name": "Cokollate",
-      "price": 250,
-      "description": ""
-    },
-    {
-      "name": "Cokollate e bardhe",
-      "price": 250,
-      "description": ""
-    },
-    {
-      "name": "Nutella",
-      "price": 300,
-      "description": ""
-    },
-    {
-      "name": "Nutella Nuts",
-      "price": 350,
-      "description": ""
-    },
-    {
-      "name": "Nutella Biskote / Cookie",
-      "price": 350,
-      "description": ""
-    },
-    {
-      "name": "Nutella Banane",
-      "price": 350,
-      "description": "Nutella, banane"
-    },
-    {
-      "name": "Pancake",
-      "price": 200,
-      "description": ""
-    },
-    {
-      "name": "Lidia",
-      "price": 400,
-      "description": "nutella, banane, biskote / Nutella, banana, cookie"
-    },
-    {
-      "name": "Apple",
-      "price": 350,
-      "description": "Krem pasticerie, molle, kanelle / Creme patissiere, apple, cinnamon"
-    },
-    {
-      "name": "Kivi / Kiwi",
-      "price": 400,
-      "description": "Nutella, kivi, biskote / Nutella, kiwi, cookie"
-    },
-    {
-      "name": "Ova Crepes",
-      "price": 400,
-      "description": "Mjalt, arra, kanelle / honey, walnuts"
-    },
-    {
-      "name": "Tutti Frutti",
-      "price": 450,
-      "description": "Nutella, luleshtrydhe, kivi, banane, ananas / nutella, strawberry, kiwi, pineapple"
-    },
-    {
-      "name": "Los Angelos",
-      "price": 450,
-      "description": "Nutella, cokollate e bardhe, lajthi, stika / nutella, white chocolate, hazelnut, pistachio"
-    },
-    {
-      "name": "Bounty",
-      "price": 350,
-      "description": "Cokollate e bardhe, Arre kokosi / white chocolate, coconut"
-    },
-    {
-      "name": "Kids",
-      "price": 450,
-      "description": "Nutella, M&M, marshmallow"
-    },
-    {
-      "name": "Cherry",
-      "price": 350,
-      "description": "Recel qershie, biskote / cherry jam, biscuit"
-    },
-    {
-      "name": "Rafaelo",
-      "price": 400,
-      "description": "Cokollate e bardhe, Arre kokosi, lajthi / white chocolate, coconut, nuts"
-    },
-    {
-      "name": "Oreo",
-      "price": 400,
-      "description": "Nutella, Oreo, banana"
-    },
-    {
-      "name": "Dubai",
-      "price": 600,
-      "description": "Nutella, pistachio, kadaif, stika, shurup pistachio"
-    },
-    {
-      "name": "Island",
-      "price": 400,
-      "description": "Cokollate e bardhe, ananas, arre kokosi / white chocolate, pineapple, coconut"
-    },
-    {
-      "name": "Fshati / Village (e kripur)",
-      "price": 400,
-      "description": "Krem djathi, djath i bardhe, ullinj, speca, domate, kastravec / cream cheese, olives, peppers, tomatoes, cucumber"
-    },
-    {
-      "name": "Cezar / Caesar (e kripur)",
-      "price": 450,
-      "description": "Krem djathi, fileto pule, mocarela, miser, salce cezar, sallate / cream cheese, chicken ham, mozzarella, Caesar sauce, salat"
-    },
-    {
-      "name": "Ova Premium (e kripur)",
-      "price": 550,
-      "description": "Philadelphia, sallate, ton peshku, kerpudhe, mozzarella / Philadelphia, salad, tuna, mushroom, mozzarella"
-    },
-    {
-      "name": "Maldive (e kripur)",
-      "price": 650,
-      "description": "Avocado, fileto pule, sallate jeshile, Philadelphia / avocado, chicken filet, salad, philadelphia"
-    },
-    {
-      "name": "So Cheesy (e kripur)",
-      "price": 550,
-      "description": "Djathe, mozzarella, djathe guda, krem djathi, gorgonzola / cheese, mozzarella, guda, cream cheese, gorgonzola"
-    },
-    {
-      "name": "Hot Crep (e kripur)",
-      "price": 550,
-      "description": "Philadelphia, Guda, fasule, tabasko, suxhuk pikant / Philadelphia, guda, beans, tabasko, hot sucuk"
-    },
-    {
-      "name": "Vegan (e kripur)",
-      "price": 600,
-      "description": "Krem djathi, djath i bardhe, guda, ullinj, pomodorini, spec jeshil, kastravec / cream cheese, white cheese, guda, olive, pomodorini, green pepper, cucumber"
-    },
-    {
-      "name": "Picnic (e kripur)",
-      "price": 500,
-      "description": "Philadelphia, djath i bardhe, domate, majdanoz / Philadelphia, white cheese, tomato, parsley"
-    },
-    {
-      "name": "Mediterrano (e kripur)",
-      "price": 550,
-      "description": "Philadelphia, ton, guda, qepe, pomodrini, sallate, jeshile / Philadelphia, tuna, guda, onion, pomodorini, salad"
-    },
-    {
-      "name": "Lunch (e kripur)",
-      "price": 500,
-      "description": "Philadelphia, proshute, domate, mozzarella / Philadelphia, cured ham, tomato, mozzarella"
-    },
-    {
-      "name": "Alla Crema (e kripur)",
-      "price": 550,
-      "description": "Philadelphia, mozzarella, proshute, kerpudhe, pana / Philadelphia, mozzarella, cured ham, mushrooms, panna"
-    },
-    {
-      "name": "The Chockoloco",
-      "price": 450,
-      "description": ""
-    },
-    {
-      "name": "Waffle Tutti Frutti",
-      "price": 600,
-      "description": ""
-    },
-    {
-      "name": "Krem Biskote",
-      "price": 550,
-      "description": ""
-    },
-    {
-      "name": "Waffle Tropical",
-      "price": 450,
-      "description": ""
-    },
-    {
-      "name": "Ying Yang",
-      "price": 550,
-      "description": ""
-    },
-    {
-      "name": "Simple Fruits",
-      "price": 650,
-      "description": ""
-    },
-    {
-      "name": "Costa Rica",
-      "price": 450,
-      "description": ""
-    },
-    {
-      "name": "House Special",
-      "price": 650,
-      "description": ""
-    },
-    {
-      "name": "Waffle Apple",
-      "price": 450,
-      "description": ""
-    },
-    {
-      "name": "Bumble Bee",
-      "price": 500,
-      "description": ""
-    },
-    {
-      "name": "Waffle Madness",
-      "price": 600,
-      "description": ""
-    },
-    {
-      "name": "Cheesecake",
-      "price": 600,
-      "description": ""
-    },
-    {
-      "name": "Waffle Dubai",
-      "price": 600,
-      "description": ""
-    },
-    {
-      "name": "Akullore",
-      "price": 100,
-      "description": ""
-    },
-    {
-      "name": "Mix Frutash",
-      "price": 300,
-      "description": ""
-    },
-    {
-      "description": "Nutella,banane,oreo,akullore",
-      "name": "Waffle oreo",
-      "price": 650
-    }
+    { "name": "Chocolate Crepe", "price": 250, "description": "" },
+    { "name": "White Chocolate Crepe", "price": 250, "description": "" },
+    { "name": "Nutella Crepe", "price": 300, "description": "" },
+    { "name": "Nutella Nuts", "price": 350, "description": "" },
+    { "name": "Nutella Cookie", "price": 350, "description": "" },
+    { "name": "Nutella Banana", "price": 350, "description": "Nutella, banana" },
+    { "name": "Pancake", "price": 200, "description": "" },
+    { "name": "Lidia", "price": 400, "description": "Nutella, banana, cookie" },
+    { "name": "Apple", "price": 350, "description": "Pastry cream, apple, cinnamon" },
+    { "name": "Kiwi", "price": 400, "description": "Nutella, kiwi, cookie" },
+    { "name": "Ova Crepes", "price": 400, "description": "Honey, walnuts, cinnamon" },
+    { "name": "Tutti Frutti", "price": 450, "description": "Nutella, strawberry, kiwi, banana, pineapple" },
+    { "name": "Los Angeles", "price": 450, "description": "Nutella, white chocolate, hazelnut, pistachio" },
+    { "name": "Bounty", "price": 350, "description": "White chocolate, coconut" },
+    { "name": "Kids", "price": 450, "description": "Nutella, M&M, marshmallow" },
+    { "name": "Cherry", "price": 350, "description": "Cherry jam, biscuit" },
+    { "name": "Rafaello", "price": 400, "description": "White chocolate, coconut, nuts" },
+    { "name": "Oreo", "price": 400, "description": "Nutella, Oreo, banana" },
+    { "name": "Dubai", "price": 600, "description": "Nutella, pistachio, kunafa, pistachio syrup" },
+    { "name": "Island", "price": 400, "description": "White chocolate, pineapple, coconut" },
+    { "name": "Village (Savory)", "price": 400, "description": "Cream cheese, white cheese, olives, peppers, tomatoes, cucumber" },
+    { "name": "Caesar (Savory)", "price": 450, "description": "Cream cheese, chicken fillet, mozzarella, corn, Caesar sauce, salad" },
+    { "name": "Ova Premium (Savory)", "price": 550, "description": "Philadelphia, salad, tuna, mushroom, mozzarella" },
+    { "name": "Maldive (Savory)", "price": 650, "description": "Avocado, chicken fillet, lettuce, Philadelphia" },
+    { "name": "So Cheesy (Savory)", "price": 550, "description": "Cheese, mozzarella, gouda, cream cheese, gorgonzola" },
+    { "name": "Hot Crep (Savory)", "price": 550, "description": "Philadelphia, gouda, beans, tabasco, spicy sucuk" },
+    { "name": "Vegan (Savory)", "price": 600, "description": "Cream cheese, white cheese, gouda, olives, cherry tomatoes, green pepper, cucumber" },
+    { "name": "Picnic (Savory)", "price": 500, "description": "Philadelphia, white cheese, tomato, parsley" },
+    { "name": "Mediterrano (Savory)", "price": 550, "description": "Philadelphia, tuna, gouda, onion, cherry tomatoes, salad" },
+    { "name": "Lunch (Savory)", "price": 500, "description": "Philadelphia, cured ham, tomato, mozzarella" },
+    { "name": "Alla Crema (Savory)", "price": 550, "description": "Philadelphia, mozzarella, cured ham, mushrooms, cream" },
+    { "name": "The Chockoloco Waffle", "price": 450, "description": "Nutella, walnuts, chocolate syrup, whipped cream" },
+    { "name": "Tutti Frutti Waffle", "price": 600, "description": "Nutella, strawberry, banana, kiwi, walnuts, chocolate syrup, whipped cream" },
+    { "name": "Biscuit Cream Waffle", "price": 550, "description": "Biscuit cream, cherry jam, walnuts, chocolate syrup" },
+    { "name": "Tropical Waffle", "price": 450, "description": "Coconut, pineapple, tropical syrup, whipped cream" },
+    { "name": "Ying Yang Waffle", "price": 550, "description": "White chocolate, strawberry, walnuts, whipped cream, ice cream" },
+    { "name": "Simple Fruits Waffle", "price": 650, "description": "Strawberry, banana, whipped cream, almonds, walnuts, chocolate syrup" },
+    { "name": "Costa Rica Waffle", "price": 450, "description": "Banana, whipped cream, walnuts, chocolate syrup" },
+    { "name": "House Special Waffle", "price": 650, "description": "Nutella, strawberry, banana, whipped cream, ice cream" },
+    { "name": "Apple Waffle", "price": 450, "description": "Apple, walnuts, whipped cream, chocolate syrup, pastry cream" },
+    { "name": "Bumble Bee Waffle", "price": 500, "description": "Honey, walnuts, ice cream" },
+    { "name": "Waffle Madness", "price": 600, "description": "White chocolate, strawberry, walnuts" },
+    { "name": "Cheesecake Waffle", "price": 600, "description": "Philadelphia, biscuit, cherry jam, ice cream" },
+    { "name": "Dubai Waffle", "price": 600, "description": "Nutella, kunafa, pistachio, pistachio cream" },
+    { "name": "Oreo Waffle", "price": 650, "description": "Nutella, banana, oreo, ice cream" },
+    { "name": "Ice Cream (scoop)", "price": 100, "description": "" },
+    { "name": "Fruit Mix", "price": 300, "description": "" }
   ]
 }
