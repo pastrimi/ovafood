@@ -78,6 +78,19 @@ collections:
               - { label: "Price (L)", name: price, widget: number, value_type: int }
               - { label: "Description", name: description, widget: text, required: false, default: "" }
 
+      - name: sandwiches
+        label: Sandwiches
+        file: data/sandwiches.json
+        fields:
+          - label: Items
+            name: items
+            widget: list
+            summary: "{{fields.name}} — {{fields.price}} L"
+            fields:
+              - { label: "Name", name: name, widget: string }
+              - { label: "Price (L)", name: price, widget: number, value_type: int }
+              - { label: "Description", name: description, widget: text, required: false, default: "" }
+
       - name: fish
         label: "Fish / Peshku"
         file: data/fish.json

@@ -1,0 +1,18 @@
+{
+  "items": [
+    { "name": "Beef Ham Sandwich", "price": 250, "description": "Mozzarella, ham, tomato, cucumber, mayonnaise" },
+    { "name": "Salami Sandwich", "price": 220, "description": "Mozzarella, salami, tomato, cucumber, mayonnaise" },
+    { "name": "Spicy Sandwich", "price": 250, "description": "Mozzarella, spicy salami, peppers, tomato, cucumber, mayonnaise" },
+    { "name": "Tuna Sandwich", "price": 300, "description": "Mozzarella, tuna, olives, tomato, cucumber, mayonnaise" },
+    { "name": "Mix Sandwich", "price": 350, "description": "Mozzarella, spicy salami, ham, salami, olives, tomato, cucumber, mayonnaise, tuna, mushrooms, peppers" },
+    { "name": "Vegetarian Sandwich", "price": 250, "description": "Mozzarella, peppers, olives, tomato, cucumber, mayonnaise, mushrooms, zucchini" },
+    { "name": "Fries Sandwich", "price": 300, "description": "Mozzarella, ham, fries, olives, tomato, cucumber, mayonnaise" },
+    { "name": "Village Sandwich", "price": 250, "description": "Yogurt sauce, peppers, olives, tomato, cucumber, white cheese" },
+    { "name": "Wudy Sandwich", "price": 300, "description": "Mozzarella, frankfurter, olives, tomato, cucumber, mayonnaise" },
+    { "name": "Four Cheese Sandwich", "price": 250, "description": "Mozzarella, tomato, cucumber, peppers, cream, parmesan, gorgonzola" },
+    { "name": "Chicken Ham Sandwich", "price": 300, "description": "Mozzarella, chicken ham, tomato, cucumber, mayonnaise" },
+    { "name": "Ova Sandwich", "price": 450, "description": "Yogurt sauce, lettuce, tomato, cucumber, meat, fries" },
+    { "name": "Chicken Cutlet Sandwich", "price": 550, "description": "" },
+    { "name": "Shish Kebab Sandwich", "price": 500, "description": "" }
+  ]
+}

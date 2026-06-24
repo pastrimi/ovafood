@@ -1,11 +1,17 @@
 {
   "items": [
-    { "name": "Cheese Burger", "price": 550, "description": "Sauce, double beef patty, cucumber, tomato, cheddar, lettuce, fries" },
-    { "name": "Barbeque Burger", "price": 600, "description": "Double beef patty, mayonnaise, white cheese, tomato, fries, lettuce, BBQ sauce" },
-    { "name": "Chicken Burger", "price": 650, "description": "Sauce, chicken fillet, cheddar, tomato, pickled cucumber, lettuce, fries" },
-    { "name": "Big Best Burger", "price": 650, "description": "Sauce, double patty, tomato, pickled cucumber, white cheese, fries" },
-    { "name": "Ova Burger", "price": 850, "description": "Sauce, lettuce, double patty, ham, corn, pickled cucumber, white cheese, cheddar, fries" },
-    { "name": "Smash Burger", "price": 650, "description": "Sauce, double smashed patty, melted cheddar, caramelized onion, fries" },
-    { "name": "UFO Burger", "price": 650, "description": "Sauce, double patty, melted cheddar, onion, fries" }
+    { "name": "Hamburger", "price": 300, "description": "Mayonnaise, tzatziki, beef patty, lettuce, tomato, cucumber, ketchup, mustard" },
+    { "name": "Cheese Burger", "price": 450, "description": "Yogurt sauce, double beef patty, cucumber, tomato, mayonnaise, ketchup, cheddar, lettuce, fries" },
+    { "name": "Barbeque Burger", "price": 550, "description": "Double beef patty, mayonnaise, white cheese, tomato, fries, BBQ sauce" },
+    { "name": "Big Best Burger", "price": 600, "description": "Yogurt sauce, double patty, tomato, pickled cucumber, white cheese, fries" },
+    { "name": "Ova Burger", "price": 850, "description": "Sauce, lettuce, double patty, corn, pickled cucumber, white cheese, cheddar, fries" },
+    { "name": "Souvlaki", "price": 300, "description": "Tzatziki, tomato, cucumber, lettuce, meat, fries, ketchup, mayonnaise, mustard" },
+    { "name": "Open Souvlaki", "price": 550, "description": "Tzatziki, mayonnaise, lettuce, onion, cucumber, tomato, meat, fries, ketchup" },
+    { "name": "Hot Dog", "price": 300, "description": "Tzatziki, mayonnaise, frankfurter, lettuce, tomato, cucumber, onion, fries, ketchup, mustard" },
+    { "name": "Doner", "price": 250, "description": "Mayonnaise, tzatziki, lettuce, tomato, cucumber, onion, meat, fries, ketchup, mustard" },
+    { "name": "Club Sandwich", "price": 450, "description": "3 toast breads, tzatziki, mayonnaise, gouda cheese, ham, lettuce, tomato" },
+    { "name": "Shawarma (Kebab)", "price": 450, "description": "Lettuce, cucumber, tomato, fries, chicken, yogurt sauce, mayonnaise, ketchup" },
+    { "name": "Pita Bread", "price": 50, "description": "" },
+    { "name": "Panini", "price": 50, "description": "" }
   ]
 }
