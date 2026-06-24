@@ -119,6 +119,52 @@
             color: var(--color-primary);
         }
 
+        /* --- Language Picker --- */
+        .lang-picker {
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            gap: 6px;
+            z-index: 11;
+        }
+
+        .lang-btn {
+            background: none;
+            border: 2px solid transparent;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            padding: 0;
+            line-height: 1;
+        }
+
+        .lang-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .lang-btn.active {
+            border-color: var(--color-primary);
+            background: rgba(186, 82, 24, 0.2);
+            box-shadow: 0 0 10px rgba(186, 82, 24, 0.3);
+        }
+
+        @media (max-width: 420px) {
+            .lang-btn {
+                width: 30px;
+                height: 30px;
+                font-size: 1rem;
+            }
+            .lang-picker { gap: 3px; }
+        }
+
         /* --- Sticky Navigation --- */
         .sticky-nav-container {
             position: sticky;
@@ -1710,6 +1756,7 @@
     <header>
         <!-- USER_CONTENT: Logo and Title Area -->
         <div class="logo">OVA <span>RESTAURANT</span></div>
+        <div class="lang-picker" id="langPicker"></div>
     </header>
 
     <!-- Category Hero Section -->
@@ -1718,72 +1765,72 @@
         <p class="hero-subtitle">Discover our delicious menu categories</p>
 
         <div class="category-grid">
-            <a href="#starters" class="category-card">
-                <div class="cat-bg" style="background-image: url('assets/cat_starters.png');"></div>
+            <a href="#starters" class="category-card" data-cat="starters">
+                <div class="cat-bg" style="background-image: url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&h=300&fit=crop&q=80');"></div>
                 <div class="cat-overlay">
                     <div class="cat-icon">🥗</div>
                     <div class="cat-name">Starters</div>
                 </div>
             </a>
 
-            <a href="#pizza" class="category-card">
-                <div class="cat-bg" style="background-image: url('assets/cat_pizza.png');"></div>
+            <a href="#pizza" class="category-card" data-cat="pizza">
+                <div class="cat-bg" style="background-image: url('https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop&q=80');"></div>
                 <div class="cat-overlay">
                     <div class="cat-icon">🍕</div>
                     <div class="cat-name">Pizza</div>
                 </div>
             </a>
 
-            <a href="#pasta" class="category-card">
-                <div class="cat-bg" style="background-image: url('assets/cat_pasta.png');"></div>
+            <a href="#pasta" class="category-card" data-cat="pasta">
+                <div class="cat-bg" style="background-image: url('https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=400&h=300&fit=crop&q=80');"></div>
                 <div class="cat-overlay">
                     <div class="cat-icon">🍝</div>
                     <div class="cat-name">Pasta</div>
                 </div>
             </a>
 
-            <a href="#meat" class="category-card">
-                <div class="cat-bg" style="background-image: url('assets/cat_meat.png');"></div>
+            <a href="#meat" class="category-card" data-cat="meat">
+                <div class="cat-bg" style="background-image: url('https://images.unsplash.com/photo-1544025162-d76694265947?w=400&h=300&fit=crop&q=80');"></div>
                 <div class="cat-overlay">
                     <div class="cat-icon">🥩</div>
                     <div class="cat-name">Meat</div>
                 </div>
             </a>
 
-            <a href="#burgers" class="category-card">
-                <div class="cat-bg" style="background-image: url('assets/cat_burgers.png');"></div>
+            <a href="#burgers" class="category-card" data-cat="burgers">
+                <div class="cat-bg" style="background-image: url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=300&fit=crop&q=80');"></div>
                 <div class="cat-overlay">
                     <div class="cat-icon">🍔</div>
                     <div class="cat-name">Burgers</div>
                 </div>
             </a>
 
-            <a href="#sandwiches" class="category-card">
-                <div class="cat-bg" style="background-image: url('assets/cat_burgers.png');"></div>
+            <a href="#sandwiches" class="category-card" data-cat="sandwiches">
+                <div class="cat-bg" style="background-image: url('https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=400&h=300&fit=crop&q=80');"></div>
                 <div class="cat-overlay">
                     <div class="cat-icon">🥪</div>
                     <div class="cat-name">Sandwiches</div>
                 </div>
             </a>
 
-            <a href="#fish" class="category-card">
-                <div class="cat-bg" style="background-image: url('assets/cat_fish.png');"></div>
+            <a href="#fish" class="category-card" data-cat="fish">
+                <div class="cat-bg" style="background-image: url('https://images.unsplash.com/photo-1534604973900-c43ab4c2e0ab?w=400&h=300&fit=crop&q=80');"></div>
                 <div class="cat-overlay">
                     <div class="cat-icon">🐟</div>
                     <div class="cat-name">Fish</div>
                 </div>
             </a>
 
-            <a href="#dessert" class="category-card">
-                <div class="cat-bg" style="background-image: url('assets/cat_dessert.png');"></div>
+            <a href="#dessert" class="category-card" data-cat="dessert">
+                <div class="cat-bg" style="background-image: url('https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400&h=300&fit=crop&q=80');"></div>
                 <div class="cat-overlay">
                     <div class="cat-icon">🍰</div>
                     <div class="cat-name">Desserts</div>
                 </div>
             </a>
 
-            <a href="#drinks" class="category-card">
-                <div class="cat-bg" style="background-image: url('assets/cat_drinks.png');"></div>
+            <a href="#drinks" class="category-card" data-cat="drinks">
+                <div class="cat-bg" style="background-image: url('https://images.unsplash.com/photo-1544145945-f90425340c7e?w=400&h=300&fit=crop&q=80');"></div>
                 <div class="cat-overlay">
                     <div class="cat-icon">🍹</div>
                     <div class="cat-name">Drinks</div>
@@ -1795,15 +1842,15 @@
     <!-- Sticky Navigation -->
     <div class="sticky-nav-container">
         <nav class="sticky-nav">
-            <a href="#starters" class="nav-item active" data-target="bg-dessert">Starters / Antipasta</a>
-            <a href="#pizza" class="nav-item" data-target="bg-dessert">Pizza</a>
-            <a href="#pasta" class="nav-item" data-target="bg-dessert">Pasta</a>
-            <a href="#meat" class="nav-item" data-target="bg-fish">Meat / Mishi</a>
-            <a href="#burgers" class="nav-item" data-target="bg-fish">Burgers</a>
-            <a href="#sandwiches" class="nav-item" data-target="bg-fish">Sandwiches</a>
-            <a href="#fish" class="nav-item" data-target="bg-fish">Fish / Peshku</a>
-            <a href="#dessert" class="nav-item" data-target="bg-fresh">Desserts / Ëmbëlsirë</a>
-            <a href="#drinks" class="nav-item" data-target="bg-fresh">Drinks / Pije</a>
+            <a href="#starters" class="nav-item active" data-target="bg-dessert" data-nav="starters">Starters</a>
+            <a href="#pizza" class="nav-item" data-target="bg-dessert" data-nav="pizza">Pizza</a>
+            <a href="#pasta" class="nav-item" data-target="bg-dessert" data-nav="pasta">Pasta</a>
+            <a href="#meat" class="nav-item" data-target="bg-fish" data-nav="meat">Meat</a>
+            <a href="#burgers" class="nav-item" data-target="bg-fish" data-nav="burgers">Burgers</a>
+            <a href="#sandwiches" class="nav-item" data-target="bg-fish" data-nav="sandwiches">Sandwiches</a>
+            <a href="#fish" class="nav-item" data-target="bg-fish" data-nav="fish">Fish</a>
+            <a href="#dessert" class="nav-item" data-target="bg-fresh" data-nav="dessert">Desserts</a>
+            <a href="#drinks" class="nav-item" data-target="bg-fresh" data-nav="drinks">Drinks</a>
         </nav>
     </div>
 
@@ -1812,7 +1859,7 @@
 
         <!-- Starters Section -->
         <section id="starters" data-bg="bg-dessert">
-            <h2 class="section-title">Starters / Antipasta</h2>
+            <h2 class="section-title" data-section="starters">Starters</h2>
             <div class="menu-grid">
 
                 <article class="menu-card">
@@ -2018,7 +2065,7 @@
 
         <!-- Pizza Section -->
         <section id="pizza" data-bg="bg-dessert">
-            <h2 class="section-title">Pizza</h2>
+            <h2 class="section-title" data-section="pizza">Pizza</h2>
             <div class="menu-grid">
 
                 <article class="menu-card" data-has-sizes="true" data-small-price="400" data-large-price="700">
@@ -2305,7 +2352,7 @@
 
         <!-- Pasta Section -->
         <section id="pasta" data-bg="bg-dessert">
-            <h2 class="section-title">Pasta</h2>
+            <h2 class="section-title" data-section="pasta">Pasta</h2>
             <div class="menu-grid">
 
                 <article class="menu-card">
@@ -2402,7 +2449,7 @@
 
         <!-- Meat Section -->
         <section id="meat" data-bg="bg-fish">
-            <h2 class="section-title">Meat / Mishi</h2>
+            <h2 class="section-title" data-section="meat">Meat</h2>
             <div class="menu-grid">
 
                 <article class="menu-card">
@@ -2742,21 +2789,21 @@
 
         <!-- Burgers Section -->
         <section id="burgers" data-bg="bg-fish">
-            <h2 class="section-title">Burgers</h2>
+            <h2 class="section-title" data-section="burgers">Burgers</h2>
             <div class="menu-grid">
             </div>
         </section>
 
         <!-- Sandwiches Section -->
         <section id="sandwiches" data-bg="bg-fish">
-            <h2 class="section-title">Sandwiches</h2>
+            <h2 class="section-title" data-section="sandwiches">Sandwiches</h2>
             <div class="menu-grid">
             </div>
         </section>
 
         <!-- Fish Section -->
         <section id="fish" data-bg="bg-fish">
-            <h2 class="section-title">Fish / Peshku</h2>
+            <h2 class="section-title" data-section="fish">Fish</h2>
             <div class="menu-grid">
 
                 <article class="menu-card">
@@ -2853,7 +2900,7 @@
 
         <!-- Dessert Section -->
         <section id="dessert" data-bg="bg-fresh">
-            <h2 class="section-title">Desserts / Ëmbëlsirë</h2>
+            <h2 class="section-title" data-section="dessert">Desserts</h2>
             <div class="menu-grid">
 
                 <article class="menu-card">
@@ -2950,7 +2997,7 @@
 
         <!-- Drinks Section -->
         <section id="drinks" data-bg="bg-fresh">
-            <h2 class="section-title">Drinks / Pije</h2>
+            <h2 class="section-title" data-section="drinks">Drinks</h2>
             <div class="menu-grid">
 
                 <article class="menu-card">
@@ -3884,6 +3931,9 @@
         </div>
     </div>
 
+    <!-- Translations -->
+    <script src="/data/i18n.js"></script>
+
     <!-- Dynamic menu loader — reads from /data/*.json (managed via Decap CMS) -->
     <script>
         const SECTIONS = [
@@ -3898,35 +3948,46 @@
             { id: 'drinks',   file: 'drinks'   }
         ];
 
+        let currentLang = localStorage.getItem('ova-lang') || 'en';
+        let menuData = {};
+
+        function t(englishName) {
+            if (currentLang === 'en') return englishName;
+            const tr = I18N.items[englishName];
+            return (tr && tr[currentLang]) || englishName;
+        }
+
         function buildCard(item) {
+            const name = t(item.name);
             const desc = item.description
                 ? `<p class="item-desc">${item.description}</p>`
                 : '';
+            const btnText = I18N.ui[currentLang]?.addToOrder || 'Add to Order';
             if (item.has_sizes) {
                 return `
                     <article class="menu-card" data-has-sizes="true"
                         data-small-price="${item.small_price}"
                         data-large-price="${item.large_price}">
                         <div class="card-header">
-                            <h3 class="item-name">${item.name}</h3>
+                            <h3 class="item-name">${name}</h3>
                             <span class="item-price">${item.small_price} L</span>
                         </div>
                         ${desc}
-                        <button class="add-btn">Add to Order</button>
+                        <button class="add-btn">${btnText}</button>
                     </article>`;
             }
             return `
                 <article class="menu-card">
                     <div class="card-header">
-                        <h3 class="item-name">${item.name}</h3>
+                        <h3 class="item-name">${name}</h3>
                         <span class="item-price">${item.price} L</span>
                     </div>
                     ${desc}
-                    <button class="add-btn">Add to Order</button>
+                    <button class="add-btn">${btnText}</button>
                 </article>`;
         }
 
-        async function loadMenus() {
+        function renderMenus() {
             const observer = new IntersectionObserver((entries, obs) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -3936,21 +3997,75 @@
                 });
             }, { threshold: 0.1 });
 
+            SECTIONS.forEach(({ id }) => {
+                const data = menuData[id];
+                if (!data) return;
+                const grid = document.querySelector(`#${id} .menu-grid`);
+                if (!grid) return;
+                grid.innerHTML = data.items.map(buildCard).join('');
+                grid.querySelectorAll('.menu-card').forEach(c => observer.observe(c));
+            });
+        }
+
+        function updateLabels() {
+            const ui = I18N.ui[currentLang] || I18N.ui.en;
+            const heroTitle = document.querySelector('.hero-title');
+            const heroSub = document.querySelector('.hero-subtitle');
+            if (heroTitle) heroTitle.textContent = ui.welcome;
+            if (heroSub) heroSub.textContent = ui.subtitle;
+
+            document.querySelectorAll('[data-section]').forEach(el => {
+                const key = el.dataset.section;
+                const tr = I18N.sections[key];
+                el.textContent = (currentLang === 'en') ? (I18N.categories[key]?.en || key) : (tr?.[currentLang] || el.textContent);
+            });
+
+            document.querySelectorAll('[data-nav]').forEach(el => {
+                const key = el.dataset.nav;
+                const tr = I18N.nav[key];
+                el.textContent = (currentLang === 'en') ? (tr?.en || key) : (tr?.[currentLang] || el.textContent);
+            });
+
+            document.querySelectorAll('[data-cat]').forEach(el => {
+                const key = el.dataset.cat;
+                const tr = I18N.categories[key];
+                const nameEl = el.querySelector('.cat-name');
+                if (nameEl && tr) nameEl.textContent = (currentLang === 'en') ? (tr.en || key) : (tr[currentLang] || nameEl.textContent);
+            });
+        }
+
+        function initLangPicker() {
+            const picker = document.getElementById('langPicker');
+            if (!picker) return;
+            picker.innerHTML = I18N.languages.map(l =>
+                `<button class="lang-btn${l.code === currentLang ? ' active' : ''}" data-lang="${l.code}" title="${l.name}">${l.flag}</button>`
+            ).join('');
+
+            picker.addEventListener('click', e => {
+                const btn = e.target.closest('.lang-btn');
+                if (!btn) return;
+                currentLang = btn.dataset.lang;
+                localStorage.setItem('ova-lang', currentLang);
+                picker.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                updateLabels();
+                renderMenus();
+            });
+        }
+
+        async function loadMenus() {
             await Promise.all(SECTIONS.map(async ({ id, file }) => {
                 try {
                     const res = await fetch(`/data/${file}.json`);
                     if (!res.ok) return;
-                    const data = await res.json();
-                    const grid = document.querySelector(`#${id} .menu-grid`);
-                    if (!grid) return;
-                    grid.innerHTML = data.items.map(buildCard).join('');
-                    grid.querySelectorAll('.menu-card').forEach(c => observer.observe(c));
-                } catch (e) {
-                    // keep hardcoded fallback on error
-                }
+                    menuData[id] = await res.json();
+                } catch (e) {}
             }));
+            renderMenus();
         }
 
+        initLangPicker();
+        updateLabels();
         loadMenus();
 
         // Netlify Identity redirect helper
