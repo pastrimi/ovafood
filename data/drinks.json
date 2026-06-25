@@ -47,7 +47,7 @@
     },
     {
       "name": "Hot Tea",
-      "price": 80,
+      "price": 90,
       "description": ""
     },
     {
@@ -87,12 +87,12 @@
     },
     {
       "name": "Red Bull",
-      "price": 250,
+      "price": 300,
       "description": "Energy Drink"
     },
     {
       "name": "Red Bull Summer",
-      "price": 300,
+      "price": 350,
       "description": "Energy Drink"
     },
     {
@@ -102,31 +102,26 @@
     },
     {
       "name": "Lemon Soda",
-      "price": 180,
-      "description": ""
-    },
-    {
-      "name": "Orange Soda",
-      "price": 180,
-      "description": ""
-    },
-    {
-      "name": "Schwepps Tonic",
-      "price": 180,
-      "description": ""
-    },
-    {
-      "name": "Schwepps Lemon",
-      "price": 180,
-      "description": ""
-    },
-    {
-      "name": "Coca Cola Can",
       "price": 200,
       "description": ""
     },
     {
-      "name": "Coca Cola Bottle",
+      "name": "Orange Soda",
+      "price": 200,
+      "description": ""
+    },
+    {
+      "name": "Schwepps Tonic",
+      "price": 200,
+      "description": ""
+    },
+    {
+      "name": "Schwepps Lemon",
+      "price": 200,
+      "description": ""
+    },
+    {
+      "name": "Coca Cola Can",
       "price": 200,
       "description": ""
     },
@@ -136,17 +131,7 @@
       "description": ""
     },
     {
-      "name": "Fanta Orange Bottle",
-      "price": 200,
-      "description": ""
-    },
-    {
       "name": "Fanta Exotic",
-      "price": 200,
-      "description": ""
-    },
-    {
-      "name": "Fanta Exotic Bottle",
       "price": 200,
       "description": ""
     },
@@ -162,22 +147,22 @@
     },
     {
       "name": "Iced Tea",
-      "price": 180,
+      "price": 200,
       "description": ""
     },
     {
       "name": "Pepsi",
-      "price": 180,
+      "price": 200,
       "description": ""
     },
     {
       "name": "Sprite",
-      "price": 180,
+      "price": 200,
       "description": ""
     },
     {
       "name": "Water",
-      "price": 90,
+      "price": 100,
       "description": ""
     },
     {
