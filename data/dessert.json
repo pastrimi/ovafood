@@ -157,16 +157,16 @@
     },
     {
       "name": "Ice Cream (scoop)",
-      "price": 100,
+      "price": 150,
       "description": ""
     },
     {
       "name": "Fruit Mix",
-      "price": 300,
+      "price": 550,
       "description": ""
     },
     {
-      "description": "Nutela,luleshtrydhe,kivi,banana,ananas",
+      "description": "Nutella, strawberries, kiwi, banana, pineapple",
       "name": "Tutti frutti crepes",
       "price": 450
     },
@@ -176,57 +176,57 @@
       "price": 450
     },
     {
-      "description": "Nutela,cokollat e bardhe,lajthi,stika",
+      "description": "Nutella, white chocolate, hazelnut, stick",
       "name": "Los Angelos crepes",
       "price": 450
     },
     {
-      "description": "Cokollat e bardh,ananas,arre kokosi",
+      "description": "White chocolate, pineapple, coconut",
       "name": "Island crepes",
       "price": 400
     },
     {
-      "description": "Philadelphia,sallate,ton peshku,kerpudhe,mozzarela\n(savory)",
+      "description": "Philadelphia,salad,tuna,mushrooms,mozzarella",
       "name": "OVA PREMIUM crepes",
       "price": 550
     },
     {
-      "description": "Avocado,fileto pule,sallate jeshile,philadelphia\n(savory)",
+      "description": "Avocado,chicken fillet,green salad,philadelphia\n(savory)",
       "name": "MALDIVE crepes",
       "price": 650
     },
     {
-      "description": "Mozzarela,djathe guda,krem djathi,gorgonzola(savory)",
+      "description": "Mozzarella, Guda cheese, cream cheese, gorgonzola (savory)",
       "name": "SO CHEESY crepes",
       "price": 550
     },
     {
-      "description": "Philadelphia,guda,fasule,tabasko,suxhuk pikant(savory)",
+      "description": "Philadelphia, guda, beans, tabasco, spicy sausage (savory)",
       "name": "HOT CREP",
       "price": 550
     },
     {
-      "description": "Krem djathi,djath i bardhe,guda,ullinj,pomodorini,spec jeshil,kastravec(savory)",
+      "description": "Cream cheese, white cheese, guda, olives, tomatoes, green pepper, cucumber (savory)",
       "name": "VEGAN",
       "price": 600
     },
     {
-      "description": "Philadelphia,djathe i bardhe,domate,majdanoz(savory)",
+      "description": "Philadelphia, white cheese, tomato, parsley (savory)",
       "name": "PICNIC krepes",
       "price": 500
     },
     {
-      "description": "Philadelphia,ton,guda,qepë,pomodorini,sallate jeshile(savory)",
+      "description": "Philadelphia, tuna, guda, onion, tomato, green salad (savory)",
       "name": "MEDITERRANO crepes",
       "price": 550
     },
     {
-      "description": "Philadelphia,proshute,domate,mozzarella(savory)",
+      "description": "Philadelphia, ham, tomato, mozzarella (savory)",
       "name": "LUNCH crepes",
       "price": 500
     },
     {
-      "description": "Philadelphia,mozzarella,proshute,kerpudhe,domate(savory)",
+      "description": "Philadelphia, mozzarella, ham, mushrooms, tomatoes (savory)",
       "name": "ALLA CREMA crepes",
       "price": 550
     }
