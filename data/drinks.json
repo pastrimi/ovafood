@@ -314,6 +314,11 @@
       "name": "Tropical",
       "price": 550,
       "description": "Banana, mango, pineapple, orange juice, honey"
+    },
+    {
+      "description": "",
+      "name": "Uj i madh 0.75",
+      "price": 200
     }
   ]
 }
