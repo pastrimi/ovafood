@@ -61,23 +61,18 @@
       "description": ""
     },
     {
-      "name": "Crudo for 3 Persons",
-      "price": 2800,
+      "name": "Crudo for 4 Persons",
+      "price": 5500,
       "description": ""
     },
     {
-      "name": "Mixed Plate 2 Persons",
-      "price": 1600,
+      "name": "Crudo for 2 Persons",
+      "price": 2800,
       "description": ""
     },
     {
       "name": "Fried Mix",
       "price": 1250,
-      "description": ""
-    },
-    {
-      "name": "Red Mullet",
-      "price": 800,
       "description": ""
     }
   ]
