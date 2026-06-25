@@ -26,7 +26,7 @@
       "description": ""
     },
     {
-      "name": "Monkey Crepe",
+      "name": "Nutela banana",
       "price": 350,
       "description": "Nutella, banana"
     },
@@ -164,6 +164,71 @@
       "name": "Fruit Mix",
       "price": 300,
       "description": ""
+    },
+    {
+      "description": "Nutela,luleshtrydhe,kivi,banana,ananas",
+      "name": "Tutti frutti crepes",
+      "price": 450
+    },
+    {
+      "description": "Nutela,M&M,marshmallow",
+      "name": "Crepes Kids",
+      "price": 450
+    },
+    {
+      "description": "Nutela,cokollat e bardhe,lajthi,stika",
+      "name": "Los Angelos crepes",
+      "price": 450
+    },
+    {
+      "description": "Cokollat e bardh,ananas,arre kokosi",
+      "name": "Island crepes",
+      "price": 400
+    },
+    {
+      "description": "Philadelphia,sallate,ton peshku,kerpudhe,mozzarela\n(savory)",
+      "name": "OVA PREMIUM crepes",
+      "price": 550
+    },
+    {
+      "description": "Avocado,fileto pule,sallate jeshile,philadelphia\n(savory)",
+      "name": "MALDIVE crepes",
+      "price": 650
+    },
+    {
+      "description": "Mozzarela,djathe guda,krem djathi,gorgonzola(savory)",
+      "name": "SO CHEESY crepes",
+      "price": 550
+    },
+    {
+      "description": "Philadelphia,guda,fasule,tabasko,suxhuk pikant(savory)",
+      "name": "HOT CREP",
+      "price": 550
+    },
+    {
+      "description": "Krem djathi,djath i bardhe,guda,ullinj,pomodorini,spec jeshil,kastravec(savory)",
+      "name": "VEGAN",
+      "price": 600
+    },
+    {
+      "description": "Philadelphia,djathe i bardhe,domate,majdanoz(savory)",
+      "name": "PICNIC krepes",
+      "price": 500
+    },
+    {
+      "description": "Philadelphia,ton,guda,qepë,pomodorini,sallate jeshile(savory)",
+      "name": "MEDITERRANO crepes",
+      "price": 550
+    },
+    {
+      "description": "Philadelphia,proshute,domate,mozzarella(savory)",
+      "name": "LUNCH crepes",
+      "price": 500
+    },
+    {
+      "description": "Philadelphia,mozzarella,proshute,kerpudhe,domate(savory)",
+      "name": "ALLA CREMA crepes",
+      "price": 550
     }
   ]
 }
