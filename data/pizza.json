@@ -1,35 +1,205 @@
 {
   "items": [
-    { "name": "Margarita", "has_sizes": true, "small_price": 400, "large_price": 700, "description": "Mozzarella, tomato sauce" },
-    { "name": "Ham", "has_sizes": true, "small_price": 450, "large_price": 850, "description": "Mozzarella, tomato sauce, ham" },
-    { "name": "Salami", "has_sizes": true, "small_price": 450, "large_price": 800, "description": "Mozzarella, tomato sauce, salami" },
-    { "name": "Ham & Salami", "has_sizes": true, "small_price": 550, "large_price": 950, "description": "Mozzarella, tomato sauce, ham, salami" },
-    { "name": "Spicy", "has_sizes": true, "small_price": 500, "large_price": 900, "description": "Mozzarella, tomato sauce, spicy salami, peppers" },
-    { "name": "Spicy Mushroom", "has_sizes": true, "small_price": 550, "large_price": 1000, "description": "Mozzarella, tomato sauce, spicy salami, fresh mushrooms" },
-    { "name": "Wudy", "has_sizes": true, "small_price": 550, "large_price": 950, "description": "Mozzarella, tomato sauce, frankfurter" },
-    { "name": "Wudy Fries", "has_sizes": true, "small_price": 600, "large_price": 1000, "description": "Mozzarella, tomato sauce, frankfurter, fries" },
-    { "name": "Four Cheese", "has_sizes": true, "small_price": 550, "large_price": 950, "description": "Mozzarella, tomato sauce, cream, parmesan, gorgonzola" },
-    { "name": "Tuna", "has_sizes": true, "small_price": 600, "large_price": 1000, "description": "Mozzarella, tomato sauce, tuna, olives" },
-    { "name": "Mushroom", "has_sizes": true, "small_price": 450, "large_price": 850, "description": "Mozzarella, tomato sauce, fresh mushrooms" },
-    { "name": "Tuna Mushroom", "has_sizes": true, "small_price": 600, "large_price": 1050, "description": "Tomato sauce, mozzarella, tuna, mushrooms" },
-    { "name": "Four Seasons", "has_sizes": true, "small_price": 600, "large_price": 1100, "description": "Mozzarella, tomato sauce, ham, spicy salami, tuna, mushrooms" },
-    { "name": "Capricciosa", "has_sizes": true, "small_price": 600, "large_price": 1100, "description": "Mozzarella, tomato sauce, ham, peppers, olives, mushrooms" },
-    { "name": "Vegetarian", "has_sizes": true, "small_price": 500, "large_price": 950, "description": "Mozzarella, tomato sauce, zucchini, olives, peppers, mushrooms" },
-    { "name": "Seafood", "has_sizes": true, "small_price": 750, "large_price": 1150, "description": "Mozzarella, tomato sauce, seafood" },
-    { "name": "Sucuk Four Cheese", "has_sizes": true, "small_price": 650, "large_price": 1100, "description": "Tomato sauce, mozzarella, spicy sucuk, white cheese, gorgonzola, gouda" },
-    { "name": "Carbonara", "has_sizes": true, "small_price": 550, "large_price": 950, "description": "Mozzarella, ham, cream, egg" },
-    { "name": "Pizza Mix", "has_sizes": true, "small_price": 650, "large_price": 1150, "description": "Tomato sauce, mozzarella, salami, ham, sucuk, tuna, olives, mushrooms, peppers" },
-    { "name": "Doner Pizza", "has_sizes": true, "small_price": 650, "large_price": 1100, "description": "Tomato sauce, mozzarella, chicken, fries" },
-    { "name": "Pizza Ova", "has_sizes": true, "small_price": 650, "large_price": 1150, "description": "Tomato sauce, mozzarella, sucuk, cream, arugula, cherry tomatoes" },
-    { "name": "American Pizza", "has_sizes": true, "small_price": 650, "large_price": 1100, "description": "Tomato sauce, mozzarella, wudy, fries" },
-    { "name": "Focaccia", "has_sizes": false, "price": 250, "description": "" },
-    { "name": "Bruschetta Focaccia", "has_sizes": false, "price": 450, "description": "Tomato, cheese" },
-    { "name": "Calzone Ham", "has_sizes": false, "price": 350, "description": "Mozzarella, sauce, ham" },
-    { "name": "Calzone Ham & Mushroom", "has_sizes": false, "price": 400, "description": "Mozzarella, sauce, ham, mushrooms" },
-    { "name": "Calzone Wudy", "has_sizes": false, "price": 350, "description": "Mozzarella, sauce, salami" },
-    { "name": "Calzone Spicy", "has_sizes": false, "price": 350, "description": "Mozzarella, sauce, spicy salami" },
-    { "name": "Calzone Mix Salami", "has_sizes": false, "price": 450, "description": "Mozzarella, sauce, salami" },
-    { "name": "Calzone Tuna", "has_sizes": false, "price": 400, "description": "Mozzarella, sauce, tuna" },
-    { "name": "Calzone Seafood", "has_sizes": false, "price": 550, "description": "Mozzarella, sauce, seafood" }
+    {
+      "name": "Margarita",
+      "has_sizes": true,
+      "small_price": 450,
+      "large_price": 850,
+      "description": "Mozzarella, tomato sauce"
+    },
+    {
+      "name": "Ham",
+      "has_sizes": true,
+      "small_price": 550,
+      "large_price": 1050,
+      "description": "Mozzarella, tomato sauce, ham"
+    },
+    {
+      "name": "Salami",
+      "has_sizes": true,
+      "small_price": 500,
+      "large_price": 950,
+      "description": "Mozzarella, tomato sauce, salami"
+    },
+    {
+      "name": "Ham & Salami",
+      "has_sizes": true,
+      "small_price": 600,
+      "large_price": 1150,
+      "description": "Mozzarella, tomato sauce, ham, salami"
+    },
+    {
+      "name": "Spicy",
+      "has_sizes": true,
+      "small_price": 600,
+      "large_price": 1150,
+      "description": "Mozzarella, tomato sauce, spicy salami, peppers"
+    },
+    {
+      "name": "Spicy Mushroom",
+      "has_sizes": true,
+      "small_price": 650,
+      "large_price": 1200,
+      "description": "Mozzarella, tomato sauce, spicy salami, fresh mushrooms"
+    },
+    {
+      "name": "Wudy",
+      "has_sizes": true,
+      "small_price": 600,
+      "large_price": 1150,
+      "description": "Mozzarella, tomato sauce, frankfurter"
+    },
+    {
+      "name": "Wudy Fries",
+      "has_sizes": true,
+      "small_price": 650,
+      "large_price": 1250,
+      "description": "Mozzarella, tomato sauce, frankfurter, fries"
+    },
+    {
+      "name": "Four Cheese",
+      "has_sizes": true,
+      "small_price": 650,
+      "large_price": 1250,
+      "description": "Mozzarella, tomato sauce, cream, parmesan, gorgonzola"
+    },
+    {
+      "name": "Tuna",
+      "has_sizes": true,
+      "small_price": 650,
+      "large_price": 1200,
+      "description": "Mozzarella, tomato sauce, tuna, olives"
+    },
+    {
+      "name": "Mushroom",
+      "has_sizes": true,
+      "small_price": 550,
+      "large_price": 1050,
+      "description": "Mozzarella, tomato sauce, fresh mushrooms"
+    },
+    {
+      "name": "Tuna Mushroom",
+      "has_sizes": true,
+      "small_price": 700,
+      "large_price": 1350,
+      "description": "Tomato sauce, mozzarella, tuna, mushrooms"
+    },
+    {
+      "name": "Four Seasons",
+      "has_sizes": true,
+      "small_price": 700,
+      "large_price": 1350,
+      "description": "Mozzarella, tomato sauce, ham, spicy salami, tuna, mushrooms"
+    },
+    {
+      "name": "Capricciosa",
+      "has_sizes": true,
+      "small_price": 650,
+      "large_price": 1250,
+      "description": "Mozzarella, tomato sauce, ham, peppers, olives, mushrooms"
+    },
+    {
+      "name": "Vegetarian",
+      "has_sizes": true,
+      "small_price": 600,
+      "large_price": 1150,
+      "description": "Mozzarella, tomato sauce, zucchini, olives, peppers, mushrooms"
+    },
+    {
+      "name": "Seafood",
+      "has_sizes": true,
+      "small_price": 850,
+      "large_price": 1500,
+      "description": "Mozzarella, tomato sauce, seafood"
+    },
+    {
+      "name": "Sucuk Four Cheese",
+      "has_sizes": true,
+      "small_price": 700,
+      "large_price": 1300,
+      "description": "Tomato sauce, mozzarella, spicy sucuk, white cheese, gorgonzola, gouda"
+    },
+    {
+      "name": "Carbonara",
+      "has_sizes": true,
+      "small_price": 600,
+      "large_price": 1150,
+      "description": "Mozzarella, ham, cream, egg"
+    },
+    {
+      "name": "Pizza Mix",
+      "has_sizes": true,
+      "small_price": 700,
+      "large_price": 1350,
+      "description": "Tomato sauce, mozzarella, salami, ham, sucuk, tuna, olives, mushrooms, peppers"
+    },
+    {
+      "name": "Pizza Ova",
+      "has_sizes": true,
+      "small_price": 850,
+      "large_price": 1550,
+      "description": "Tomato sauce, mozzarella, sucuk, cream, arugula, cherry tomatoes"
+    },
+    {
+      "name": "American Pizza",
+      "has_sizes": true,
+      "small_price": 700,
+      "large_price": 1350,
+      "description": "Tomato sauce, mozzarella, wudy, fries"
+    },
+    {
+      "name": "Focaccia",
+      "has_sizes": false,
+      "price": 250,
+      "description": ""
+    },
+    {
+      "name": "Bruschetta Focaccia",
+      "has_sizes": false,
+      "price": 450,
+      "description": "Tomato, cheese"
+    },
+    {
+      "name": "Calzone Ham",
+      "has_sizes": false,
+      "price": 400,
+      "description": "Mozzarella, sauce, ham"
+    },
+    {
+      "name": "Calzone Ham & Mushroom",
+      "has_sizes": false,
+      "price": 450,
+      "description": "Mozzarella, sauce, ham, mushrooms"
+    },
+    {
+      "name": "Calzone Wudy",
+      "has_sizes": false,
+      "price": 400,
+      "description": "Mozzarella, sauce, salami"
+    },
+    {
+      "name": "Calzone Spicy",
+      "has_sizes": false,
+      "price": 400,
+      "description": "Mozzarella, sauce, spicy salami"
+    },
+    {
+      "name": "Calzone Mix Salami",
+      "has_sizes": false,
+      "price": 500,
+      "description": "Mozzarella, sauce, salami"
+    },
+    {
+      "name": "Calzone Tuna",
+      "has_sizes": false,
+      "price": 450,
+      "description": "Mozzarella, sauce, tuna"
+    },
+    {
+      "name": "Calzone Seafood",
+      "has_sizes": false,
+      "price": 600,
+      "description": "Mozzarella, sauce, seafood"
+    }
   ]
 }
