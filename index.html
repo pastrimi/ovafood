@@ -2672,10 +2672,16 @@
             return (tr && tr[currentLang]) || englishName;
         }
 
+        function td(itemName, englishDesc) {
+            if (!englishDesc || currentLang === 'en') return englishDesc;
+            const tr = I18N.descs && I18N.descs[itemName];
+            return (tr && tr[currentLang]) || englishDesc;
+        }
+
         function buildCard(item) {
             const name = t(item.name);
             const desc = item.description
-                ? `<p class="item-desc">${item.description}</p>`
+                ? `<p class="item-desc">${td(item.name, item.description)}</p>`
                 : '';
             const btnText = I18N.ui[currentLang]?.addToOrder || 'Add to Order';
             if (item.has_sizes) {
