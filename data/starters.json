@@ -46,88 +46,8 @@
       "description": "Mayonnaise, tomato, double ham, ketchup"
     },
     {
-      "name": "Green Salad",
-      "price": 450,
-      "description": "Lettuce, lemon, olives, onion"
-    },
-    {
-      "name": "Greek Salad",
-      "price": 450,
-      "description": "Tomato, onion, cucumber, white cheese, peppers, olives, oregano"
-    },
-    {
-      "name": "Mix Salad",
-      "price": 600,
-      "description": "Lettuce, olives, onion, tomato, cucumber, lemon, peppers"
-    },
-    {
-      "name": "Village Salad",
-      "price": 550,
-      "description": "Lettuce, tomato, cucumber, white cheese"
-    },
-    {
-      "name": "Arugula Salad",
-      "price": 550,
-      "description": "Cherry tomatoes, arugula, parmesan"
-    },
-    {
-      "name": "Caesar Salad",
-      "price": 650,
-      "description": "Lettuce, croutons, chicken fillet, corn, parmesan, Caesar sauce"
-    },
-    {
-      "name": "Fish Soup",
-      "price": 400,
-      "description": ""
-    },
-    {
-      "name": "Chicken Soup",
-      "price": 350,
-      "description": ""
-    },
-    {
-      "name": "Vegetable Soup",
+      "name": "Fried Dough with Honey and Cheese",
       "price": 300,
-      "description": ""
-    },
-    {
-      "name": "Mixed Plate",
-      "price": 850,
-      "description": ""
-    },
-    {
-      "name": "French Fries",
-      "price": 350,
-      "description": ""
-    },
-    {
-      "name": "Crab Cakes",
-      "price": 650,
-      "description": ""
-    },
-    {
-      "name": "Grilled Kaskaval Cheese",
-      "price": 500,
-      "description": ""
-    },
-    {
-      "name": "White Cheese",
-      "price": 350,
-      "description": ""
-    },
-    {
-      "name": "Yogurt Sauce",
-      "price": 350,
-      "description": ""
-    },
-    {
-      "name": "Tzatziki",
-      "price": 300,
-      "description": ""
-    },
-    {
-      "name": "Olives",
-      "price": 150,
       "description": ""
     }
   ]

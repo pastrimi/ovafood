@@ -1,0 +1,39 @@
+{
+  "items": [
+    {
+      "name": "French Fries",
+      "price": 350,
+      "description": ""
+    },
+    {
+      "name": "Crab Balls",
+      "price": 650,
+      "description": ""
+    },
+    {
+      "name": "Grilled Kaskaval Cheese",
+      "price": 500,
+      "description": ""
+    },
+    {
+      "name": "White Cheese",
+      "price": 350,
+      "description": ""
+    },
+    {
+      "name": "Yogurt Sauce",
+      "price": 350,
+      "description": ""
+    },
+    {
+      "name": "Tzatziki",
+      "price": 300,
+      "description": ""
+    },
+    {
+      "name": "Olives",
+      "price": 150,
+      "description": ""
+    }
+  ]
+}

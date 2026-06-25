@@ -1,13 +1,84 @@
 {
   "items": [
-    { "name": "Grilled Gilt-head Bream", "price": 850, "description": "" },
-    { "name": "Grilled Sea Bass", "price": 850, "description": "" },
-    { "name": "Fried Hake", "price": 850, "description": "" },
-    { "name": "Fried Red Mullet", "price": 850, "description": "" },
-    { "name": "Calamari Grilled/Fried", "price": 950, "description": "" },
-    { "name": "Cuttlefish Grilled/Fried", "price": 950, "description": "" },
-    { "name": "Shrimp Grilled/Fried", "price": 950, "description": "" },
-    { "name": "Fried Mix", "price": 1000, "description": "" },
-    { "name": "Grilled Octopus", "price": 1150, "description": "" }
+    {
+      "name": "Monkfish Baked/Grilled",
+      "price": 1600,
+      "description": ""
+    },
+    {
+      "name": "Baked Salmon",
+      "price": 1250,
+      "description": ""
+    },
+    {
+      "name": "Grilled Gilt-head Bream",
+      "price": 1100,
+      "description": ""
+    },
+    {
+      "name": "Wild Sea Bass per KG",
+      "price": 5500,
+      "description": ""
+    },
+    {
+      "name": "Grilled Sea Bass",
+      "price": 1100,
+      "description": ""
+    },
+    {
+      "name": "Fried Hake",
+      "price": 1200,
+      "description": ""
+    },
+    {
+      "name": "Calamari Grilled/Fried",
+      "price": 1100,
+      "description": ""
+    },
+    {
+      "name": "Cuttlefish Grilled/Fried",
+      "price": 1100,
+      "description": ""
+    },
+    {
+      "name": "Shrimp Grilled/Fried",
+      "price": 1200,
+      "description": ""
+    },
+    {
+      "name": "Fish Fillet with Baked Potatoes",
+      "price": 1500,
+      "description": ""
+    },
+    {
+      "name": "Grilled Octopus",
+      "price": 1350,
+      "description": ""
+    },
+    {
+      "name": "Mussels",
+      "price": 800,
+      "description": ""
+    },
+    {
+      "name": "Crudo for 3 Persons",
+      "price": 2800,
+      "description": ""
+    },
+    {
+      "name": "Mixed Plate 2 Persons",
+      "price": 1600,
+      "description": ""
+    },
+    {
+      "name": "Fried Mix",
+      "price": 1250,
+      "description": ""
+    },
+    {
+      "name": "Red Mullet",
+      "price": 800,
+      "description": ""
+    }
   ]
 }

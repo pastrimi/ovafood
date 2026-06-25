@@ -3,7 +3,7 @@
     {
       "name": "Cheese Burger",
       "price": 550,
-      "description": "Yogurt sauce, double beef patty, cucumber, tomato, mayonnaise, ketchup, cheddar, lettuce, fries"
+      "description": "Sauce, double beef patty, cucumber, tomato, cheddar, lettuce, fries"
     },
     {
       "name": "Barbeque Burger",
@@ -11,9 +11,14 @@
       "description": "Double beef patty, mayonnaise, white cheese, tomato, fries, BBQ sauce"
     },
     {
+      "name": "Chicken Burger",
+      "price": 650,
+      "description": "Sauce, chicken fillet, cheddar, tomato, pickled cucumber, lettuce, fries"
+    },
+    {
       "name": "Big Best Burger",
       "price": 650,
-      "description": "Yogurt sauce, double patty, tomato, pickled cucumber, white cheese, fries"
+      "description": "Sauce, double patty, tomato, pickled cucumber, white cheese, fries"
     },
     {
       "name": "Ova Burger",
@@ -21,14 +26,14 @@
       "description": "Sauce, lettuce, double patty, corn, pickled cucumber, white cheese, cheddar, fries"
     },
     {
-      "name": "Club Sandwich",
-      "price": 450,
-      "description": "3 toast breads, tzatziki, mayonnaise, gouda cheese, ham, lettuce, tomato"
+      "name": "Smash Burger",
+      "price": 650,
+      "description": "Sauce, double meat patty, melted cheddar, caramelized onion, fries"
     },
     {
-      "name": "Panini",
-      "price": 50,
-      "description": ""
+      "name": "UFO Burger",
+      "price": 650,
+      "description": "Sauce, double patty, melted cheddar, onion, fries"
     }
   ]
 }

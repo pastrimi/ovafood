@@ -16,43 +16,55 @@ const I18N = {
   },
 
   sections: {
-    starters:   { sq: 'Antipasta', it: 'Antipasti', de: 'Vorspeisen', fr: 'Entrées' },
-    pizza:      { sq: 'Pizza', it: 'Pizza', de: 'Pizza', fr: 'Pizza' },
-    pasta:      { sq: 'Pasta / Rizoto', it: 'Pasta / Risotti', de: 'Pasta / Risotto', fr: 'Pâtes / Risotto' },
+    starters:   { sq: 'Mengjesi', it: 'Colazione', de: 'Frühstück', fr: 'Petit-déjeuner' },
+    salads:     { sq: 'Sallata', it: 'Insalate', de: 'Salate', fr: 'Salades' },
+    soups:      { sq: 'Supat', it: 'Zuppe', de: 'Suppen', fr: 'Soupes' },
+    pasta:      { sq: 'Pasta', it: 'Pasta', de: 'Pasta', fr: 'Pâtes' },
+    risotto:    { sq: 'Rizoto', it: 'Risotto', de: 'Risotto', fr: 'Risotto' },
     meat:       { sq: 'Mishi', it: 'Carne', de: 'Fleisch', fr: 'Viande' },
-    burgers:    { sq: 'Hamburger / Fast Food', it: 'Hamburger / Fast Food', de: 'Burger / Fast Food', fr: 'Burgers / Fast Food' },
-    sandwiches: { sq: 'Sanduiçe', it: 'Panini', de: 'Sandwiches', fr: 'Sandwichs' },
     fish:       { sq: 'Peshku', it: 'Pesce', de: 'Fisch', fr: 'Poisson' },
+    sides:      { sq: 'Shoqëruese', it: 'Contorni', de: 'Beilagen', fr: 'Accompagnements' },
+    pizza:      { sq: 'Pizza', it: 'Pizza', de: 'Pizza', fr: 'Pizza' },
+    sandwiches: { sq: 'Sanduiçe', it: 'Panini', de: 'Sandwiches', fr: 'Sandwichs' },
+    burgers:    { sq: 'Hamburger', it: 'Hamburger', de: 'Burger', fr: 'Burgers' },
     dessert:    { sq: 'Ëmbëlsira', it: 'Dolci', de: 'Desserts', fr: 'Desserts' },
     drinks:     { sq: 'Pijet', it: 'Bevande', de: 'Getränke', fr: 'Boissons' }
   },
 
   categories: {
-    starters:   { en: 'Starters', sq: 'Antipasta', it: 'Antipasti', de: 'Vorspeisen', fr: 'Entrées' },
-    pizza:      { en: 'Pizza', sq: 'Pizza', it: 'Pizza', de: 'Pizza', fr: 'Pizza' },
+    starters:   { en: 'Breakfast', sq: 'Mengjesi', it: 'Colazione', de: 'Frühstück', fr: 'Petit-déjeuner' },
+    salads:     { en: 'Salads', sq: 'Sallata', it: 'Insalate', de: 'Salate', fr: 'Salades' },
+    soups:      { en: 'Soups', sq: 'Supat', it: 'Zuppe', de: 'Suppen', fr: 'Soupes' },
     pasta:      { en: 'Pasta', sq: 'Pasta', it: 'Pasta', de: 'Pasta', fr: 'Pâtes' },
+    risotto:    { en: 'Risotto', sq: 'Rizoto', it: 'Risotto', de: 'Risotto', fr: 'Risotto' },
     meat:       { en: 'Meat', sq: 'Mishi', it: 'Carne', de: 'Fleisch', fr: 'Viande' },
-    burgers:    { en: 'Burgers', sq: 'Hamburger', it: 'Hamburger', de: 'Burger', fr: 'Burgers' },
-    sandwiches: { en: 'Sandwiches', sq: 'Sanduiçe', it: 'Panini', de: 'Sandwiches', fr: 'Sandwichs' },
     fish:       { en: 'Fish', sq: 'Peshku', it: 'Pesce', de: 'Fisch', fr: 'Poisson' },
+    sides:      { en: 'Side Dishes', sq: 'Shoqëruese', it: 'Contorni', de: 'Beilagen', fr: 'Accompagnements' },
+    pizza:      { en: 'Pizza', sq: 'Pizza', it: 'Pizza', de: 'Pizza', fr: 'Pizza' },
+    sandwiches: { en: 'Sandwiches', sq: 'Sanduiçe', it: 'Panini', de: 'Sandwiches', fr: 'Sandwichs' },
+    burgers:    { en: 'Burgers', sq: 'Hamburger', it: 'Hamburger', de: 'Burger', fr: 'Burgers' },
     dessert:    { en: 'Desserts', sq: 'Ëmbëlsira', it: 'Dolci', de: 'Desserts', fr: 'Desserts' },
     drinks:     { en: 'Drinks', sq: 'Pijet', it: 'Bevande', de: 'Getränke', fr: 'Boissons' }
   },
 
   nav: {
-    starters:   { en: 'Starters', sq: 'Antipasta', it: 'Antipasti', de: 'Vorspeisen', fr: 'Entrées' },
-    pizza:      { en: 'Pizza', sq: 'Pizza', it: 'Pizza', de: 'Pizza', fr: 'Pizza' },
+    starters:   { en: 'Breakfast', sq: 'Mengjesi', it: 'Colazione', de: 'Frühstück', fr: 'Petit-déjeuner' },
+    salads:     { en: 'Salads', sq: 'Sallata', it: 'Insalate', de: 'Salate', fr: 'Salades' },
+    soups:      { en: 'Soups', sq: 'Supat', it: 'Zuppe', de: 'Suppen', fr: 'Soupes' },
     pasta:      { en: 'Pasta', sq: 'Pasta', it: 'Pasta', de: 'Pasta', fr: 'Pâtes' },
+    risotto:    { en: 'Risotto', sq: 'Rizoto', it: 'Risotto', de: 'Risotto', fr: 'Risotto' },
     meat:       { en: 'Meat', sq: 'Mishi', it: 'Carne', de: 'Fleisch', fr: 'Viande' },
-    burgers:    { en: 'Burgers', sq: 'Hamburger', it: 'Hamburger', de: 'Burger', fr: 'Burgers' },
-    sandwiches: { en: 'Sandwiches', sq: 'Sanduiçe', it: 'Panini', de: 'Sandwiches', fr: 'Sandwichs' },
     fish:       { en: 'Fish', sq: 'Peshku', it: 'Pesce', de: 'Fisch', fr: 'Poisson' },
+    sides:      { en: 'Side Dishes', sq: 'Shoqëruese', it: 'Contorni', de: 'Beilagen', fr: 'Accompagnements' },
+    pizza:      { en: 'Pizza', sq: 'Pizza', it: 'Pizza', de: 'Pizza', fr: 'Pizza' },
+    sandwiches: { en: 'Sandwiches', sq: 'Sanduiçe', it: 'Panini', de: 'Sandwiches', fr: 'Sandwichs' },
+    burgers:    { en: 'Burgers', sq: 'Hamburger', it: 'Hamburger', de: 'Burger', fr: 'Burgers' },
     dessert:    { en: 'Desserts', sq: 'Ëmbëlsira', it: 'Dolci', de: 'Desserts', fr: 'Desserts' },
     drinks:     { en: 'Drinks', sq: 'Pijet', it: 'Bevande', de: 'Getränke', fr: 'Boissons' }
   },
 
   items: {
-    // ── Starters ──
+    // ── Breakfast ──
     'Ova Breakfast':        { sq: 'Mëngjesi Ova', it: 'Colazione Ova', de: 'Ova-Frühstück', fr: 'Petit-déjeuner Ova' },
     'Ham Omelette':         { sq: 'Omletë me Proshutë', it: 'Frittata al Prosciutto', de: 'Schinken-Omelett', fr: 'Omelette au Jambon' },
     'Vegetable Omelette':   { sq: 'Omletë me Perime', it: 'Frittata alle Verdure', de: 'Gemüse-Omelett', fr: 'Omelette aux Légumes' },
@@ -62,18 +74,71 @@ const I18N = {
     'Sunny Side Up':        { sq: 'Vezë Sy', it: 'Uovo al Tegamino', de: 'Sonnenseite', fr: 'Œuf au Plat' },
     'Scrambled Egg':        { sq: 'Vezë e Prishur', it: 'Uova Strapazzate', de: 'Rührei', fr: 'Œufs Brouillés' },
     'Toast':                { sq: 'Tost', it: 'Toast', de: 'Toast', fr: 'Toast' },
+    'Fried Dough with Honey and Cheese': { sq: 'Petulla me Mjaltë dhe Djathë', it: 'Frittelle con Miele e Formaggio', de: 'Teigkrapfen mit Honig und Käse', fr: 'Beignets au Miel et Fromage' },
+
+    // ── Salads ──
     'Green Salad':          { sq: 'Sallatë Jeshile', it: 'Insalata Verde', de: 'Grüner Salat', fr: 'Salade Verte' },
     'Greek Salad':          { sq: 'Sallatë Greke', it: 'Insalata Greca', de: 'Griechischer Salat', fr: 'Salade Grecque' },
     'Mix Salad':            { sq: 'Sallatë Mikse', it: 'Insalata Mista', de: 'Gemischter Salat', fr: 'Salade Mixte' },
     'Village Salad':        { sq: 'Sallatë Fshati', it: 'Insalata Contadina', de: 'Bauernsalat', fr: 'Salade Paysanne' },
     'Arugula Salad':        { sq: 'Sallatë Rukola', it: 'Insalata di Rucola', de: 'Rucola-Salat', fr: 'Salade de Roquette' },
     'Caesar Salad':         { sq: 'Sallatë Cezar', it: 'Insalata Caesar', de: 'Caesar-Salat', fr: 'Salade César' },
+    'Cold Seafood Salad':   { sq: 'Sallatë e Ftohtë Deti', it: 'Insalata Fredda di Mare', de: 'Kalter Meeresfrüchtesalat', fr: 'Salade Froide aux Fruits de Mer' },
+    'Cold Octopus':         { sq: 'Oktapod i Ftohtë', it: 'Polpo Freddo', de: 'Kalter Oktopus', fr: 'Poulpe Froid' },
+
+    // ── Soups ──
     'Fish Soup':            { sq: 'Supë Peshku', it: 'Zuppa di Pesce', de: 'Fischsuppe', fr: 'Soupe de Poisson' },
     'Chicken Soup':         { sq: 'Supë Pule', it: 'Zuppa di Pollo', de: 'Hühnersuppe', fr: 'Soupe de Poulet' },
     'Vegetable Soup':       { sq: 'Supë Perimesh', it: 'Zuppa di Verdure', de: 'Gemüsesuppe', fr: 'Soupe de Légumes' },
-    'Mixed Plate':          { sq: 'Pjatë Mikse', it: 'Piatto Misto', de: 'Gemischte Platte', fr: 'Assiette Mixte' },
+
+    // ── Pasta ──
+    'Linguini Seafood':     { sq: 'Linguini Fruta Deti', it: 'Linguine ai Frutti di Mare', de: 'Linguine Meeresfrüchte', fr: 'Linguine Fruits de Mer' },
+    'Linguini Shrimp & Zucchini': { sq: 'Linguini Karkalec & Kungull', it: 'Linguine Gamberi e Zucchine', de: 'Linguine Garnelen & Zucchini', fr: 'Linguine Crevettes & Courgettes' },
+    'Pasta Bolognese':      { sq: 'Pasta Boloneze', it: 'Pasta alla Bolognese', de: 'Pasta Bolognese', fr: 'Pâtes Bolognaise' },
+    'Butter Pasta':         { sq: 'Pasta me Gjalp', it: 'Pasta al Burro', de: 'Butter-Pasta', fr: 'Pâtes au Beurre' },
+    'Ravioli Truffle Cream': { sq: 'Ravioli Krem Tartuf', it: 'Ravioli Crema al Tartufo', de: 'Ravioli Trüffelcreme', fr: 'Ravioli Crème Truffe' },
+    'Ravioli Truffle Shrimp': { sq: 'Ravioli Tartuf Karkalec', it: 'Ravioli Tartufo e Gamberi', de: 'Ravioli Trüffel & Garnelen', fr: 'Ravioli Truffe & Crevettes' },
+    'Chicken Cream Mushroom Pasta': { sq: 'Makarona Fileto Pule me Pana dhe Kërpudha', it: 'Pasta Pollo Panna e Funghi', de: 'Pasta Hähnchen Sahne Pilze', fr: 'Pâtes Poulet Crème Champignons' },
+
+    // ── Risotto ──
+    'Risotto Seafood':      { sq: 'Rizoto Fruta Deti', it: 'Risotto ai Frutti di Mare', de: 'Risotto Meeresfrüchte', fr: 'Risotto Fruits de Mer' },
+    'Risotto Shrimp & Zucchini': { sq: 'Rizoto Karkalec & Kungull', it: 'Risotto Gamberi e Zucchine', de: 'Risotto Garnelen & Zucchini', fr: 'Risotto Crevettes & Courgettes' },
+    'Risotto Salmon':       { sq: 'Rizoto me Salmon', it: 'Risotto al Salmone', de: 'Risotto mit Lachs', fr: 'Risotto au Saumon' },
+    'Risotto Shrimp':       { sq: 'Rizoto me Karkalec', it: 'Risotto ai Gamberi', de: 'Risotto mit Garnelen', fr: 'Risotto aux Crevettes' },
+    'Risotto Vegetables':   { sq: 'Rizoto me Perime', it: 'Risotto alle Verdure', de: 'Gemüserisotto', fr: 'Risotto aux Légumes' },
+
+    // ── Meat ──
+    'Chicken Fillet with Potatoes': { sq: 'Fileto Pule me Patate', it: 'Filetto di Pollo con Patate', de: 'Hähnchenfilet mit Kartoffeln', fr: 'Filet de Poulet avec Pommes de Terre' },
+    'Beef Steak with Baked Potatoes': { sq: 'Biftek Viçi me Patate Furre', it: 'Bistecca di Manzo con Patate al Forno', de: 'Rindersteak mit Ofenkartoffeln', fr: 'Steak de Bœuf avec Pommes au Four' },
+    'Veal Chops with Baked Potatoes': { sq: 'Berxollë Viçi me Patate Furre', it: 'Costolette di Vitello con Patate al Forno', de: 'Kalbskoteletts mit Ofenkartoffeln', fr: 'Côtelettes de Veau avec Pommes au Four' },
+    'Grilled Lamb Ribs':    { sq: 'Brinjë Qingji në Zgarë', it: 'Costine d\'Agnello alla Griglia', de: 'Gegrillte Lammrippen', fr: 'Côtes d\'Agneau Grillées' },
+    'Mixed Grill Normal':   { sq: 'Zgarë Mikse Normale', it: 'Grigliata Mista Normale', de: 'Gemischter Grill Normal', fr: 'Grillade Mixte Normale' },
+    'Mixed Grill Family':   { sq: 'Zgarë Mikse Familjare', it: 'Grigliata Mista Familiare', de: 'Gemischter Grill Familien', fr: 'Grillade Mixte Familiale' },
+    'Shish Kebab':          { sq: 'Shishqebap', it: 'Spiedino', de: 'Schaschlik', fr: 'Brochette' },
+    'Chicken Cutlet':       { sq: 'Kotoleta Pule', it: 'Cotoletta di Pollo', de: 'Hähnchenschnitzel', fr: 'Escalope de Poulet' },
+    'Marinated Chicken Wings': { sq: 'Krahë Pule të Marinuar', it: 'Ali di Pollo Marinato', de: 'Marinierte Hähnchenflügel', fr: 'Ailes de Poulet Marinées' },
+
+    // ── Fish ──
+    'Monkfish Baked/Grilled': { sq: 'Peshkatricë Furre/Zgarë', it: 'Rana Pescatrice al Forno/Griglia', de: 'Seeteufel Gebacken/Gegrillt', fr: 'Lotte au Four/Grillée' },
+    'Baked Salmon':         { sq: 'Salmon Furre', it: 'Salmone al Forno', de: 'Lachs aus dem Ofen', fr: 'Saumon au Four' },
+    'Grilled Gilt-head Bream': { sq: 'Koce Zgare', it: 'Orata alla Griglia', de: 'Gegrillte Goldbrasse', fr: 'Daurade Grillée' },
+    'Wild Sea Bass per KG': { sq: 'Levrek i Egër në Tavë (kg)', it: 'Branzino Selvaggio al Forno (kg)', de: 'Wilder Wolfsbarsch (kg)', fr: 'Bar Sauvage au Four (kg)' },
+    'Grilled Sea Bass':     { sq: 'Levrek Zgare', it: 'Branzino alla Griglia', de: 'Gegrillter Wolfsbarsch', fr: 'Bar Grillé' },
+    'Fried Hake':           { sq: 'Merluc Fërguar', it: 'Nasello Fritto', de: 'Gebratener Seehecht', fr: 'Merlu Frit' },
+    'Calamari Grilled/Fried': { sq: 'Kallamar Zgare/Fërguar', it: 'Calamari Grigliati/Fritti', de: 'Calamari Gegrillt/Frittiert', fr: 'Calamars Grillés/Frits' },
+    'Cuttlefish Grilled/Fried': { sq: 'Sepje Zgare/Fërguar', it: 'Seppie Grigliate/Fritte', de: 'Tintenfisch Gegrillt/Frittiert', fr: 'Seiche Grillée/Frite' },
+    'Shrimp Grilled/Fried': { sq: 'Karkalec Zgare/Fërguar', it: 'Gamberi Grigliati/Fritti', de: 'Garnelen Gegrillt/Frittiert', fr: 'Crevettes Grillées/Frites' },
+    'Fish Fillet with Baked Potatoes': { sq: 'Fileto Peshku me Patate Furre', it: 'Filetto di Pesce con Patate al Forno', de: 'Fischfilet mit Ofenkartoffeln', fr: 'Filet de Poisson avec Pommes au Four' },
+    'Grilled Octopus':      { sq: 'Oktapod Zgare', it: 'Polpo alla Griglia', de: 'Gegrillter Oktopus', fr: 'Poulpe Grillé' },
+    'Mussels':              { sq: 'Midhje', it: 'Cozze', de: 'Muscheln', fr: 'Moules' },
+    'Crudo for 3 Persons':  { sq: 'Crudo për 3 Persona', it: 'Crudo per 3 Persone', de: 'Crudo für 3 Personen', fr: 'Crudo pour 3 Personnes' },
+    'Mixed Plate 2 Persons': { sq: 'Pjatë Mikse 2 Persona', it: 'Piatto Misto 2 Persone', de: 'Gemischte Platte 2 Personen', fr: 'Assiette Mixte 2 Personnes' },
+    'Fried Mix':            { sq: 'Friturë Mikse', it: 'Fritto Misto', de: 'Frittiermix', fr: 'Friture Mixte' },
+    'Red Mullet':           { sq: 'Mesore', it: 'Triglia', de: 'Rotbarbe', fr: 'Rouget' },
+
+    // ── Side Dishes ──
     'French Fries':         { sq: 'Patate të Skuqura', it: 'Patatine Fritte', de: 'Pommes Frites', fr: 'Frites' },
-    'Crab Cakes':           { sq: 'Qofte Gafore', it: 'Polpette di Granchio', de: 'Krabben-Frikadellen', fr: 'Croquettes de Crabe' },
+    'Crab Balls':           { sq: 'Qofte Gafore', it: 'Polpette di Granchio', de: 'Krabbenbällchen', fr: 'Boulettes de Crabe' },
     'Grilled Kaskaval Cheese': { sq: 'Kaçkavall Zgare', it: 'Kaçkavall alla Griglia', de: 'Gegrillter Kaçkavall', fr: 'Kaçkavall Grillé' },
     'White Cheese':         { sq: 'Djathë i Bardhë', it: 'Formaggio Bianco', de: 'Weißkäse', fr: 'Fromage Blanc' },
     'Yogurt Sauce':         { sq: 'Salcë Kosi', it: 'Salsa allo Yogurt', de: 'Joghurtsauce', fr: 'Sauce au Yaourt' },
@@ -95,9 +160,11 @@ const I18N = {
     'Vegetarian':           { sq: 'Vegjetariane', it: 'Vegetariana', de: 'Vegetarisch', fr: 'Végétarienne' },
     'Seafood':              { sq: 'Fruta Deti', it: 'Frutti di Mare', de: 'Meeresfrüchte', fr: 'Fruits de Mer' },
     'Sucuk Four Cheese':    { sq: 'Suxhuk 4 Djathëra', it: 'Sucuk Quattro Formaggi', de: 'Sucuk Vier Käse', fr: 'Sucuk Quatre Fromages' },
+    'La Crema':             { sq: 'La Crema', it: 'La Crema', de: 'La Crema', fr: 'La Crema' },
     'Pizza Mix':            { sq: 'Pizza Mikse', it: 'Pizza Mista', de: 'Pizza Mix', fr: 'Pizza Mixte' },
-    'Doner Pizza':          { sq: 'Pizza Doner', it: 'Pizza Döner', de: 'Döner-Pizza', fr: 'Pizza Döner' },
+    'Pizza Ova':            { sq: 'Pizza Ova', it: 'Pizza Ova', de: 'Pizza Ova', fr: 'Pizza Ova' },
     'American Pizza':       { sq: 'Pizza Amerikane', it: 'Pizza Americana', de: 'Amerikanische Pizza', fr: 'Pizza Américaine' },
+    'Focaccia':             { sq: 'Fogace', it: 'Focaccia', de: 'Focaccia', fr: 'Focaccia' },
     'Bruschetta Focaccia':  { sq: 'Brusketë Focaccia', it: 'Bruschetta Focaccia', de: 'Bruschetta Focaccia', fr: 'Bruschetta Focaccia' },
     'Calzone Ham':          { sq: 'Kalcone Proshutë', it: 'Calzone Prosciutto', de: 'Calzone Schinken', fr: 'Calzone Jambon' },
     'Calzone Ham & Mushroom': { sq: 'Kalcone Proshutë & Kërpudha', it: 'Calzone Prosciutto e Funghi', de: 'Calzone Schinken & Pilze', fr: 'Calzone Jambon & Champignons' },
@@ -105,41 +172,8 @@ const I18N = {
     'Calzone Spicy':        { sq: 'Kalcone Pikante', it: 'Calzone Piccante', de: 'Calzone Pikant', fr: 'Calzone Épicé' },
     'Calzone Mix Salami':   { sq: 'Kalcone Sallam Mikse', it: 'Calzone Salame Misto', de: 'Calzone Salami Mix', fr: 'Calzone Salami Mixte' },
     'Calzone Tuna':         { sq: 'Kalcone Ton', it: 'Calzone Tonno', de: 'Calzone Thunfisch', fr: 'Calzone Thon' },
+    'Calzone Four Cheese':  { sq: 'Kalcone 4 Djathëra', it: 'Calzone Quattro Formaggi', de: 'Calzone Vier Käse', fr: 'Calzone Quatre Fromages' },
     'Calzone Seafood':      { sq: 'Kalcone Fruta Deti', it: 'Calzone Frutti di Mare', de: 'Calzone Meeresfrüchte', fr: 'Calzone Fruits de Mer' },
-
-    // ── Pasta ──
-    'Linguini Seafood':     { sq: 'Linguini Fruta Deti', it: 'Linguine ai Frutti di Mare', de: 'Linguine Meeresfrüchte', fr: 'Linguine Fruits de Mer' },
-    'Linguini Shrimp & Zucchini': { sq: 'Linguini Karkalec & Kungull', it: 'Linguine Gamberi e Zucchine', de: 'Linguine Garnelen & Zucchini', fr: 'Linguine Crevettes & Courgettes' },
-    'Pasta Bolognese':      { sq: 'Pasta Boloneze', it: 'Pasta alla Bolognese', de: 'Pasta Bolognese', fr: 'Pâtes Bolognaise' },
-    'Butter Pasta':         { sq: 'Pasta me Gjalp', it: 'Pasta al Burro', de: 'Butter-Pasta', fr: 'Pâtes au Beurre' },
-    'Ravioli Truffle Cream': { sq: 'Ravioli Krem Tartuf', it: 'Ravioli Crema al Tartufo', de: 'Ravioli Trüffelcreme', fr: 'Ravioli Crème Truffe' },
-    'Ravioli Truffle Shrimp': { sq: 'Ravioli Tartuf Karkalec', it: 'Ravioli Tartufo e Gamberi', de: 'Ravioli Trüffel & Garnelen', fr: 'Ravioli Truffe & Crevettes' },
-    'Risotto Seafood':      { sq: 'Rizoto Fruta Deti', it: 'Risotto ai Frutti di Mare', de: 'Risotto Meeresfrüchte', fr: 'Risotto Fruits de Mer' },
-    'Risotto Shrimp & Zucchini': { sq: 'Rizoto Karkalec & Kungull', it: 'Risotto Gamberi e Zucchine', de: 'Risotto Garnelen & Zucchini', fr: 'Risotto Crevettes & Courgettes' },
-    'Risotto Shrimp & Saffron': { sq: 'Rizoto Karkalec & Shafran', it: 'Risotto Gamberi e Zafferano', de: 'Risotto Garnelen & Safran', fr: 'Risotto Crevettes & Safran' },
-    'Simple Risotto':       { sq: 'Rizoto e Thjeshtë', it: 'Risotto Semplice', de: 'Einfaches Risotto', fr: 'Risotto Simple' },
-
-    // ── Meat ──
-    'Chicken Fillet with Fries': { sq: 'Fileto Pule me Patate', it: 'Filetto di Pollo con Patatine', de: 'Hähnchenfilet mit Pommes', fr: 'Filet de Poulet avec Frites' },
-    'Beef Steak with Fries': { sq: 'Biftek Viçi me Patate', it: 'Bistecca di Manzo con Patatine', de: 'Rindersteak mit Pommes', fr: 'Steak de Bœuf avec Frites' },
-    'Beef Chop with Fries':  { sq: 'Brinjë Viçi me Patate', it: 'Costoletta di Manzo con Patatine', de: 'Rinderkotelett mit Pommes', fr: 'Côtelette de Bœuf avec Frites' },
-    'Clay Pot Stew':        { sq: 'Tavë Balte', it: 'Stufato in Terracotta', de: 'Tontopf-Eintopf', fr: 'Ragoût en Cocotte' },
-    'Chicken Cutlet':       { sq: 'Kotoleta Pule', it: 'Cotoletta di Pollo', de: 'Hähnchenschnitzel', fr: 'Escalope de Poulet' },
-    'Shish Kebab':          { sq: 'Shishqebap', it: 'Spiedino', de: 'Schaschlik', fr: 'Brochette' },
-
-    // ── Burgers / Fast Food ──
-    'Cheese Burger':        { sq: 'Çizbërger', it: 'Cheeseburger', de: 'Cheeseburger', fr: 'Cheeseburger' },
-    'Barbeque Burger':      { sq: 'Burger BBQ', it: 'Burger Barbecue', de: 'Barbecue-Burger', fr: 'Burger Barbecue' },
-    'Big Best Burger':      { sq: 'Big Best Burger', it: 'Big Best Burger', de: 'Big Best Burger', fr: 'Big Best Burger' },
-    'Ova Burger':           { sq: 'Ova Burger', it: 'Ova Burger', de: 'Ova Burger', fr: 'Ova Burger' },
-    'Souvlaki':             { sq: 'Sufllaqe', it: 'Souvlaki', de: 'Souvlaki', fr: 'Souvlaki' },
-    'Open Souvlaki':        { sq: 'Sufllaqe e Hapur', it: 'Souvlaki Aperto', de: 'Offener Souvlaki', fr: 'Souvlaki Ouvert' },
-    'Hot Dog':              { sq: 'Hot Dog', it: 'Hot Dog', de: 'Hot Dog', fr: 'Hot Dog' },
-    'Doner':                { sq: 'Doner', it: 'Döner Kebab', de: 'Döner', fr: 'Kebab' },
-    'Club Sandwich':        { sq: 'Sanduiç Club', it: 'Club Sandwich', de: 'Club Sandwich', fr: 'Club Sandwich' },
-    'Shawarma (Kebab)':     { sq: 'Shawarma (Kebap)', it: 'Shawarma', de: 'Schawarma', fr: 'Shawarma' },
-    'Pita Bread':           { sq: 'Pite', it: 'Pane Pita', de: 'Fladenbrot', fr: 'Pain Pita' },
-    'Panini':               { sq: 'Panine', it: 'Panino', de: 'Panini', fr: 'Panini' },
 
     // ── Sandwiches ──
     'Beef Ham Sandwich':    { sq: 'Sanduiç Proshutë Viçi', it: 'Panino Prosciutto di Manzo', de: 'Rinderschinken-Sandwich', fr: 'Sandwich Jambon de Bœuf' },
@@ -154,26 +188,28 @@ const I18N = {
     'Four Cheese Sandwich': { sq: 'Sanduiç 4 Djathëra', it: 'Panino Quattro Formaggi', de: 'Vier-Käse-Sandwich', fr: 'Sandwich Quatre Fromages' },
     'Chicken Ham Sandwich': { sq: 'Sanduiç Proshutë Pule', it: 'Panino Prosciutto di Pollo', de: 'Hähnchenschinken-Sandwich', fr: 'Sandwich Jambon de Poulet' },
     'Ova Sandwich':         { sq: 'Sanduiç Ova', it: 'Panino Ova', de: 'Ova-Sandwich', fr: 'Sandwich Ova' },
-    'Chicken Cutlet Sandwich': { sq: 'Sanduiç Kotoleta Pule', it: 'Panino Cotoletta di Pollo', de: 'Schnitzel-Sandwich', fr: 'Sandwich Escalope de Poulet' },
-    'Shish Kebab Sandwich': { sq: 'Sanduiç Shishqebap', it: 'Panino Spiedino', de: 'Schaschlik-Sandwich', fr: 'Sandwich Brochette' },
 
-    // ── Fish ──
-    'Grilled Gilt-head Bream': { sq: 'Koce Zgare', it: 'Orata alla Griglia', de: 'Gegrillte Goldbrasse', fr: 'Daurade Grillée' },
-    'Grilled Sea Bass':     { sq: 'Levrek Zgare', it: 'Branzino alla Griglia', de: 'Gegrillter Wolfsbarsch', fr: 'Bar Grillé' },
-    'Fried Hake':           { sq: 'Merluc Fërguar', it: 'Nasello Fritto', de: 'Gebratener Seehecht', fr: 'Merlu Frit' },
-    'Fried Red Mullet':     { sq: 'Barbun Fërguar', it: 'Triglia Fritta', de: 'Gebratene Meerbarbe', fr: 'Rouget Frit' },
-    'Calamari Grilled/Fried': { sq: 'Kallamar Zgare/Fërguar', it: 'Calamari Grigliati/Fritti', de: 'Calamari Gegrillt/Frittiert', fr: 'Calamars Grillés/Frits' },
-    'Cuttlefish Grilled/Fried': { sq: 'Sepje Zgare/Fërguar', it: 'Seppie Grigliate/Fritte', de: 'Tintenfisch Gegrillt/Frittiert', fr: 'Seiche Grillée/Frite' },
-    'Shrimp Grilled/Fried': { sq: 'Karkalec Zgare/Fërguar', it: 'Gamberi Grigliati/Fritti', de: 'Garnelen Gegrillt/Frittiert', fr: 'Crevettes Grillées/Frites' },
-    'Fried Mix':            { sq: 'Friturë Mikse', it: 'Fritto Misto', de: 'Frittiermix', fr: 'Friture Mixte' },
-    'Grilled Octopus':      { sq: 'Oktapod Zgare', it: 'Polpo alla Griglia', de: 'Gegrillter Oktopus', fr: 'Poulpe Grillé' },
+    // ── Burgers ──
+    'Cheese Burger':        { sq: 'Çizbërger', it: 'Cheeseburger', de: 'Cheeseburger', fr: 'Cheeseburger' },
+    'Barbeque Burger':      { sq: 'Burger BBQ', it: 'Burger Barbecue', de: 'Barbecue-Burger', fr: 'Burger Barbecue' },
+    'Chicken Burger':       { sq: 'Burger Pule', it: 'Chicken Burger', de: 'Chicken Burger', fr: 'Burger au Poulet' },
+    'Big Best Burger':      { sq: 'Big Best Burger', it: 'Big Best Burger', de: 'Big Best Burger', fr: 'Big Best Burger' },
+    'Ova Burger':           { sq: 'Ova Burger', it: 'Ova Burger', de: 'Ova Burger', fr: 'Ova Burger' },
+    'Smash Burger':         { sq: 'Smash Burger', it: 'Smash Burger', de: 'Smash Burger', fr: 'Smash Burger' },
+    'UFO Burger':           { sq: 'UFO Burger', it: 'UFO Burger', de: 'UFO Burger', fr: 'UFO Burger' },
 
     // ── Desserts — Crepes ──
+    'Chocolate Crepe':      { sq: 'Krepë me Çokollatë', it: 'Crêpe al Cioccolato', de: 'Schokoladen-Crêpe', fr: 'Crêpe au Chocolat' },
+    'White Chocolate Crepe': { sq: 'Krepë me Çokollatë të Bardhë', it: 'Crêpe al Cioccolato Bianco', de: 'Weiße-Schokoladen-Crêpe', fr: 'Crêpe au Chocolat Blanc' },
     'Nutella Crepe':        { sq: 'Krepë Nutella', it: 'Crêpe alla Nutella', de: 'Nutella-Crêpe', fr: 'Crêpe Nutella' },
+    'Nutella Nuts Crepe':   { sq: 'Krepë Nutella me Arra', it: 'Crêpe Nutella e Noci', de: 'Nutella-Nuss-Crêpe', fr: 'Crêpe Nutella et Noix' },
     'Nutella Cookie Crepe': { sq: 'Krepë Nutella Biskotë', it: 'Crêpe Nutella e Biscotto', de: 'Nutella-Keks-Crêpe', fr: 'Crêpe Nutella Cookie' },
-    'Nutella Banana Crepe': { sq: 'Krepë Nutella Banane', it: 'Crêpe Nutella e Banana', de: 'Nutella-Bananen-Crêpe', fr: 'Crêpe Nutella Banane' },
+    'Monkey Crepe':         { sq: 'Krepë Monkey', it: 'Crêpe Monkey', de: 'Monkey-Crêpe', fr: 'Crêpe Monkey' },
+    'Pancake':              { sq: 'Pancake', it: 'Pancake', de: 'Pfannkuchen', fr: 'Pancake' },
     'Lidia Crepe':          { sq: 'Krepë Lidia', it: 'Crêpe Lidia', de: 'Lidia-Crêpe', fr: 'Crêpe Lidia' },
+    'Apple Crepe':          { sq: 'Krepë me Mollë', it: 'Crêpe alla Mela', de: 'Apfel-Crêpe', fr: 'Crêpe aux Pommes' },
     'Kiwi Crepe':           { sq: 'Krepë Kivi', it: 'Crêpe al Kiwi', de: 'Kiwi-Crêpe', fr: 'Crêpe Kiwi' },
+    'Ova Crepe':            { sq: 'Krepë Ova', it: 'Crêpe Ova', de: 'Ova-Crêpe', fr: 'Crêpe Ova' },
     'Bounty Crepe':         { sq: 'Krepë Bounty', it: 'Crêpe Bounty', de: 'Bounty-Crêpe', fr: 'Crêpe Bounty' },
     'Cherry Crepe':         { sq: 'Krepë Qershi', it: 'Crêpe alla Ciliegia', de: 'Kirsch-Crêpe', fr: 'Crêpe à la Cerise' },
     'Rafaello Crepe':       { sq: 'Krepë Rafaello', it: 'Crêpe Rafaello', de: 'Rafaello-Crêpe', fr: 'Crêpe Rafaello' },
@@ -196,7 +232,6 @@ const I18N = {
     'Waffle Madness':       { sq: 'Waffle Madness', it: 'Waffle Madness', de: 'Waffel-Wahnsinn', fr: 'Folie de Gaufre' },
     'Cheesecake Waffle':    { sq: 'Waffle Cheesecake', it: 'Waffle Cheesecake', de: 'Käsekuchen-Waffel', fr: 'Gaufre Cheesecake' },
     'Dubai Waffle':         { sq: 'Waffle Dubai', it: 'Waffle Dubai', de: 'Dubai-Waffel', fr: 'Gaufre Dubaï' },
-    'Oreo Waffle':          { sq: 'Waffle Oreo', it: 'Waffle Oreo', de: 'Oreo-Waffel', fr: 'Gaufre Oreo' },
     'Ice Cream (scoop)':    { sq: 'Akullore (topë)', it: 'Gelato (pallina)', de: 'Eiskugel', fr: 'Glace (boule)' },
     'Fruit Mix':            { sq: 'Mikse Frutash', it: 'Mix di Frutta', de: 'Fruchtmix', fr: 'Mix de Fruits' },
 
@@ -218,7 +253,7 @@ const I18N = {
     'Sweet Coffee':         { sq: 'Kafe e Ëmbël', it: 'Caffè Dolce', de: 'Süßer Kaffee', fr: 'Café Sucré' },
     'Coffee Cream':         { sq: 'Krem Kafe', it: 'Crema di Caffè', de: 'Kaffeecreme', fr: 'Crème de Café' },
 
-    // ── Drinks — Energy & Soft ──
+    // ── Drinks — Soft ──
     'Lemon Soda':           { sq: 'Limonadë', it: 'Soda al Limone', de: 'Zitronenlimonade', fr: 'Soda Citron' },
     'Orange Soda':          { sq: 'Portokall Soda', it: 'Soda all\'Arancia', de: 'Orangenlimonade', fr: 'Soda Orange' },
     'Schwepps Tonic':       { sq: 'Schweppes Tonik', it: 'Schweppes Tonic', de: 'Schweppes Tonic', fr: 'Schweppes Tonic' },
@@ -243,18 +278,14 @@ const I18N = {
     'Iced Chocolate':       { sq: 'Çokollatë e Ftohtë', it: 'Cioccolata Fredda', de: 'Eisschokolade', fr: 'Chocolat Glacé' },
     'Iced Nescafe':         { sq: 'Neskafe e Ftohtë', it: 'Nescafé Freddo', de: 'Eis-Nescafé', fr: 'Nescafé Glacé' },
 
-    // ── Drinks — Juices ──
+    // ── Drinks — Juices & Other ──
     'Orange Juice':         { sq: 'Lëng Portokalli', it: 'Succo d\'Arancia', de: 'Orangensaft', fr: 'Jus d\'Orange' },
     'Apple Juice':          { sq: 'Lëng Molle', it: 'Succo di Mela', de: 'Apfelsaft', fr: 'Jus de Pomme' },
     'Fruit Juice Mix':      { sq: 'Lëng Frutash Mikse', it: 'Succo Misto di Frutta', de: 'Fruchtsaftmix', fr: 'Jus de Fruits Mixte' },
     'Smoothie':             { sq: 'Smoothie', it: 'Frullato', de: 'Smoothie', fr: 'Smoothie' },
-
-    // ── Drinks — Beer/Wine ──
     'Champagne':            { sq: 'Shampanjë', it: 'Champagne', de: 'Champagner', fr: 'Champagne' },
     'Cocktails Alcohol Free': { sq: 'Koktej pa Alkool', it: 'Cocktail Analcolici', de: 'Alkoholfreie Cocktails', fr: 'Cocktails Sans Alcool' },
     'Glass of Wine':        { sq: 'Gotë Verë', it: 'Bicchiere di Vino', de: 'Glas Wein', fr: 'Verre de Vin' },
-
-    // ── Drinks — Fresh Juices ──
     'Daily Juice':          { sq: 'Lëngu i Ditës', it: 'Succo del Giorno', de: 'Tagessaft', fr: 'Jus du Jour' },
     'Pick Me Up':           { sq: 'Pick Me Up', it: 'Pick Me Up', de: 'Pick Me Up', fr: 'Pick Me Up' },
     'Stress Down':          { sq: 'Stress Down', it: 'Stress Down', de: 'Stress Down', fr: 'Stress Down' },
@@ -270,7 +301,7 @@ const I18N = {
   },
 
   descs: {
-    // ── Starters ──
+    // ── Breakfast ──
     'Ova Breakfast': {
       sq: 'Proshutë pule, proshutë viçi, reçel luleshtrydhe, reçel fiku, reçel qershi, vezë, mjaltë, nutella, djathë kaçkavall, djathë i bardhë, domate, kastravec, salcë kosi, fruta',
       it: 'Prosciutto di pollo, prosciutto di manzo, marmellata di fragole, di fichi, di ciliegie, uova, miele, nutella, kaçkavall, formaggio bianco, pomodoro, cetriolo, salsa yogurt, frutta',
@@ -325,6 +356,8 @@ const I18N = {
       de: 'Mayonnaise, Tomate, doppelter Schinken, Ketchup',
       fr: 'Mayonnaise, tomate, double jambon, ketchup'
     },
+
+    // ── Salads ──
     'Green Salad': {
       sq: 'Sallatë jeshile, limon, ullinj, qepë',
       it: 'Lattuga, limone, olive, cipolla',
@@ -360,6 +393,94 @@ const I18N = {
       it: 'Lattuga, crostini, filetto di pollo, mais, grana, salsa Caesar',
       de: 'Blattsalat, Croutons, Hähnchenfilet, Mais, Parmesan, Caesar-Sauce',
       fr: 'Laitue, croûtons, filet de poulet, maïs, parmesan, sauce César'
+    },
+    'Cold Seafood Salad': {
+      sq: 'Sepje, kallamar, karkalec të marinuar',
+      it: 'Seppie, calamari, gamberi marinati',
+      de: 'Tintenfisch, Calamari, marinierte Garnelen',
+      fr: 'Seiche, calamars, crevettes marinées'
+    },
+    'Cold Octopus': {
+      sq: 'Oktapod i marinuar',
+      it: 'Polpo marinato',
+      de: 'Marinierter Oktopus',
+      fr: 'Poulpe mariné'
+    },
+
+    // ── Pasta ──
+    'Linguini Seafood': {
+      sq: 'Sepje, kallamar, karkalec, midhje, pomodorini, majdanoz',
+      it: 'Seppie, calamari, gamberi, cozze, pomodorini, prezzemolo',
+      de: 'Tintenfisch, Calamari, Garnelen, Muscheln, Kirschtomaten, Petersilie',
+      fr: 'Seiche, calamars, crevettes, moules, tomates cerises, persil'
+    },
+    'Linguini Shrimp & Zucchini': {
+      sq: 'Karkalec, kungull, pomodorini, majdanoz',
+      it: 'Gamberi, zucchine, pomodorini, prezzemolo',
+      de: 'Garnelen, Zucchini, Kirschtomaten, Petersilie',
+      fr: 'Crevettes, courgettes, tomates cerises, persil'
+    },
+    'Pasta Bolognese': {
+      sq: 'Mish i grirë, pomodorini, majdanoz',
+      it: 'Carne macinata, pomodorini, prezzemolo',
+      de: 'Hackfleisch, Kirschtomaten, Petersilie',
+      fr: 'Viande hachée, tomates cerises, persil'
+    },
+    'Butter Pasta': {
+      sq: 'Gjalp i freskët, majdanoz',
+      it: 'Burro fresco, prezzemolo',
+      de: 'Frische Butter, Petersilie',
+      fr: 'Beurre frais, persil'
+    },
+    'Ravioli Truffle Cream': {
+      sq: 'Pana, tartuf',
+      it: 'Panna, tartufo',
+      de: 'Sahne, Trüffel',
+      fr: 'Crème, truffe'
+    },
+    'Ravioli Truffle Shrimp': {
+      sq: 'Karkalec, pana, tartuf',
+      it: 'Gamberi, panna, tartufo',
+      de: 'Garnelen, Sahne, Trüffel',
+      fr: 'Crevettes, crème, truffe'
+    },
+    'Chicken Cream Mushroom Pasta': {
+      sq: 'Fileto pule, pana, kërpudha',
+      it: 'Filetto di pollo, panna, funghi',
+      de: 'Hähnchenfilet, Sahne, Pilze',
+      fr: 'Filet de poulet, crème, champignons'
+    },
+
+    // ── Risotto ──
+    'Risotto Seafood': {
+      sq: 'Sepje, kallamar, karkalec, midhje, pomodorini, majdanoz',
+      it: 'Seppie, calamari, gamberi, cozze, pomodorini, prezzemolo',
+      de: 'Tintenfisch, Calamari, Garnelen, Muscheln, Kirschtomaten, Petersilie',
+      fr: 'Seiche, calamars, crevettes, moules, tomates cerises, persil'
+    },
+    'Risotto Shrimp & Zucchini': {
+      sq: 'Karkalec, kungull, pomodorini, majdanoz',
+      it: 'Gamberi, zucchine, pomodorini, prezzemolo',
+      de: 'Garnelen, Zucchini, Kirschtomaten, Petersilie',
+      fr: 'Crevettes, courgettes, tomates cerises, persil'
+    },
+    'Risotto Salmon': {
+      sq: 'Salmon, pomodorini, majdanoz',
+      it: 'Salmone, pomodorini, prezzemolo',
+      de: 'Lachs, Kirschtomaten, Petersilie',
+      fr: 'Saumon, tomates cerises, persil'
+    },
+    'Risotto Shrimp': {
+      sq: 'Karkalec, pomodorini, majdanoz',
+      it: 'Gamberi, pomodorini, prezzemolo',
+      de: 'Garnelen, Kirschtomaten, Petersilie',
+      fr: 'Crevettes, tomates cerises, persil'
+    },
+    'Risotto Vegetables': {
+      sq: 'Oriz, pomodorini, shafran, majdanoz',
+      it: 'Riso, pomodorini, zafferano, prezzemolo',
+      de: 'Reis, Kirschtomaten, Safran, Petersilie',
+      fr: 'Riz, tomates cerises, safran, persil'
     },
 
     // ── Pizza ──
@@ -471,17 +592,17 @@ const I18N = {
       de: 'Mozzarella, Schinken, Sahne, Ei',
       fr: 'Mozzarella, jambon, crème, œuf'
     },
+    'La Crema': {
+      sq: 'Mozzarela, salcë domatesh, kërpudha, sallam pikant, pana',
+      it: 'Mozzarella, salsa di pomodoro, funghi, salame piccante, panna',
+      de: 'Mozzarella, Tomatensauce, Pilze, pikante Salami, Sahne',
+      fr: 'Mozzarella, sauce tomate, champignons, salami piquant, crème'
+    },
     'Pizza Mix': {
       sq: 'Salcë domatesh, mozzarela, sallam, proshutë, suxhuk, ton, ullinj, kërpudha, speca',
       it: 'Salsa di pomodoro, mozzarella, salame, prosciutto, sucuk, tonno, olive, funghi, peperoni',
       de: 'Tomatensauce, Mozzarella, Salami, Schinken, Sucuk, Thunfisch, Oliven, Pilze, Paprika',
       fr: 'Sauce tomate, mozzarella, salami, jambon, sucuk, thon, olives, champignons, poivrons'
-    },
-    'Doner Pizza': {
-      sq: 'Salcë domatesh, mozzarela, mish pule, patate',
-      it: 'Salsa di pomodoro, mozzarella, pollo, patatine',
-      de: 'Tomatensauce, Mozzarella, Hähnchen, Pommes',
-      fr: 'Sauce tomate, mozzarella, poulet, frites'
     },
     'Pizza Ova': {
       sq: 'Salcë domatesh, mozzarela, suxhuk, pana, rukola, pomodorini',
@@ -544,140 +665,10 @@ const I18N = {
       fr: 'Mozzarella, sauce, fruits de mer'
     },
     'Calzone Four Cheese': {
-      sq: 'Mozzarela, salcë domatesh, djathë i bardhë, grana, gorgonzola',
-      it: 'Mozzarella, salsa di pomodoro, formaggio bianco, grana, gorgonzola',
-      de: 'Mozzarella, Tomatensauce, Weißkäse, Parmesan, Gorgonzola',
-      fr: 'Mozzarella, sauce tomate, fromage blanc, parmesan, gorgonzola'
-    },
-
-    // ── Pasta ──
-    'Linguini Seafood': {
-      sq: 'Sepje, kallamar, karkalec, midhje, pomodorini, majdanoz',
-      it: 'Seppie, calamari, gamberi, cozze, pomodorini, prezzemolo',
-      de: 'Tintenfisch, Calamari, Garnelen, Muscheln, Kirschtomaten, Petersilie',
-      fr: 'Seiche, calamars, crevettes, moules, tomates cerises, persil'
-    },
-    'Linguini Shrimp & Zucchini': {
-      sq: 'Karkalec, kungull, pomodorini, majdanoz',
-      it: 'Gamberi, zucchine, pomodorini, prezzemolo',
-      de: 'Garnelen, Zucchini, Kirschtomaten, Petersilie',
-      fr: 'Crevettes, courgettes, tomates cerises, persil'
-    },
-    'Pasta Bolognese': {
-      sq: 'Mish i grirë, pomodorini, majdanoz',
-      it: 'Carne macinata, pomodorini, prezzemolo',
-      de: 'Hackfleisch, Kirschtomaten, Petersilie',
-      fr: 'Viande hachée, tomates cerises, persil'
-    },
-    'Butter Pasta': {
-      sq: 'Gjalp i freskët, majdanoz',
-      it: 'Burro fresco, prezzemolo',
-      de: 'Frische Butter, Petersilie',
-      fr: 'Beurre frais, persil'
-    },
-    'Ravioli Truffle Cream': {
-      sq: 'Pana, tartuf',
-      it: 'Panna, tartufo',
-      de: 'Sahne, Trüffel',
-      fr: 'Crème, truffe'
-    },
-    'Ravioli Truffle Shrimp': {
-      sq: 'Karkalec, pana, tartuf',
-      it: 'Gamberi, panna, tartufo',
-      de: 'Garnelen, Sahne, Trüffel',
-      fr: 'Crevettes, crème, truffe'
-    },
-    'Risotto Seafood': {
-      sq: 'Sepje, kallamar, karkalec, midhje, pomodorini, majdanoz',
-      it: 'Seppie, calamari, gamberi, cozze, pomodorini, prezzemolo',
-      de: 'Tintenfisch, Calamari, Garnelen, Muscheln, Kirschtomaten, Petersilie',
-      fr: 'Seiche, calamars, crevettes, moules, tomates cerises, persil'
-    },
-    'Risotto Shrimp & Zucchini': {
-      sq: 'Karkalec, kungull, pomodorini, majdanoz',
-      it: 'Gamberi, zucchine, pomodorini, prezzemolo',
-      de: 'Garnelen, Zucchini, Kirschtomaten, Petersilie',
-      fr: 'Crevettes, courgettes, tomates cerises, persil'
-    },
-    'Risotto Shrimp & Saffron': {
-      sq: 'Karkalec, pomodorini, shafran, majdanoz',
-      it: 'Gamberi, pomodorini, zafferano, prezzemolo',
-      de: 'Garnelen, Kirschtomaten, Safran, Petersilie',
-      fr: 'Crevettes, tomates cerises, safran, persil'
-    },
-    'Simple Risotto': {
-      sq: 'Oriz, pomodorini, shafran, majdanoz',
-      it: 'Riso, pomodorini, zafferano, prezzemolo',
-      de: 'Reis, Kirschtomaten, Safran, Petersilie',
-      fr: 'Riz, tomates cerises, safran, persil'
-    },
-
-    // ── Burgers / Fast Food ──
-    'Hamburger': {
-      sq: 'Majonezë, xaxiq, qofte, sallatë jeshile, domate, kastravec, ketchup, mustardë',
-      it: 'Maionese, tzatziki, hamburger, lattuga, pomodoro, cetriolo, ketchup, senape',
-      de: 'Mayonnaise, Tzatziki, Frikadelle, Blattsalat, Tomate, Gurke, Ketchup, Senf',
-      fr: 'Mayonnaise, tzatziki, steak haché, laitue, tomate, concombre, ketchup, moutarde'
-    },
-    'Cheese Burger': {
-      sq: 'Salcë kosi, qofte e dyfishtë viçi, kastravec, domate, majonezë, ketchup, djathë, sallatë jeshile, patate',
-      it: 'Salsa yogurt, doppio hamburger di manzo, cetriolo, pomodoro, maionese, ketchup, formaggio, lattuga, patatine',
-      de: 'Joghurtsauce, doppeltes Rindfleisch-Patty, Gurke, Tomate, Mayonnaise, Ketchup, Käse, Blattsalat, Pommes',
-      fr: 'Sauce yaourt, double steak de bœuf, concombre, tomate, mayonnaise, ketchup, fromage, laitue, frites'
-    },
-    'Barbeque Burger': {
-      sq: 'Qofte e dyfishtë viçi, majonezë, djathë i bardhë, domate, patate, salcë BBQ',
-      it: 'Doppio hamburger di manzo, maionese, formaggio bianco, pomodoro, patatine, salsa BBQ',
-      de: 'Doppeltes Rindfleisch-Patty, Mayonnaise, Weißkäse, Tomate, Pommes, BBQ-Sauce',
-      fr: 'Double steak de bœuf, mayonnaise, fromage blanc, tomate, frites, sauce BBQ'
-    },
-    'Big Best Burger': {
-      sq: 'Salcë kosi, qofte e dyfishtë, domate, kastravec turshi, djathë i bardhë, patate',
-      it: 'Salsa yogurt, doppio hamburger, pomodoro, cetriolo sottaceto, formaggio bianco, patatine',
-      de: 'Joghurtsauce, doppeltes Patty, Tomate, Essiggurke, Weißkäse, Pommes',
-      fr: 'Sauce yaourt, double steak, tomate, cornichon, fromage blanc, frites'
-    },
-    'Ova Burger': {
-      sq: 'Salcë, sallatë jeshile, qofte e dyfishtë, misër, kastravec turshi, djathë i bardhë, djathë cedar, patate',
-      it: 'Salsa, lattuga, doppio hamburger, mais, cetriolo sottaceto, formaggio bianco, cheddar, patatine',
-      de: 'Sauce, Blattsalat, doppeltes Patty, Mais, Essiggurke, Weißkäse, Cheddar, Pommes',
-      fr: 'Sauce, laitue, double steak, maïs, cornichon, fromage blanc, cheddar, frites'
-    },
-    'Souvlaki': {
-      sq: 'Xaxiq, domate, kastravec, sallatë jeshile, mish, patate, ketchup, majonezë, mustardë',
-      it: 'Tzatziki, pomodoro, cetriolo, lattuga, carne, patatine, ketchup, maionese, senape',
-      de: 'Tzatziki, Tomate, Gurke, Blattsalat, Fleisch, Pommes, Ketchup, Mayonnaise, Senf',
-      fr: 'Tzatziki, tomate, concombre, laitue, viande, frites, ketchup, mayonnaise, moutarde'
-    },
-    'Open Souvlaki': {
-      sq: 'Xaxiq, majonezë, sallatë jeshile, qepë, kastravec, domate, mish, patate, ketchup',
-      it: 'Tzatziki, maionese, lattuga, cipolla, cetriolo, pomodoro, carne, patatine, ketchup',
-      de: 'Tzatziki, Mayonnaise, Blattsalat, Zwiebel, Gurke, Tomate, Fleisch, Pommes, Ketchup',
-      fr: 'Tzatziki, mayonnaise, laitue, oignon, concombre, tomate, viande, frites, ketchup'
-    },
-    'Hot Dog': {
-      sq: 'Xaxiq, majonezë, kremvicë, sallatë jeshile, domate, kastravec, qepë, patate, ketchup, mustardë',
-      it: 'Tzatziki, maionese, würstel, lattuga, pomodoro, cetriolo, cipolla, patatine, ketchup, senape',
-      de: 'Tzatziki, Mayonnaise, Würstchen, Blattsalat, Tomate, Gurke, Zwiebel, Pommes, Ketchup, Senf',
-      fr: 'Tzatziki, mayonnaise, saucisse, laitue, tomate, concombre, oignon, frites, ketchup, moutarde'
-    },
-    'Doner': {
-      sq: 'Majonezë, xaxiq, sallatë jeshile, domate, kastravec, qepë, mish, patate, ketchup, mustardë',
-      it: 'Maionese, tzatziki, lattuga, pomodoro, cetriolo, cipolla, carne, patatine, ketchup, senape',
-      de: 'Mayonnaise, Tzatziki, Blattsalat, Tomate, Gurke, Zwiebel, Fleisch, Pommes, Ketchup, Senf',
-      fr: 'Mayonnaise, tzatziki, laitue, tomate, concombre, oignon, viande, frites, ketchup, moutarde'
-    },
-    'Club Sandwich': {
-      sq: '3 bukë tosti, xaxiq, majonezë, djathë guda, proshutë, sallatë jeshile, domate',
-      it: '3 pane tostato, tzatziki, maionese, gouda, prosciutto, lattuga, pomodoro',
-      de: '3 Toastbrot, Tzatziki, Mayonnaise, Gouda, Schinken, Blattsalat, Tomate',
-      fr: '3 pains toastés, tzatziki, mayonnaise, gouda, jambon, laitue, tomate'
-    },
-    'Shawarma (Kebab)': {
-      sq: 'Sallatë jeshile, kastravec, domate, patate, mish pule, salcë kosi, majonezë, ketchup',
-      it: 'Lattuga, cetriolo, pomodoro, patatine, pollo, salsa yogurt, maionese, ketchup',
-      de: 'Blattsalat, Gurke, Tomate, Pommes, Hähnchen, Joghurtsauce, Mayonnaise, Ketchup',
-      fr: 'Laitue, concombre, tomate, frites, poulet, sauce yaourt, mayonnaise, ketchup'
+      sq: 'Mozzarela, salcë domatesh, pana, gorgonzola',
+      it: 'Mozzarella, salsa di pomodoro, panna, gorgonzola',
+      de: 'Mozzarella, Tomatensauce, Sahne, Gorgonzola',
+      fr: 'Mozzarella, sauce tomate, crème, gorgonzola'
     },
 
     // ── Sandwiches ──
@@ -748,14 +739,58 @@ const I18N = {
       fr: 'Mozzarella, jambon de poulet, tomate, concombre, mayonnaise'
     },
     'Ova Sandwich': {
-      sq: 'Salcë kosi, sallatë jeshile, domate, kastravec, mish, patate',
-      it: 'Salsa yogurt, lattuga, pomodoro, cetriolo, carne, patatine',
-      de: 'Joghurtsauce, Blattsalat, Tomate, Gurke, Fleisch, Pommes',
-      fr: 'Sauce yaourt, laitue, tomate, concombre, viande, frites'
+      sq: 'Salcë kosi, sallatë jeshile, domate, kastravec, sallam pikant, patate',
+      it: 'Salsa yogurt, lattuga, pomodoro, cetriolo, salame piccante, patatine',
+      de: 'Joghurtsauce, Blattsalat, Tomate, Gurke, pikante Salami, Pommes',
+      fr: 'Sauce yaourt, laitue, tomate, concombre, salami piquant, frites'
     },
 
-    // ── Desserts ──
-    'Nutella Banana Crepe': {
+    // ── Burgers ──
+    'Cheese Burger': {
+      sq: 'Salcë, qofte e dyfishtë viçi, kastravec, domate, djathë cedar, sallatë jeshile, patate',
+      it: 'Salsa, doppio hamburger di manzo, cetriolo, pomodoro, cheddar, lattuga, patatine',
+      de: 'Sauce, doppeltes Rindfleisch-Patty, Gurke, Tomate, Cheddar, Blattsalat, Pommes',
+      fr: 'Sauce, double steak de bœuf, concombre, tomate, cheddar, laitue, frites'
+    },
+    'Barbeque Burger': {
+      sq: 'Qofte e dyfishtë viçi, majonezë, djathë i bardhë, domate, patate, salcë BBQ',
+      it: 'Doppio hamburger di manzo, maionese, formaggio bianco, pomodoro, patatine, salsa BBQ',
+      de: 'Doppeltes Rindfleisch-Patty, Mayonnaise, Weißkäse, Tomate, Pommes, BBQ-Sauce',
+      fr: 'Double steak de bœuf, mayonnaise, fromage blanc, tomate, frites, sauce BBQ'
+    },
+    'Chicken Burger': {
+      sq: 'Salcë, fileto pule, djathë cedar, domate, kastravec turshi, sallatë jeshile, patate',
+      it: 'Salsa, filetto di pollo, cheddar, pomodoro, cetriolo sottaceto, lattuga, patatine',
+      de: 'Sauce, Hähnchenfilet, Cheddar, Tomate, Essiggurke, Blattsalat, Pommes',
+      fr: 'Sauce, filet de poulet, cheddar, tomate, cornichon, laitue, frites'
+    },
+    'Big Best Burger': {
+      sq: 'Salcë, qofte e dyfishtë, domate, kastravec turshi, djathë i bardhë, patate',
+      it: 'Salsa, doppio hamburger, pomodoro, cetriolo sottaceto, formaggio bianco, patatine',
+      de: 'Sauce, doppeltes Patty, Tomate, Essiggurke, Weißkäse, Pommes',
+      fr: 'Sauce, double steak, tomate, cornichon, fromage blanc, frites'
+    },
+    'Ova Burger': {
+      sq: 'Salcë, sallatë jeshile, qofte e dyfishtë, misër, kastravec turshi, djathë i bardhë, djathë cedar, patate',
+      it: 'Salsa, lattuga, doppio hamburger, mais, cetriolo sottaceto, formaggio bianco, cheddar, patatine',
+      de: 'Sauce, Blattsalat, doppeltes Patty, Mais, Essiggurke, Weißkäse, Cheddar, Pommes',
+      fr: 'Sauce, laitue, double steak, maïs, cornichon, fromage blanc, cheddar, frites'
+    },
+    'Smash Burger': {
+      sq: 'Salcë, qofte e dyfishtë, djathë cedar i shkrirë, qepë e karamelizuar, patate',
+      it: 'Salsa, doppio hamburger, cheddar fuso, cipolla caramellata, patatine',
+      de: 'Sauce, doppeltes Patty, geschmolzener Cheddar, karamellisierte Zwiebel, Pommes',
+      fr: 'Sauce, double steak, cheddar fondu, oignon caramélisé, frites'
+    },
+    'UFO Burger': {
+      sq: 'Salcë, qofte e dyfishtë, djathë cedar i shkrirë, qepë, patate',
+      it: 'Salsa, doppio hamburger, cheddar fuso, cipolla, patatine',
+      de: 'Sauce, doppeltes Patty, geschmolzener Cheddar, Zwiebel, Pommes',
+      fr: 'Sauce, double steak, cheddar fondu, oignon, frites'
+    },
+
+    // ── Desserts — Crepes ──
+    'Monkey Crepe': {
       sq: 'Nutella, banane',
       it: 'Nutella, banana',
       de: 'Nutella, Banane',
@@ -767,23 +802,35 @@ const I18N = {
       de: 'Nutella, Banane, Keks',
       fr: 'Nutella, banane, biscuit'
     },
+    'Apple Crepe': {
+      sq: 'Krem pastiçerie, mollë, kanellë',
+      it: 'Crema pasticcera, mela, cannella',
+      de: 'Vanillecreme, Apfel, Zimt',
+      fr: 'Crème pâtissière, pomme, cannelle'
+    },
     'Kiwi Crepe': {
       sq: 'Nutella, kivi, biskotë',
       it: 'Nutella, kiwi, biscotto',
       de: 'Nutella, Kiwi, Keks',
       fr: 'Nutella, kiwi, biscuit'
     },
-    'Cherry Crepe': {
-      sq: 'Reçel qershie',
-      it: 'Marmellata di ciliegie',
-      de: 'Kirschmarmelade',
-      fr: 'Confiture de cerises'
+    'Ova Crepe': {
+      sq: 'Mjaltë, arra, kanellë',
+      it: 'Miele, noci, cannella',
+      de: 'Honig, Walnüsse, Zimt',
+      fr: 'Miel, noix, cannelle'
     },
     'Bounty Crepe': {
       sq: 'Çokollatë e bardhë, arrë kokosi',
       it: 'Cioccolato bianco, cocco',
       de: 'Weiße Schokolade, Kokosnuss',
       fr: 'Chocolat blanc, noix de coco'
+    },
+    'Cherry Crepe': {
+      sq: 'Reçel qershie',
+      it: 'Marmellata di ciliegie',
+      de: 'Kirschmarmelade',
+      fr: 'Confiture de cerises'
     },
     'Rafaello Crepe': {
       sq: 'Çokollatë e bardhë, arrë kokosi, lajthi',
@@ -804,17 +851,19 @@ const I18N = {
       fr: 'Nutella, pistache, kunafa, sirop de pistache'
     },
     'Village Crepe (Savory)': {
-      sq: 'Krem djathi, proshutë pule, mozzarela, ullinj, speca, domate',
-      it: 'Crema di formaggio, prosciutto di pollo, mozzarella, olive, peperoni, pomodori',
-      de: 'Frischkäse, Hähnchenschinken, Mozzarella, Oliven, Paprika, Tomaten',
-      fr: 'Fromage à la crème, jambon de poulet, mozzarella, olives, poivrons, tomates'
+      sq: 'Krem djathi, djathë i bardhë, ullinj, speca, domate, kastravec',
+      it: 'Crema di formaggio, formaggio bianco, olive, peperoni, pomodori, cetriolo',
+      de: 'Frischkäse, Weißkäse, Oliven, Paprika, Tomaten, Gurke',
+      fr: 'Fromage à la crème, fromage blanc, olives, poivrons, tomates, concombre'
     },
     'Caesar Crepe (Savory)': {
-      sq: 'Krem djathi, proshutë pule, mozzarela, salcë Cezar, sallatë',
-      it: 'Crema di formaggio, prosciutto di pollo, mozzarella, salsa Caesar, insalata',
-      de: 'Frischkäse, Hähnchenschinken, Mozzarella, Caesar-Sauce, Salat',
-      fr: 'Fromage à la crème, jambon de poulet, mozzarella, sauce César, salade'
+      sq: 'Krem djathi, fileto pule, mozzarela, misër, salcë Cezar, sallatë',
+      it: 'Crema di formaggio, filetto di pollo, mozzarella, mais, salsa Caesar, insalata',
+      de: 'Frischkäse, Hähnchenfilet, Mozzarella, Mais, Caesar-Sauce, Salat',
+      fr: 'Fromage à la crème, filet de poulet, mozzarella, maïs, sauce César, salade'
     },
+
+    // ── Desserts — Waffles ──
     'The Chockoloco Waffle': {
       sq: 'Nutella, arra, shurup çokollate, shllak',
       it: 'Nutella, noci, sciroppo di cioccolato, panna montata',
@@ -840,10 +889,10 @@ const I18N = {
       fr: 'Noix de coco, ananas, sirop tropical, crème fouettée'
     },
     'Ying Yang Waffle': {
-      sq: 'Shurup çokollate, luleshtrydhe, arra, shllak, akullore',
-      it: 'Sciroppo di cioccolato, fragole, noci, panna montata, gelato',
-      de: 'Schokoladensirup, Erdbeeren, Walnüsse, Schlagsahne, Eiscreme',
-      fr: 'Sirop de chocolat, fraises, noix, crème fouettée, glace'
+      sq: 'Çokollatë e bardhë, luleshtrydhe, arra, shllak, akullore',
+      it: 'Cioccolato bianco, fragole, noci, panna montata, gelato',
+      de: 'Weiße Schokolade, Erdbeeren, Walnüsse, Schlagsahne, Eiscreme',
+      fr: 'Chocolat blanc, fraises, noix, crème fouettée, glace'
     },
     'Simple Fruits Waffle': {
       sq: 'Luleshtrydhe, banane, shllak, bajame, arra, shurup çokollate',
@@ -892,12 +941,6 @@ const I18N = {
       it: 'Nutella, kunafa, pistacchio, crema di pistacchio',
       de: 'Nutella, Kunafa, Pistazie, Pistaziencreme',
       fr: 'Nutella, kunafa, pistache, crème de pistache'
-    },
-    'Oreo Waffle': {
-      sq: 'Nutella, banane, Oreo, akullore',
-      it: 'Nutella, banana, Oreo, gelato',
-      de: 'Nutella, Banane, Oreo, Eiscreme',
-      fr: 'Nutella, banane, Oreo, glace'
     },
 
     // ── Drinks ──

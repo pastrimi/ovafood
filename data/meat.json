@@ -1,10 +1,49 @@
 {
   "items": [
-    { "name": "Chicken Fillet with Fries", "price": 650, "description": "" },
-    { "name": "Beef Steak with Fries", "price": 750, "description": "" },
-    { "name": "Beef Chop with Fries", "price": 750, "description": "" },
-    { "name": "Clay Pot Stew", "price": 550, "description": "" },
-    { "name": "Chicken Cutlet", "price": 550, "description": "" },
-    { "name": "Shish Kebab", "price": 500, "description": "" }
+    {
+      "name": "Chicken Fillet with Potatoes",
+      "price": 950,
+      "description": ""
+    },
+    {
+      "name": "Beef Steak with Baked Potatoes",
+      "price": 1200,
+      "description": ""
+    },
+    {
+      "name": "Veal Chops with Baked Potatoes",
+      "price": 1200,
+      "description": ""
+    },
+    {
+      "name": "Grilled Lamb Ribs",
+      "price": 1300,
+      "description": ""
+    },
+    {
+      "name": "Mixed Grill Normal",
+      "price": 2500,
+      "description": ""
+    },
+    {
+      "name": "Mixed Grill Family",
+      "price": 4500,
+      "description": ""
+    },
+    {
+      "name": "Shish Kebab",
+      "price": 850,
+      "description": ""
+    },
+    {
+      "name": "Chicken Cutlet",
+      "price": 850,
+      "description": ""
+    },
+    {
+      "name": "Marinated Chicken Wings",
+      "price": 650,
+      "description": ""
+    }
   ]
 }

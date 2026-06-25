@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "name": "Green Salad",
+      "price": 450,
+      "description": "Lettuce, lemon, olives, onion"
+    },
+    {
+      "name": "Greek Salad",
+      "price": 600,
+      "description": "Tomato, onion, cucumber, white cheese, peppers, olives, oregano"
+    },
+    {
+      "name": "Mix Salad",
+      "price": 650,
+      "description": "Lettuce, olives, onion, tomato, cucumber, lemon, peppers"
+    },
+    {
+      "name": "Village Salad",
+      "price": 550,
+      "description": "Lettuce, tomato, cucumber, white cheese"
+    },
+    {
+      "name": "Arugula Salad",
+      "price": 550,
+      "description": "Cherry tomatoes, arugula, parmesan"
+    },
+    {
+      "name": "Caesar Salad",
+      "price": 650,
+      "description": "Lettuce, croutons, chicken fillet, corn, parmesan, Caesar sauce"
+    },
+    {
+      "name": "Cold Seafood Salad",
+      "price": 1500,
+      "description": "Cuttlefish, calamari, marinated shrimp"
+    },
+    {
+      "name": "Cold Octopus",
+      "price": 1500,
+      "description": "Marinated octopus"
+    }
+  ]
+}

@@ -1,31 +1,169 @@
 {
   "items": [
-    { "name": "Nutella Crepe", "price": 300, "description": "" },
-    { "name": "Nutella Cookie Crepe", "price": 350, "description": "" },
-    { "name": "Nutella Banana Crepe", "price": 350, "description": "Nutella, banana" },
-    { "name": "Lidia Crepe", "price": 400, "description": "Nutella, banana, cookie" },
-    { "name": "Kiwi Crepe", "price": 400, "description": "Nutella, kiwi, cookie" },
-    { "name": "Bounty Crepe", "price": 350, "description": "White chocolate, coconut" },
-    { "name": "Cherry Crepe", "price": 350, "description": "Cherry jam" },
-    { "name": "Rafaello Crepe", "price": 400, "description": "White chocolate, coconut, nuts" },
-    { "name": "Oreo Crepe", "price": 400, "description": "Nutella, Oreo, banana" },
-    { "name": "Dubai Crepe", "price": 600, "description": "Nutella, pistachio, kunafa, pistachio syrup" },
-    { "name": "Village Crepe (Savory)", "price": 400, "description": "Cream cheese, chicken ham, mozzarella, olives, peppers, tomatoes" },
-    { "name": "Caesar Crepe (Savory)", "price": 450, "description": "Cream cheese, chicken ham, mozzarella, Caesar sauce, salad" },
-    { "name": "The Chockoloco Waffle", "price": 450, "description": "Nutella, walnuts, chocolate syrup, whipped cream" },
-    { "name": "Tutti Frutti Waffle", "price": 600, "description": "Nutella, strawberry, banana, kiwi, walnuts, chocolate syrup, whipped cream" },
-    { "name": "Biscuit Cream Waffle", "price": 550, "description": "Biscuit cream, cherry jam, walnuts, chocolate syrup" },
-    { "name": "Tropical Waffle", "price": 450, "description": "Coconut, pineapple, tropical syrup, whipped cream" },
-    { "name": "Ying Yang Waffle", "price": 550, "description": "Chocolate syrup, strawberry, walnuts, whipped cream, ice cream" },
-    { "name": "Simple Fruits Waffle", "price": 650, "description": "Strawberry, banana, whipped cream, almonds, walnuts, chocolate syrup" },
-    { "name": "Costa Rica Waffle", "price": 450, "description": "Banana, whipped cream, walnuts, chocolate syrup" },
-    { "name": "House Special Waffle", "price": 650, "description": "Nutella, strawberry, banana, whipped cream, ice cream" },
-    { "name": "Apple Waffle", "price": 450, "description": "Apple, walnuts, whipped cream, chocolate syrup, pastry cream" },
-    { "name": "Bumble Bee Waffle", "price": 500, "description": "Honey, walnuts, ice cream" },
-    { "name": "Waffle Madness", "price": 600, "description": "White chocolate, strawberry, walnuts" },
-    { "name": "Cheesecake Waffle", "price": 600, "description": "Philadelphia, biscuit, cherry jam, ice cream" },
-    { "name": "Dubai Waffle", "price": 600, "description": "Nutella, kunafa, pistachio, pistachio cream" },
-    { "name": "Ice Cream (scoop)", "price": 100, "description": "" },
-    { "name": "Fruit Mix", "price": 300, "description": "" }
+    {
+      "name": "Chocolate Crepe",
+      "price": 250,
+      "description": ""
+    },
+    {
+      "name": "White Chocolate Crepe",
+      "price": 250,
+      "description": ""
+    },
+    {
+      "name": "Nutella Crepe",
+      "price": 300,
+      "description": ""
+    },
+    {
+      "name": "Nutella Nuts Crepe",
+      "price": 350,
+      "description": ""
+    },
+    {
+      "name": "Nutella Cookie Crepe",
+      "price": 350,
+      "description": ""
+    },
+    {
+      "name": "Monkey Crepe",
+      "price": 350,
+      "description": "Nutella, banana"
+    },
+    {
+      "name": "Pancake",
+      "price": 200,
+      "description": ""
+    },
+    {
+      "name": "Lidia Crepe",
+      "price": 400,
+      "description": "Nutella, banana, cookie"
+    },
+    {
+      "name": "Apple Crepe",
+      "price": 350,
+      "description": "Pastry cream, apple, cinnamon"
+    },
+    {
+      "name": "Kiwi Crepe",
+      "price": 400,
+      "description": "Nutella, kiwi, cookie"
+    },
+    {
+      "name": "Ova Crepe",
+      "price": 400,
+      "description": "Honey, walnuts, cinnamon"
+    },
+    {
+      "name": "Bounty Crepe",
+      "price": 350,
+      "description": "White chocolate, coconut"
+    },
+    {
+      "name": "Cherry Crepe",
+      "price": 350,
+      "description": "Cherry jam"
+    },
+    {
+      "name": "Rafaello Crepe",
+      "price": 400,
+      "description": "White chocolate, coconut, nuts"
+    },
+    {
+      "name": "Oreo Crepe",
+      "price": 400,
+      "description": "Nutella, Oreo, banana"
+    },
+    {
+      "name": "Dubai Crepe",
+      "price": 600,
+      "description": "Nutella, pistachio, kunafa, pistachio syrup"
+    },
+    {
+      "name": "Village Crepe (Savory)",
+      "price": 400,
+      "description": "Cream cheese, white cheese, olives, peppers, tomatoes, cucumber"
+    },
+    {
+      "name": "Caesar Crepe (Savory)",
+      "price": 450,
+      "description": "Cream cheese, chicken fillet, mozzarella, corn, Caesar sauce, salad"
+    },
+    {
+      "name": "The Chockoloco Waffle",
+      "price": 450,
+      "description": "Nutella, walnuts, chocolate syrup, whipped cream"
+    },
+    {
+      "name": "Tutti Frutti Waffle",
+      "price": 600,
+      "description": "Nutella, strawberry, banana, kiwi, walnuts, chocolate syrup, whipped cream"
+    },
+    {
+      "name": "Biscuit Cream Waffle",
+      "price": 550,
+      "description": "Biscuit cream, cherry jam, walnuts, chocolate syrup"
+    },
+    {
+      "name": "Tropical Waffle",
+      "price": 450,
+      "description": "Coconut, pineapple, tropical syrup, whipped cream"
+    },
+    {
+      "name": "Ying Yang Waffle",
+      "price": 550,
+      "description": "White chocolate, strawberry, walnuts, whipped cream, ice cream"
+    },
+    {
+      "name": "Simple Fruits Waffle",
+      "price": 650,
+      "description": "Strawberry, banana, whipped cream, almonds, walnuts, chocolate syrup"
+    },
+    {
+      "name": "Costa Rica Waffle",
+      "price": 450,
+      "description": "Banana, whipped cream, walnuts, chocolate syrup"
+    },
+    {
+      "name": "House Special Waffle",
+      "price": 650,
+      "description": "Nutella, strawberry, banana, whipped cream, ice cream"
+    },
+    {
+      "name": "Apple Waffle",
+      "price": 450,
+      "description": "Apple, walnuts, whipped cream, chocolate syrup, pastry cream"
+    },
+    {
+      "name": "Bumble Bee Waffle",
+      "price": 500,
+      "description": "Honey, walnuts, ice cream"
+    },
+    {
+      "name": "Waffle Madness",
+      "price": 600,
+      "description": "White chocolate, strawberry, walnuts"
+    },
+    {
+      "name": "Cheesecake Waffle",
+      "price": 600,
+      "description": "Philadelphia, biscuit, cherry jam, ice cream"
+    },
+    {
+      "name": "Dubai Waffle",
+      "price": 600,
+      "description": "Nutella, kunafa, pistachio, pistachio cream"
+    },
+    {
+      "name": "Ice Cream (scoop)",
+      "price": 100,
+      "description": ""
+    },
+    {
+      "name": "Fruit Mix",
+      "price": 300,
+      "description": ""
+    }
   ]
 }

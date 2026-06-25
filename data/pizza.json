@@ -106,6 +106,13 @@
       "description": "Mozzarella, tomato sauce, zucchini, olives, peppers, mushrooms"
     },
     {
+      "name": "La Crema",
+      "has_sizes": true,
+      "small_price": 750,
+      "large_price": 1250,
+      "description": "Mozzarella, tomato sauce, mushrooms, spicy salami, cream"
+    },
+    {
       "name": "Seafood",
       "has_sizes": true,
       "small_price": 850,
@@ -194,6 +201,12 @@
       "has_sizes": false,
       "price": 450,
       "description": "Mozzarella, sauce, tuna"
+    },
+    {
+      "name": "Calzone Four Cheese",
+      "has_sizes": false,
+      "price": 450,
+      "description": "Mozzarella, tomato sauce, cream, gorgonzola"
     },
     {
       "name": "Calzone Seafood",

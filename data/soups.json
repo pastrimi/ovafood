@@ -1,0 +1,19 @@
+{
+  "items": [
+    {
+      "name": "Fish Soup",
+      "price": 400,
+      "description": ""
+    },
+    {
+      "name": "Chicken Soup",
+      "price": 350,
+      "description": ""
+    },
+    {
+      "name": "Vegetable Soup",
+      "price": 300,
+      "description": ""
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "items": [
+    {
+      "name": "Risotto Seafood",
+      "price": 900,
+      "description": "Cuttlefish, calamari, shrimp, mussels, cherry tomatoes, parsley"
+    },
+    {
+      "name": "Risotto Shrimp & Zucchini",
+      "price": 900,
+      "description": "Shrimp, zucchini, cherry tomatoes, parsley"
+    },
+    {
+      "name": "Risotto Salmon",
+      "price": 900,
+      "description": "Salmon, cherry tomatoes, parsley"
+    },
+    {
+      "name": "Risotto Shrimp",
+      "price": 850,
+      "description": "Shrimp, cherry tomatoes, parsley"
+    },
+    {
+      "name": "Risotto Vegetables",
+      "price": 600,
+      "description": "Rice, cherry tomatoes, saffron, parsley"
+    }
+  ]
+}
